@@ -54,8 +54,8 @@ The purpose of this project is to identify, connect, and promote assets within C
 
 ## Asset Types
 - Agriculture & Food Production
-- Aggregation
-- Wholesale
+- Aggregation & Wholesale
 - Processing
 - Distribution
-- Food Waste/Loss
+- Food Waste Management
+- Education & Outreach

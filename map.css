@@ -7,3 +7,7 @@ html, body, #mapid {
   height: 100%;
   font: 10pt "Helvetica Neue", Arial, Helvetica, sans-serif;
 }
+
+.mdi {
+  font-size: 28pt;
+}
