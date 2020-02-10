@@ -2,20 +2,19 @@
 
 # Food System Map of Chautauqua County, New York
 
-## Authors
+## Author
 Chautauqua County Division of Planning & Community Development  
-Contact: Brendan Cullen | cullenb@co.chautauqua.ny.us
-
+Primary Contact: Brendan Cullen | cullenb@co.chautauqua.ny.us
 
 ## Summary
-During the initial meetings of the Chautauqua County Food Policy Council, the Council noted that while we have a foundation understanding of the strengths and weaknesses of Chautauqua County's food system, we are unaware of its specific assets. Understanding our assets and capacity will help the Council to formulate policy changes and program areas that will benefit the food system. Additionally, we hope that this will help develop and strengthen connections within the food system.
+During the initial meetings of the Chautauqua County Food Policy Council, the Council noted that while we have a foundational understanding of the strengths and weaknesses of Chautauqua County's food system, we are unaware of its specific assets. Understanding our assets and capacity will help the Council to formulate policy changes and program areas that will benefit the food system. Additionally, we hope that this will help develop and strengthen connections within Chautauqua County.
 
 ### Purpose
-The purpose of this project is to identify, connect, and promote assets within Chautauqua County's Food System
+The purpose of this project is to identify, connect, and promote assets within Chautauqua County's Food System.
 
 ### Objectives
-- To develop and strengthen connections with Chautauqua County's Food System
-- To better understand the current efforts of assets within Chautauqua County's Food System
+- To develop and strengthen connections within Chautauqua County's Food System
+- To better understand the current efforts of assets within Chautauqua County
 - Provide the Chautauqua County Food Policy Council opportunities to network and obtain feedback from assets within the food system
 
 ### Key Users/Uses
