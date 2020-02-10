@@ -1,5 +1,9 @@
-#mapid {
-  height: 98vh;
-  width: 98vw;
-  margin: auto;
+body {
+  padding: 0;
+  margin: 0;
+}
+
+html, body, #mapid {
+  height: 100%;
+  font: 10pt "Helvetica Neue", Arial, Helvetica, sans-serif;
 }

@@ -3,12 +3,9 @@
   <head>
     <meta charset="utf-8">
     <title>CHQ - Food System Map</title>
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
-      integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
-      crossorigin=""/>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" crossorigin=""/>
     <link rel="stylesheet" href="map.css">
+    <link rel="stylesheet" href="Plugins/leaflet-sidebar-v2/css/leaflet-sidebar.css">
     <!-- Make sure you put this AFTER Leaflet's CSS -->
     <script
       src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
@@ -17,9 +14,42 @@
     </script>
   </head>
   <body>
+    <div id="sidebar" class="leaflet-sidebar collapsed">
+
+      <!-- nav tabs -->
+      <div class="leaflet-sidebar-tabs">
+        <!-- top aligned tabs -->
+        <ul role="tablist">
+          <li><a href="#home" role="tab"></a></li>
+          <li><a href="#autopan" role="tab"></a></li>
+        </ul>
+
+        <!-- bottom aligned tabs -->
+        <ul role="tablist">
+            <li><a href="https://github.com"></a></li>
+        </ul>
+      </div>
+
+      <!-- panel conent -->
+      <div class="leaflet-sidebar-content">
+        <div class="leaflet-sidebar-pane" id="home">
+          <h1 class="leaflet-sidebar-header">
+            CHQ - Food System Assets
+            <span class="leaflet-sidebar-close"></span>
+          </h1>
+          <p>A responsive sidebar for the mapping library <a href="http://leafletjs.com/">Leaflet</a>.</p>
+
+        </div>
+
+      </div>
+      <div class="leaflet-sidebar-pane" id="messages">
+          <h1 class="leaflet-sidebar-header">Messages<span class="leaflet-sidebar-close"><i class="fa fa-caret-left"></i></span></h1>
+      </div>
+    </div>
     <div id="mapid"></div>
   </body>
   <footer>
+    <script type="text/javascript" src="Plugins/leaflet-sidebar-v2/js/leaflet-sidebar.js"></script>
     <script type="text/javascript" src="map.js"></script>
   </footer>
 </html>
