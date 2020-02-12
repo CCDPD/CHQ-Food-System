@@ -3,11 +3,52 @@ body {
   margin: 0;
 }
 
-html, body, #mapid {
+html, body {
   height: 100%;
   font: 10pt "Helvetica Neue", Arial, Helvetica, sans-serif;
 }
 
+#mapid {
+  position: absolute;
+  left: 400px;
+  top: 0;
+  bottom: 0;
+  right: 0;
+}
+
 .mdi {
   font-size: 28pt;
+}
+
+#sidebar-left {
+  height: 100%;
+  width: 400px;
+  position: fixed;
+  left: 0px;
+}
+
+/* Style the button that is used to open and close the collapsible content */
+.collapsible {
+ background-color: #eee;
+ color: #444;
+ cursor: pointer;
+ padding: 18px;
+ width: 100%;
+ border: none;
+ text-align: left;
+ outline: none;
+ font-size: 15px;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .collapsible:hover {
+ background-color: #ccc;
+}
+
+/* Style the collapsible content. Note: hidden by default */
+.content {
+ padding: 0 18px;
+ display: none;
+ overflow: hidden;
+ background-color: #f1f1f1;
 }
