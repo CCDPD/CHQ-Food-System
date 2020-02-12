@@ -5,7 +5,8 @@
     <title>CHQ - Food System Map</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" crossorigin=""/>
     <link rel="stylesheet" href="map.css">
-    <link rel="stylesheet" href="Plugins/leaflet-sidebar.css">
+    <link rel="stylesheet" href="page.css">
+
     <!-- Make sure you put this AFTER Leaflet's CSS -->
     <script
       src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
@@ -17,14 +18,16 @@
   </head>
   <body>
     <div id="sidebar-left" class="">
-      <button type="button" class="collapsible">
-        CHQ - Food System Assets Map
+      <button type="button" class="collapsible" id="header">
+        CHQ - Food System Map
       </button>
       <div class="content">
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
         eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
         minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
         ex ea commodo consequat.</p>
+        <p>The purpose of this project is to identify, connect, and promote assets within Chautauqua County's Food System.</p>
+
       </div>
       <button type="button" class="collapsible">
         <i class="mdi mdi-sprout"></i>
@@ -94,49 +97,16 @@
       </div>
     </div>
 
-    <!-- <div id="sidebar" class="leaflet-sidebar collapsed">
-
-
-      <div class="leaflet-sidebar-tabs">
-        <ul role="tablist">
-          <li><a href="#home" role="tab"><span class="mdi mdi-apps"></span></a></li>
-          <li><a href="#tractor" role="tab"><span class="mdi mdi-tractor"></span></a></li>
-          <li><a href="#barn" role="tab"><span class="mdi mdi-barn"></span></a></li>
-          <li><a href="#silo" role="tab"><span class="mdi mdi-silo"></span></a></li>
-          <li><a href="#barley" role="tab"><span class="mdi mdi-barley"></span></a></li>
-          <li><a href="#cheese" role="tab"><span class="mdi mdi-cheese"></span></a></li>
-        </ul>
-
-        <ul role="tablist">
+        <!-- <ul role="tablist">
           <li><a href="https://github.com/bren96/CHQ-Food-System" role="tab"><span class="mdi mdi-github-circle"></span></a></li>
-        </ul>
-      </div>
+        </ul> -->
 
-      <div class="leaflet-sidebar-content">
-        <div class="leaflet-sidebar-pane" id="home">
-          <h1 class="leaflet-sidebar-header">
-            CHQ - Food System Assets
-            <span class="leaflet-sidebar-close"></span>
-          </h1>
-          <h2> Purpose </h2>
-            <p>The purpose of this project is to identify, connect, and promote assets within Chautauqua County's Food System.</p>
-        </div>
-        <div class="leaflet-sidebar-pane" id="tractor">
-          <h1 class="leaflet-sidebar-header">
-            Agriculture & Food Production
-            <span class="leaflet-sidebar-close"></span>
-          </h1>
-        </div>
 
-      </div>
-      <div class="leaflet-sidebar-pane" id="messages">
-          <h1 class="leaflet-sidebar-header">Messages<span class="leaflet-sidebar-close"><i class="fa fa-caret-left"></i></span></h1>
-      </div>
-    </div> -->
     <div id="mapid"></div>
   </body>
   <footer>
-    <script type="text/javascript" src="Plugins/leaflet-sidebar.js"></script>
+    <script type="text/javascript" src="Geocoding_Results_webmercator.geojson"></script>
+    <script type="text/javascript" src="page.js"></script>
     <script type="text/javascript" src="map.js"></script>
   </footer>
 </html>

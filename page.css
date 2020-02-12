@@ -1,0 +1,54 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+
+html, body {
+  height: 100%;
+  font: 10pt "Helvetica Neue", Arial, Helvetica, sans-serif;
+}
+
+.mdi {
+  font-size: 20pt;
+}
+
+#sidebar-left {
+  height: 100%;
+  width: 400px;
+  position: fixed;
+  left: 0px;
+  background-color: #addd8e;
+}
+
+/* Style the button that is used to open and close the collapsible content */
+.collapsible {
+ background-color: hsl(96, 53%, 71%);
+ color: hsl(0, 0%, 26%);
+ cursor: pointer;
+ padding: 18px;
+ width: 100%;
+ border: none;
+ text-align: left;
+ outline: none;
+ font-size: 18px;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .collapsible:hover {
+ background-color: hsl(138, 53%, 41%);
+}
+
+/* Style the collapsible content. Note: hidden by default */
+.content {
+ padding: 0 18px;
+ display: none;
+ overflow: hidden;
+ background-color: hsl(64, 91%, 85%);
+}
+
+#header {
+  font-size: 36px;
+  letter-spacing: 10px;
+  color: hsl(0, 0%, 100%);
+  font-weight: bold;
+}
