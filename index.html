@@ -22,78 +22,63 @@
         CHQ - Food System Map
       </button>
       <div class="content">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-        minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-        ex ea commodo consequat.</p>
         <p>The purpose of this project is to identify, connect, and promote assets within Chautauqua County's Food System.</p>
 
       </div>
-      <button type="button" class="collapsible">
+      <button type="button" class="collapsible" onclick="filterPoints('Production')">
         <i class="mdi mdi-sprout"></i>
         <i class="mdi mdi-tractor"></i>
         Agriculture & Food Production
       </button>
       <div class="content">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-        minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-        ex ea commodo consequat.</p>
+        <p>Lorem ipsum</p>
+        <div class="switch_label">
+          Farm
+          <label class="switch">
+            <input type="checkbox">
+            <span class="slider round"></span>
+          </label>
+        </div>
       </div>
-      <button type="button" class="collapsible">
+      <button type="button" class="collapsible" onclick="filterPoints('Aggregation')">
         <i class="mdi mdi-barn"></i>
         <i class="mdi mdi-silo"></i>
         Aggregation & Wholesale
       </button>
       <div class="content">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-        minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-        ex ea commodo consequat.</p>
+        <p>Lorem ipsum</p>
       </div>
-      <button type="button" class="collapsible">
+      <button type="button" class="collapsible" onclick="filterPoints('Processing')">
         <i class="mdi mdi-fruit-grapes-outline"></i>
         <i class="mdi mdi-glass-wine"></i>
         Processing & Value-add
       </button>
       <div class="content">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-        minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-        ex ea commodo consequat.</p>
+        <p>Lorem ipsum</p>
       </div>
-      <button type="button" class="collapsible">
+      <button type="button" class="collapsible" onclick="filterPoints('Distribution')">
         <i class="mdi mdi-store"></i>
         <i class="mdi mdi-silverware-variant"></i>
         Distribution & Consumption
       </button>
       <div class="content">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-        minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-        ex ea commodo consequat.</p>
+        <p>Lorem ipsum</p>
       </div>
-      <button type="button" class="collapsible">
+      <button type="button" class="collapsible" onclick="filterPoints('Waste')">
         <i class="mdi mdi-trash-can-outline"></i>
         <i class="mdi mdi-dump-truck"></i>
         Food Waste Management
       </button>
       <div class="content">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-        minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-        ex ea commodo consequat.</p>
+        <p>Lorem ipsum</p>
       </div>
-      <button type="button" class="collapsible">
+      <button type="button" class="collapsible" onclick="filterPoints('Education')">
         <i class="mdi mdi-school"></i>
         <i class="mdi mdi-information-outline"></i>
         Education & Outreach
       </button>
       <div class="content">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-        minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-        ex ea commodo consequat.</p>
+        <p>Lorem ipsum</p>
       </div>
     </div>
 
@@ -105,6 +90,8 @@
     <div id="mapid"></div>
   </body>
   <footer>
+    <script type="text/javascript" src="Sectors.js"></script>
+    <script type="text/javascript" src="Plugins/Leaflet.Icon.Glyph.js"></script>
     <script type="text/javascript" src="Geocoding_Results_webmercator.geojson"></script>
     <script type="text/javascript" src="page.js"></script>
     <script type="text/javascript" src="map.js"></script>
