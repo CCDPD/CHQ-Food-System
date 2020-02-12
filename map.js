@@ -5,19 +5,18 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(map);
 
-// create the sidebar instance and add it to the map
-var sidebar = L.control.sidebar({ container: 'sidebar' })
-  .addTo(map)
-  .open('home');
 
+var coll = document.getElementsByClassName("collapsible");
+var i;
 
-// be notified when a panel is opened
-sidebar.on('content', function (ev) {
-    switch (ev.id) {
-        case 'autopan':
-        sidebar.options.autopan = true;
-        break;
-        default:
-        sidebar.options.autopan = false;
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
     }
-});
+  });
+}
