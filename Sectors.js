@@ -1,5 +1,5 @@
 var sectors = {
-  "Production" : {
+  "1" : {
     "sector_name" : "Production",
     "section_title": "Agriculture & Food Production",
     "section_icon_1": "mdi mdi-sprout",
@@ -25,49 +25,83 @@ var sectors = {
       {"sub_sector_name": "Other", "sub_sector_icon": ""}
     ]
   },
-  "Aggregation & Wholesale" : {
-    "sector_name" : "Aggregation",
-    "section_title": "Aggregation & Wholesale",
-    "section_icon_1": "mdi mdi-barn",
-    "section_icon_2": "mdi mdi-silo",
-    "sub_sectors": [
-      {"sub_sector_name": "Vegetables", "sub_sector_icon": ""},
-    ]
-  },
-  "Processing & Value-Added Products" : {
+  "2" : {
     "sector_name" : "Processing",
     "section_title": "Processing & Value-Added Products",
     "section_icon_1": "mdi mdi-fruit-grapes-outline",
     "section_icon_2": "mdi mdi-glass-wine",
     "sub_sectors": [
-      {"sub_sector_name": "Vegetables", "sub_sector_icon": ""},
+      {"sub_sector_name": "Milk/Dairy", "sub_sector_icon": ""},
+      {"sub_sector_name": "Grains/Baked Goods", "sub_sector_icon": ""},
+      {"sub_sector_name": "Prepared/Speciality Foods", "sub_sector_icon": ""},
+      {"sub_sector_name": "Brewery", "sub_sector_icon": ""},
+      {"sub_sector_name": "Winery", "sub_sector_icon": ""},
+      {"sub_sector_name": "Meat/Fish Processing", "sub_sector_icon": ""},
+      {"sub_sector_name": "Commercial Kitchen", "sub_sector_icon": ""},
     ]
   },
-  "Distribution" : {
+  "3" : {
+    "sector_name" : "Aggregation",
+    "section_title": "Aggregation & Wholesale",
+    "section_icon_1": "mdi mdi-silo",
+    "section_icon_2": "mdi mdi-barn",
+    "sub_sectors": [
+      {"sub_sector_name": "Aggregation Facility", "sub_sector_icon": ""},
+      {"sub_sector_name": "Packaging", "sub_sector_icon": ""},
+      {"sub_sector_name": "Food Broker/Sourcer", "sub_sector_icon": ""},
+      {"sub_sector_name": "Cold Storage", "sub_sector_icon": ""},
+      {"sub_sector_name": "Dry Storage", "sub_sector_icon": ""},
+      {"sub_sector_name": "Distributor", "sub_sector_icon": ""},
+      {"sub_sector_name": "Wholesaler", "sub_sector_icon": ""},
+      {"sub_sector_name": "Food Hub", "sub_sector_icon": ""},
+      {"sub_sector_name": "Cooperative", "sub_sector_icon": ""},
+      {"sub_sector_name": "Food Auction", "sub_sector_icon": ""},
+    ]
+  },
+  "4" : {
     "sector_name" : "Distribution",
-    "section_title": "Distribution",
+    "section_title": "Local Food Outlets",
     "section_icon_1": "mdi mdi-store",
     "section_icon_2": "mdi mdi-silverware-variant",
     "sub_sectors": [
-      {"sub_sector_name": "Vegetables", "sub_sector_icon": ""},
+      {"sub_sector_name": "Convenience/Dollar Store", "sub_sector_icon": ""},
+      {"sub_sector_name": "Supermarket/Grocery Store", "sub_sector_icon": ""},
+      {"sub_sector_name": "Farmers Market", "sub_sector_icon": ""},
+      {"sub_sector_name": "CSA (Community Supported Agriculture)", "sub_sector_icon": ""},
+      {"sub_sector_name": "Farm Store/Stand", "sub_sector_icon": ""},
+      {"sub_sector_name": "Resaurant/Cafe", "sub_sector_icon": ""},
+      {"sub_sector_name": "Caterer", "sub_sector_icon": ""},
+      {"sub_sector_name": "Brewery", "sub_sector_icon": ""},
+      {"sub_sector_name": "Winery", "sub_sector_icon": ""},
+      {"sub_sector_name": "Institutional Dining Services", "sub_sector_icon": ""},
     ]
   },
-  "Food Waste Management" : {
+  "5" : {
     "sector_name" : "Waste",
-    "section_title": "Food Waste Management",
-    "section_icon_1": "mdi mdi-trash-can-outline",
-    "section_icon_2": "mdi mdi-dump-truck",
+    "section_title": "Food Loss Management",
+    "section_icon_1": "mdi mdi-dump-truck",
+    "section_icon_2": "mdi mdi-trash-can-outline",
     "sub_sectors": [
-      {"sub_sector_name": "Vegetables", "sub_sector_icon": ""},
+      {"sub_sector_name": "Gleaning", "sub_sector_icon": ""},
+      {"sub_sector_name": "Composting", "sub_sector_icon": ""},
+      {"sub_sector_name": "Landfill", "sub_sector_icon": ""},
+      {"sub_sector_name": "Organic Recycling", "sub_sector_icon": ""},
     ]
   },
-  "Education & Outreach" : {
+  "6" : {
     "sector_name" : "Education",
-    "section_title": "Education & Outreach",
+    "section_title": "Education & Support",
     "section_icon_1": "mdi mdi-school",
     "section_icon_2": "mdi mdi-information-outline",
     "sub_sectors": [
-      {"sub_sector_name": "Vegetables", "sub_sector_icon": ""},
+      {"sub_sector_name": "Food Assitance", "sub_sector_icon": ""},
+      {"sub_sector_name": "Emergency Meal Sites", "sub_sector_icon": ""},
+      {"sub_sector_name": "Food Pantry", "sub_sector_icon": ""},
+      {"sub_sector_name": "Community Resources", "sub_sector_icon": ""},
+      {"sub_sector_name": "Training Opportunties", "sub_sector_icon": ""},
+      {"sub_sector_name": "Research & Education", "sub_sector_icon": ""},
+      {"sub_sector_name": "Business Resources", "sub_sector_icon": ""},
+      {"sub_sector_name": "Farmland Conservation", "sub_sector_icon": ""},
     ]
   },
 };
