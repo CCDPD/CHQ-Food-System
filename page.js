@@ -1,15 +1,24 @@
 for ( var a in sectors) {
   var sidebar = document.getElementById("sidebar-left");
+  // Create Sector Section
   var section = document.createElement("BUTTON");
   section.type = "button";
   section.className = "collapsible";
   section.idName = sectors[a].sector_name;
-  section.innerHTML = sectors[a].section_title;
   sidebar.appendChild(section);
+  // Add Sector Icon
+  var section_icon = document.createElement("I");
+  section_icon.className = sectors[a].section_icon_1;
+  section.appendChild(section_icon);
+  // Add Sector Title
+  var section_title = document.createElement("P");
+  section_icon.innerHTML = sectors[a].section_title;
+  section.appendChild(section_title)
+  // Add Sector Content DIV
   var section_content = document.createElement("DIV");
   section_content.className = "content";
   sidebar.appendChild(section_content);
-
+  // Dynamically add sub-sectors to sector content
   for ( var b in sectors[a].sub_sectors) {
     var sub_sections = document.createElement("DIV");
     sub_sections.className = "switch_label";

@@ -2,7 +2,8 @@ var sectors = {
   "Production" : {
     "sector_name" : "Production",
     "section_title": "Agriculture & Food Production",
-    "section_icon": "",
+    "section_icon_1": "mdi mdi-sprout",
+    "section_icon_2": "mdi mdi-tractor",
     "sub_sectors": [
       {"sub_sector_name": "Vegetables", "sub_sector_icon": ""},
       {"sub_sector_name": "Fruits/Berries", "sub_sector_icon": ""},
@@ -23,5 +24,50 @@ var sectors = {
       {"sub_sector_name": "GFSI Equivalent", "sub_sector_icon": ""},
       {"sub_sector_name": "Other", "sub_sector_icon": ""}
     ]
-  }
+  },
+  "Aggregation & Wholesale" : {
+    "sector_name" : "Aggregation",
+    "section_title": "Aggregation & Wholesale",
+    "section_icon_1": "mdi mdi-barn",
+    "section_icon_2": "mdi mdi-silo",
+    "sub_sectors": [
+      {"sub_sector_name": "Vegetables", "sub_sector_icon": ""},
+    ]
+  },
+  "Processing & Value-Added Products" : {
+    "sector_name" : "Processing",
+    "section_title": "Processing & Value-Added Products",
+    "section_icon_1": "mdi mdi-fruit-grapes-outline",
+    "section_icon_2": "mdi mdi-glass-wine",
+    "sub_sectors": [
+      {"sub_sector_name": "Vegetables", "sub_sector_icon": ""},
+    ]
+  },
+  "Distribution" : {
+    "sector_name" : "Distribution",
+    "section_title": "Distribution",
+    "section_icon_1": "mdi mdi-store",
+    "section_icon_2": "mdi mdi-silverware-variant",
+    "sub_sectors": [
+      {"sub_sector_name": "Vegetables", "sub_sector_icon": ""},
+    ]
+  },
+  "Food Waste Management" : {
+    "sector_name" : "Waste",
+    "section_title": "Food Waste Management",
+    "section_icon_1": "mdi mdi-trash-can-outline",
+    "section_icon_2": "mdi mdi-dump-truck",
+    "sub_sectors": [
+      {"sub_sector_name": "Vegetables", "sub_sector_icon": ""},
+    ]
+  },
+  "Education & Outreach" : {
+    "sector_name" : "Education",
+    "section_title": "Education & Outreach",
+    "section_icon_1": "mdi mdi-school",
+    "section_icon_2": "mdi mdi-information-outline",
+    "sub_sectors": [
+      {"sub_sector_name": "Vegetables", "sub_sector_icon": ""},
+    ]
+  },
 };
