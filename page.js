@@ -1,3 +1,13 @@
+function checked_subsector(a,b) {
+  if(sectors[a].sub_sectors[b].show_on_map == "True") {
+    sectors[a].sub_sectors[b].show_on_map = "False";
+  } else if (sectors[a].sub_sectors[b].show_on_map == "False"){
+    sectors[a].sub_sectors[b].show_on_map = "True"
+  };
+  filterPoints();
+};
+
+
 for ( var a in sectors) {
   var sidebar = document.getElementById("sidebar-left");
   // Create Sector Section
@@ -23,10 +33,12 @@ for ( var a in sectors) {
     var sub_sections = document.createElement("DIV");
     sub_sections.className = "switch_label";
     section_content.appendChild(sub_sections);
-    sub_sections.innerHTML = sectors[a].sub_sectors[b].sub_sector_name;
+    var sub_sector = sectors[a].sub_sectors[b].sub_sector_name
+    sub_sections.innerHTML = sub_sector;
     var input_element = document.createElement("INPUT");
     input_element.type = "checkbox";
     sub_sections.appendChild(input_element);
+    input_element.setAttribute("onclick","checked_subsector(" + a + "," +b + ")");
     // var span_element = document.createElement("SPAN");
     // span_element.className = "slider round";
     // input_element.appendChild(span_element);
@@ -46,4 +58,4 @@ for (i = 0; i < coll.length; i++) {
       content.style.display = "block";
     }
   });
-}
+};

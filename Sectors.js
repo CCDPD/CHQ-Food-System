@@ -5,24 +5,96 @@ var sectors = {
     "section_icon_1": "mdi mdi-sprout",
     "section_icon_2": "mdi mdi-tractor",
     "sub_sectors": [
-      {"sub_sector_name": "Vegetables", "sub_sector_icon": ""},
-      {"sub_sector_name": "Fruits/Berries", "sub_sector_icon": ""},
-      {"sub_sector_name": "Meat", "sub_sector_icon": ""},
-      {"sub_sector_name": "Eggs", "sub_sector_icon": ""},
-      {"sub_sector_name": "Dairy", "sub_sector_icon": ""},
-      {"sub_sector_name": "Fish", "sub_sector_icon": ""},
-      {"sub_sector_name": "Grains", "sub_sector_icon": ""},
-      {"sub_sector_name": "Nuts", "sub_sector_icon": ""},
-      {"sub_sector_name": "Honey", "sub_sector_icon": ""},
-      {"sub_sector_name": "Maple Syrup", "sub_sector_icon": ""},
-      {"sub_sector_name": "Herbs", "sub_sector_icon": ""},
-      {"sub_sector_name": "Hops", "sub_sector_icon": ""},
-      {"sub_sector_name": "Community Garden", "sub_sector_icon": ""},
-      {"sub_sector_name": "Food Safety Plan", "sub_sector_icon": ""},
-      {"sub_sector_name": "Organic", "sub_sector_icon": ""},
-      {"sub_sector_name": "USDA GAP", "sub_sector_icon": ""},
-      {"sub_sector_name": "GFSI Equivalent", "sub_sector_icon": ""},
-      {"sub_sector_name": "Other", "sub_sector_icon": ""}
+      {
+        "sub_sector_name": "Vegetables",
+        "sub_sector_icon": "",
+        "show_on_map": "False",
+      },
+      {
+        "sub_sector_name": "Fruits/Berries",
+        "sub_sector_icon": "",
+        "show_on_map": "False",
+      },
+      {
+        "sub_sector_name": "Meat",
+        "sub_sector_icon": "",
+        "show_on_map": "False",
+      },
+      {
+        "sub_sector_name": "Eggs",
+        "sub_sector_icon": "",
+        "show_on_map": "False",
+      },
+      {
+        "sub_sector_name": "Dairy",
+        "sub_sector_icon": "",
+        "show_on_map": "False",
+      },
+      {
+        "sub_sector_name": "Fish",
+        "sub_sector_icon": "",
+        "show_on_map": "False",
+      },
+      {
+        "sub_sector_name": "Grains",
+        "sub_sector_icon": "",
+        "show_on_map": "False",
+      },
+      {
+        "sub_sector_name": "Nuts",
+        "sub_sector_icon": "",
+        "show_on_map": "False",
+      },
+      {
+        "sub_sector_name": "Honey",
+        "sub_sector_icon": "",
+        "show_on_map": "False",
+      },
+      {
+        "sub_sector_name": "Maple Syrup",
+        "sub_sector_icon": "",
+        "show_on_map": "False",
+      },
+      {
+        "sub_sector_name": "Herbs",
+        "sub_sector_icon": "",
+        "show_on_map": "False",
+      },
+      {
+        "sub_sector_name": "Hops",
+        "sub_sector_icon": "",
+        "show_on_map": "False",
+      },
+      {
+        "sub_sector_name": "Community Garden",
+        "sub_sector_icon": "",
+        "show_on_map": "False",
+      },
+      {
+        "sub_sector_name": "Food Safety Plan",
+        "sub_sector_icon": "",
+        "show_on_map": "False",
+      },
+      {
+        "sub_sector_name": "Certified Organic",
+        "sub_sector_icon": "",
+        "show_on_map": "False",
+      },
+      {
+        "sub_sector_name": "USDA GAP",
+        "sub_sector_icon": "",
+        "show_on_map": "False",
+      },
+      {
+        "sub_sector_name": "GFSI Equivalent",
+        "sub_sector_icon": "",
+        "show_on_map": "False",
+      },
+      {
+        "sub_sector_name": "Other",
+        "sub_sector_icon": "",
+        "show_on_map": "False",
+      }
     ]
   },
   "2" : {
@@ -31,13 +103,51 @@ var sectors = {
     "section_icon_1": "mdi mdi-fruit-grapes-outline",
     "section_icon_2": "mdi mdi-glass-wine",
     "sub_sectors": [
-      {"sub_sector_name": "Milk/Dairy", "sub_sector_icon": ""},
-      {"sub_sector_name": "Grains/Baked Goods", "sub_sector_icon": ""},
-      {"sub_sector_name": "Prepared/Speciality Foods", "sub_sector_icon": ""},
-      {"sub_sector_name": "Brewery", "sub_sector_icon": ""},
-      {"sub_sector_name": "Winery", "sub_sector_icon": ""},
-      {"sub_sector_name": "Meat/Fish Processing", "sub_sector_icon": ""},
-      {"sub_sector_name": "Commercial Kitchen", "sub_sector_icon": ""},
+      {
+        "sub_sector_name": "Dairy",
+         "sub_sector_icon": "",
+         "show_on_map": "False",
+      },
+      {
+        "sub_sector_name": "Grains/Baked Goods",
+        "sub_sector_icon": "",
+        "show_on_map": "False",
+      },
+      {
+        "sub_sector_name": "Prepared/Speciality Foods",
+        "sub_sector_icon": "",
+        "show_on_map": "False",
+      },
+      {
+        "sub_sector_name": "Brewery",
+        "sub_sector_icon": "",
+        "show_on_map": "False",
+      },
+      {
+        "sub_sector_name": "Winery",
+        "sub_sector_icon": "",
+        "show_on_map": "False",
+      },
+      {
+        "sub_sector_name": "Coffee/Tea",
+        "sub_sector_icon": "",
+        "show_on_map": "False",
+      },
+      {
+        "sub_sector_name": "Meat Processing",
+        "sub_sector_icon": "",
+        "show_on_map": "False",
+      },
+      {
+        "sub_sector_name": "Fish Processing",
+        "sub_sector_icon": "",
+        "show_on_map": "False",
+      },
+      {
+        "sub_sector_name": "Commercial Kitchen",
+        "sub_sector_icon": "",
+        "show_on_map": "False",
+      },
     ]
   },
   "3" : {
@@ -46,16 +156,56 @@ var sectors = {
     "section_icon_1": "mdi mdi-silo",
     "section_icon_2": "mdi mdi-barn",
     "sub_sectors": [
-      {"sub_sector_name": "Aggregation Facility", "sub_sector_icon": ""},
-      {"sub_sector_name": "Packaging", "sub_sector_icon": ""},
-      {"sub_sector_name": "Food Broker/Sourcer", "sub_sector_icon": ""},
-      {"sub_sector_name": "Cold Storage", "sub_sector_icon": ""},
-      {"sub_sector_name": "Dry Storage", "sub_sector_icon": ""},
-      {"sub_sector_name": "Distributor", "sub_sector_icon": ""},
-      {"sub_sector_name": "Wholesaler", "sub_sector_icon": ""},
-      {"sub_sector_name": "Food Hub", "sub_sector_icon": ""},
-      {"sub_sector_name": "Cooperative", "sub_sector_icon": ""},
-      {"sub_sector_name": "Food Auction", "sub_sector_icon": ""},
+      {
+        "sub_sector_name": "Aggregation Facility",
+        "sub_sector_icon": "",
+        "show_on_map": "False",
+      },
+      {
+        "sub_sector_name": "Packaging",
+        "sub_sector_icon": "",
+        "show_on_map": "False",
+      },
+      {
+        "sub_sector_name": "Food Broker/Sourcer",
+        "sub_sector_icon": "",
+        "show_on_map": "False",
+      },
+      {
+        "sub_sector_name": "Cold Storage",
+        "sub_sector_icon": "",
+        "show_on_map": "False",
+      },
+      {
+        "sub_sector_name": "Dry Storage",
+        "sub_sector_icon": "",
+        "show_on_map": "False",
+      },
+      {
+        "sub_sector_name": "Distribution",
+        "sub_sector_icon": "",
+        "show_on_map": "False",
+      },
+      {
+        "sub_sector_name": "Wholesaler",
+        "sub_sector_icon": "",
+        "show_on_map": "False",
+      },
+      {
+        "sub_sector_name": "Food Hub",
+        "sub_sector_icon": "",
+        "show_on_map": "False",
+      },
+      {
+        "sub_sector_name": "Co-op",
+        "sub_sector_icon": "",
+        "show_on_map": "False",
+      },
+      {
+        "sub_sector_name": "Food Auction",
+        "sub_sector_icon": "",
+        "show_on_map": "False",
+      },
     ]
   },
   "4" : {
@@ -64,16 +214,56 @@ var sectors = {
     "section_icon_1": "mdi mdi-store",
     "section_icon_2": "mdi mdi-silverware-variant",
     "sub_sectors": [
-      {"sub_sector_name": "Convenience/Dollar Store", "sub_sector_icon": ""},
-      {"sub_sector_name": "Supermarket/Grocery Store", "sub_sector_icon": ""},
-      {"sub_sector_name": "Farmers Market", "sub_sector_icon": ""},
-      {"sub_sector_name": "CSA (Community Supported Agriculture)", "sub_sector_icon": ""},
-      {"sub_sector_name": "Farm Store/Stand", "sub_sector_icon": ""},
-      {"sub_sector_name": "Resaurant/Cafe", "sub_sector_icon": ""},
-      {"sub_sector_name": "Caterer", "sub_sector_icon": ""},
-      {"sub_sector_name": "Brewery", "sub_sector_icon": ""},
-      {"sub_sector_name": "Winery", "sub_sector_icon": ""},
-      {"sub_sector_name": "Institutional Dining Services", "sub_sector_icon": ""},
+      {
+        "sub_sector_name": "Convenience Store",
+        "sub_sector_icon": "",
+        "show_on_map": "False",
+      },
+      {
+        "sub_sector_name": "Grocery Store",
+        "sub_sector_icon": "",
+        "show_on_map": "False",
+      },
+      {
+        "sub_sector_name": "Farmers Market",
+        "sub_sector_icon": "",
+        "show_on_map": "False",
+      },
+      {
+        "sub_sector_name": "CSA",
+        "sub_sector_icon": "",
+        "show_on_map": "False",
+      },
+      {
+        "sub_sector_name": "Farm Store",
+        "sub_sector_icon": "",
+        "show_on_map": "False",
+      },
+      {
+        "sub_sector_name": "Resaurant",
+        "sub_sector_icon": "",
+        "show_on_map": "False",
+      },
+      {
+        "sub_sector_name": "Caterer",
+        "sub_sector_icon": "",
+        "show_on_map": "False",
+      },
+      {
+        "sub_sector_name": "Brewery",
+        "sub_sector_icon": "",
+        "show_on_map": "False",
+      },
+      {
+        "sub_sector_name": "Winery",
+        "sub_sector_icon": "",
+        "show_on_map": "False",
+      },
+      {
+        "sub_sector_name": "Institutional Dining Services",
+        "sub_sector_icon": "",
+        "show_on_map": "False",
+      },
     ]
   },
   "5" : {
@@ -82,10 +272,26 @@ var sectors = {
     "section_icon_1": "mdi mdi-dump-truck",
     "section_icon_2": "mdi mdi-trash-can-outline",
     "sub_sectors": [
-      {"sub_sector_name": "Gleaning", "sub_sector_icon": ""},
-      {"sub_sector_name": "Composting", "sub_sector_icon": ""},
-      {"sub_sector_name": "Landfill", "sub_sector_icon": ""},
-      {"sub_sector_name": "Organic Recycling", "sub_sector_icon": ""},
+      {
+        "sub_sector_name": "Gleaning",
+        "sub_sector_icon": "",
+        "show_on_map": "False",
+      },
+      {
+        "sub_sector_name": "Composting",
+        "sub_sector_icon": "",
+        "show_on_map": "False",
+      },
+      {
+        "sub_sector_name": "Landfill",
+        "sub_sector_icon": "",
+        "show_on_map": "False",
+      },
+      {
+        "sub_sector_name": "Organic Recycling",
+        "sub_sector_icon": "",
+        "show_on_map": "False",
+      },
     ]
   },
   "6" : {
@@ -94,14 +300,46 @@ var sectors = {
     "section_icon_1": "mdi mdi-school",
     "section_icon_2": "mdi mdi-information-outline",
     "sub_sectors": [
-      {"sub_sector_name": "Food Assitance", "sub_sector_icon": ""},
-      {"sub_sector_name": "Emergency Meal Sites", "sub_sector_icon": ""},
-      {"sub_sector_name": "Food Pantry", "sub_sector_icon": ""},
-      {"sub_sector_name": "Community Resources", "sub_sector_icon": ""},
-      {"sub_sector_name": "Training Opportunties", "sub_sector_icon": ""},
-      {"sub_sector_name": "Research & Education", "sub_sector_icon": ""},
-      {"sub_sector_name": "Business Resources", "sub_sector_icon": ""},
-      {"sub_sector_name": "Farmland Conservation", "sub_sector_icon": ""},
+      {
+        "sub_sector_name": "Food Assitance",
+        "sub_sector_icon": "",
+        "show_on_map": "False",
+      },
+      {
+        "sub_sector_name": "Emergency Meal Sites",
+        "sub_sector_icon": "",
+        "show_on_map": "False",
+      },
+      {
+        "sub_sector_name": "Food Pantry",
+        "sub_sector_icon": "",
+        "show_on_map": "False",
+      },
+      {
+        "sub_sector_name": "Community Resources",
+        "sub_sector_icon": "",
+        "show_on_map": "False",
+      },
+      {
+        "sub_sector_name": "Training Opportunties",
+        "sub_sector_icon": "",
+        "show_on_map": "False",
+      },
+      {
+        "sub_sector_name": "Research & Education",
+        "sub_sector_icon": "",
+        "show_on_map": "False",
+      },
+      {
+        "sub_sector_name": "Business Resources",
+        "sub_sector_icon": "",
+        "show_on_map": "False",
+      },
+      {
+        "sub_sector_name": "Farmland Conservation",
+        "sub_sector_icon": "",
+        "show_on_map": "False",
+      },
     ]
   },
 };

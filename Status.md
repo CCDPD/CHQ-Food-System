@@ -7,10 +7,14 @@
 4. User-friendliness
 
 
-### Filter System
+### Filter System - COMPLETED
 - The filtering of map points function and overall system needs to be worked out.
 - Currently I have it set up to filter by sector, not sub-sector.
 - From a user perspective, if they select Vegetables it is assumed they will see all points that have the Vegetable tag. In the same line of thinking, if they select Organic, it is assumed they will see all points that have the Organic tag. However, if they select Vegetables and Organic, should they see only points that have contain both tags or see all Vegetable points and all Organic points?
+
+1. When the subsector is checked, change the state of the "show on map" attribute in sectors.js
+2. When the subsector is checked, map reads sectors.js to see which layers are to be shows on the map.
+
 
 ### Data Collection & Formatting
 - Points may be in multiple sectors and will mostly likely have multiple sub-sectors.

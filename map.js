@@ -27,14 +27,34 @@ var geoJSON = L.geoJSON(points, {
 }).addTo(map);
 
 
-function filterPoints(x){
+
+function filterPoints(){
   map.removeLayer(geoJSON);
+  var filter_list = [];
+  for ( var a in sectors ){
+    for ( var b in sectors[a].sub_sectors ){
+      if(sectors[a].sub_sectors[b].show_on_map == "True") {
+        filter_list.push(sectors[a].sub_sectors[b].sub_sector_name);
+      };
+    };
+  };
   geoJSON = L.geoJSON(points, {
     filter: function(feature) {
-      if (feature.properties.Sector == x) {
+      if (filter_list.length == 0){
         return true;
       } else {
-        return false;
+        var true_list = [];
+        var c = feature.properties.Subsector.split(',');
+        for (var d in c) {
+          if (filter_list.includes(c[d])) {
+            true_list.push(c);
+          }
+        };
+        if (true_list.length == filter_list.length) {
+          return true
+        } else {
+          return false
+        }
       }
     },
     style: pointStyle,
