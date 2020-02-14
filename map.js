@@ -1,6 +1,6 @@
 // standard leaflet map setup
 var map = L.map('mapid');
-map.setView([42.350, -79.306], 9);
+map.setView([42.350, -79.306], 10);
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(map);
@@ -8,21 +8,28 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 
 //geocoded addresses
 
-function pointStyle(){
-  return {
-    color: 'blue',
-    opacity: 0.5,
-    weight: 2,
-  };
+var pointStyle = {
+  radius: 8,
+  fillColor: "#f55b5b",
+  color: "#000",
+  weight: 1,
+  opacity: 1,
+  fillOpacity: 0.8
 };
 
 function pointPopup(feature, layer){
-  var content = "<p>Name: " + feature.properties.Trade_Name + "<br />Sector: " + feature.properties.Sector + "<br />Sub-Sector: " + feature.properties.Subsector + "</p>";
+  var content = (
+    "<p id='popup-header'>" + feature.properties.Trade_Name + "</p>" +
+    "<p id='popup-sector'>" + feature.properties.Sector + "</p>" +
+    "<p id='popup-subsector'>" + feature.properties.Subsector + "</p>"
+  );
   layer.bindPopup(content);
 };
 
 var geoJSON = L.geoJSON(points, {
-  style: pointStyle(),
+  pointToLayer: function (feature, latlng) {
+    return L.circleMarker(latlng, pointStyle )
+  },
   onEachFeature: pointPopup
 }).addTo(map);
 
@@ -57,7 +64,9 @@ function filterPoints(){
         }
       }
     },
-    style: pointStyle,
+    pointToLayer: function (feature, latlng) {
+      return L.circleMarker(latlng, pointStyle )
+    },
     onEachFeature: pointPopup
   }).addTo(map);
 };
