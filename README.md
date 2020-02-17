@@ -59,3 +59,7 @@ The purpose of this project is to identify, connect, and promote assets within C
 - Distribution
 - Food Waste Management
 - Education & Outreach
+
+## Resources
+- https://www.nal.usda.gov/afsic/local-food-systems
+- https://clf.jhsph.edu/publications
