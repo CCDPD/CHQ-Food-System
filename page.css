@@ -15,7 +15,7 @@ html, body {
   width: 400px;
   position: fixed;
   left: 0px;
-  background-color: #addd8e;
+  background-color: hsl(96, 53%, 71%);
   overflow-y: auto;
 }
 

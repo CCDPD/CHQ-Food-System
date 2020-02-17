@@ -5,3 +5,18 @@
   bottom: 0;
   right: 0;
 }
+
+#popup-header {
+  background-color: hsl(96, 53%, 71%);
+  color: white;
+  font-family: 'Raleway', sans-serif;
+  margin: 0;
+  text-align: center;
+  font-size: 16pt;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+#popup-sector {}
+
+#popup-subsector {}

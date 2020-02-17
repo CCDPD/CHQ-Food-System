@@ -7,9 +7,7 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 
 // ESRI Geocoder
 var searchControl = L.esri.Geocoding.geosearch().addTo(map);
-
 var results = L.layerGroup().addTo(map);
-
 searchControl.on('results', function (data) {
   results.clearLayers();
   for (var i = data.results.length - 1; i >= 0; i--) {
@@ -18,17 +16,17 @@ searchControl.on('results', function (data) {
 });
 
 
-//geocoded addresses
-
-var pointStyle = {
-  radius: 8,
-  fillColor: "#f55b5b",
-  color: "#000",
-  weight: 1,
-  opacity: 1,
-  fillOpacity: 0.8
+var geojsonMarkerOptions = {
+    radius: 10,
+    fillColor: "hsl(96, 53%, 71%)",
+    color: "#000",
+    weight: 1.5,
+    opacity: 1,
+    fillOpacity: 0.75
 };
 
+
+// Points Popup
 function pointPopup(feature, layer){
   var content = (
     "<p id='popup-header'>" + feature.properties.Trade_Name + "</p>" +
@@ -38,15 +36,16 @@ function pointPopup(feature, layer){
   layer.bindPopup(content);
 };
 
+//GEOJSON Layer
 var geoJSON = L.geoJSON(points, {
   pointToLayer: function (feature, latlng) {
-    return L.circleMarker(latlng, pointStyle )
+    return L.circleMarker(latlng, geojsonMarkerOptions)
   },
   onEachFeature: pointPopup
 }).addTo(map);
 
 
-
+//FILTER GEOJSON
 function filterPoints(){
   map.removeLayer(geoJSON);
   var filter_list = [];
@@ -77,7 +76,7 @@ function filterPoints(){
       }
     },
     pointToLayer: function (feature, latlng) {
-      return L.circleMarker(latlng, pointStyle )
+      return L.circleMarker(latlng, geojsonMarkerOptions )
     },
     onEachFeature: pointPopup
   }).addTo(map);
