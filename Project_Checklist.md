@@ -20,3 +20,4 @@
 - [ ] 'All' tag to show one layer of an entire category
 - [ ] Show icon category in popup
 - [ ] If there are no points to show on a layer, don't show the layer in the list
+- [ ] Make sure not to post peoples personal information on github
