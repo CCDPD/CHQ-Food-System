@@ -15,14 +15,62 @@ searchControl.on('results', function (data) {
   }
 });
 
+var color_schemes = [
+  '#a6cee3',
+  '#1f78b4',
+  '#b2df8a',
+  '#33a02c',
+  '#fb9a99',
+  '#e31a1c',
+  '#fdbf6f',
+  '#ff7f00',
+  '#cab2d6',
+  '#6a3d9a',
+  '#ffff99',
+  '#b15928'
+];
 
-var geojsonMarkerOptions = {
-    radius: 10,
-    fillColor: "hsl(96, 53%, 71%)",
-    color: "#000",
-    weight: 1.5,
-    opacity: 1,
-    fillOpacity: 0.75
+function initialStyle(a) {
+  if (a == "Agriculture & Food Production"){
+    return '#b2df8a'
+  } else if (a == "Processing & Value-Added Products"){
+    return '#33a02c'
+  } else if (a == "Aggregation & Wholesale"){
+    return '#a6cee3'
+  } else if (a == "Local Food Outlets"){
+    return '#1f78b4'
+  } else if (a == "Food Loss Management"){
+    return '#fb9a99'
+  } else if (a == "Education & Support"){
+    return '#e31a1c'
+  };
+};
+
+function getIcon(d) {
+  for (var a in sectors) {
+      if (sectors[a].section_title == d ){
+        return "mdi " + sectors[a].section_icon_1;
+    };
+  };
+};
+
+function getColor(a,b) {
+  if (a == "home") {
+    return initialStyle(b);
+  } else {
+    return color_schemes[Math.floor(Math.random() * color_schemes.length)];
+  };
+};
+
+function geojsonMarkerOptions(feature, type) {
+  var icon_choice = getIcon(feature.properties.Sector);
+  var color_choice = getColor(type, feature.properties.Sector);
+  return L.divIcon({
+    className: 'custom-div-icon',
+    html: "<div style='background-color:" + color_choice + ";' class='marker-pin'></div><i class='" + icon_choice + "'></i>",
+    iconSize: [30, 42],
+    iconAnchor: [15, 42]
+  });
 };
 
 
@@ -39,13 +87,16 @@ function pointPopup(feature, layer){
 //GEOJSON Layer
 var geoJSON = L.geoJSON(points, {
   pointToLayer: function (feature, latlng) {
-    return L.circleMarker(latlng, geojsonMarkerOptions)
+    // return L.circleMarker(latlng, geojsonMarkerOptions(feature));
+    return L.marker(latlng, {
+      icon: geojsonMarkerOptions(feature, "home")
+    });
   },
   onEachFeature: pointPopup
 }).addTo(map);
 
 
-//FILTER GEOJSON
+//FILTER GEOJSON SIMPLE VERSION
 function filterPoints(){
   map.removeLayer(geoJSON);
   var filter_list = [];
@@ -76,8 +127,61 @@ function filterPoints(){
       }
     },
     pointToLayer: function (feature, latlng) {
-      return L.circleMarker(latlng, geojsonMarkerOptions )
+      // return L.circleMarker(latlng, geojsonMarkerOptions(feature));
+      if (filter_list.length == 0){
+        var type = "home"
+      } else {
+        var type = "layer"
+      };
+      return L.marker(latlng, {
+        icon: geojsonMarkerOptions(feature, type)
+      });
     },
     onEachFeature: pointPopup
   }).addTo(map);
 };
+
+//FILTER GEOJSON COMPLEX VERSION
+// function filterPoints(){
+//   map.removeLayer(geoJSON);
+//   var filter_list = [];
+//   for ( var a in sectors ){
+//     for ( var b in sectors[a].sub_sectors ){
+//       if(sectors[a].sub_sectors[b].show_on_map == "True") {
+//         filter_list.push(sectors[a].sub_sectors[b].sub_sector_name);
+//       };
+//     };
+//   };
+//   geoJSON = L.geoJSON(points, {
+//     filter: function(feature) {
+//       if (filter_list.length == 0){
+//         return true;
+//       } else {
+//         var true_list = [];
+//         var c = feature.properties.Subsector.split(',');
+//         for (var d in c) {
+//           if (filter_list.includes(c[d])) {
+//             true_list.push(c);
+//           }
+//         };
+//         if (true_list.length == filter_list.length) {
+//           return true
+//         } else {
+//           return false
+//         }
+//       }
+//     },
+//     pointToLayer: function (feature, latlng) {
+//       // return L.circleMarker(latlng, geojsonMarkerOptions(feature));
+//       if (filter_list.length == 0){
+//         var type = "home"
+//       } else {
+//         var type = "layer"
+//       };
+//       return L.marker(latlng, {
+//         icon: geojsonMarkerOptions(feature, type)
+//       });
+//     },
+//     onEachFeature: pointPopup
+//   }).addTo(map);
+// };

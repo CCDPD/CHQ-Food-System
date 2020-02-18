@@ -2,8 +2,8 @@ var sectors = {
   "1" : {
     "sector_name" : "Production",
     "section_title": "Agriculture & Food Production",
-    "section_icon_1": "mdi mdi-sprout",
-    "section_icon_2": "mdi mdi-tractor",
+    "section_icon_1": "mdi-sprout",
+    "section_icon_2": "mdi-tractor",
     "sub_sectors": [
       {
         "sub_sector_name": "Vegetables",
@@ -100,8 +100,8 @@ var sectors = {
   "2" : {
     "sector_name" : "Processing",
     "section_title": "Processing & Value-Added Products",
-    "section_icon_1": "mdi mdi-fruit-grapes-outline",
-    "section_icon_2": "mdi mdi-glass-wine",
+    "section_icon_1": "mdi-dolly",
+    "section_icon_2": "mdi-glass-wine",
     "sub_sectors": [
       {
         "sub_sector_name": "Dairy",
@@ -153,8 +153,8 @@ var sectors = {
   "3" : {
     "sector_name" : "Aggregation",
     "section_title": "Aggregation & Wholesale",
-    "section_icon_1": "mdi mdi-silo",
-    "section_icon_2": "mdi mdi-barn",
+    "section_icon_1": "mdi-silo",
+    "section_icon_2": "mdi-barn",
     "sub_sectors": [
       {
         "sub_sector_name": "Aggregation Facility",
@@ -211,8 +211,8 @@ var sectors = {
   "4" : {
     "sector_name" : "Distribution",
     "section_title": "Local Food Outlets",
-    "section_icon_1": "mdi mdi-store",
-    "section_icon_2": "mdi mdi-silverware-variant",
+    "section_icon_1": "mdi-store",
+    "section_icon_2": "mdi-silverware-variant",
     "sub_sectors": [
       {
         "sub_sector_name": "Convenience Store",
@@ -269,8 +269,8 @@ var sectors = {
   "5" : {
     "sector_name" : "Waste",
     "section_title": "Food Loss Management",
-    "section_icon_1": "mdi mdi-dump-truck",
-    "section_icon_2": "mdi mdi-trash-can-outline",
+    "section_icon_1": "mdi-dump-truck",
+    "section_icon_2": "mdi-trash-can-outline",
     "sub_sectors": [
       {
         "sub_sector_name": "Gleaning",
@@ -297,8 +297,8 @@ var sectors = {
   "6" : {
     "sector_name" : "Education",
     "section_title": "Education & Support",
-    "section_icon_1": "mdi mdi-school",
-    "section_icon_2": "mdi mdi-information-outline",
+    "section_icon_1": "mdi-school",
+    "section_icon_2": "mdi-information-outline",
     "sub_sectors": [
       {
         "sub_sector_name": "Food Assitance",

@@ -18,7 +18,7 @@ for ( var a in sectors) {
   sidebar.appendChild(section);
   // Add Sector Icon
   var section_icon = document.createElement("I");
-  section_icon.className = sectors[a].section_icon_1;
+  section_icon.className = "mdi " + sectors[a].section_icon_1;
   section.appendChild(section_icon);
   // Add Sector Title
   var section_title = document.createElement("P");
