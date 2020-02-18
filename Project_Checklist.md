@@ -8,6 +8,7 @@
 - [ ] Map Legend
 - [ ] transfer sample dataset to new google sheet format
 - [ ] Page Content (text, resource links, graphics, etc.)
+- [ ] Make popups bind to divicon correctly
 - [X] Address search bar
 - [X] Form Google Sheet Geocoder Script
 
