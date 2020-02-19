@@ -30,6 +30,18 @@ var color_schemes = [
   '#b15928'
 ];
 
+function generateRamp(){
+  var ramp = {};
+  for (var a in sectors){
+    for (var b in sectors[a].sub_sectors){
+      ramp[sectors[a].sub_sectors[b].sub_sector_name] = color_schemes[Math.floor(Math.random() * color_schemes.length)]
+    };
+  };
+  return ramp;
+};
+
+generateRamp();
+
 function initialStyle(a) {
   if (a == "Agriculture & Food Production"){
     return '#b2df8a'
@@ -54,11 +66,11 @@ function getIcon(d) {
   };
 };
 
-function getColor(a,b,c,d) {
+function getColor(a,b,c) {
   if (b == "home") {
     return initialStyle(a.properties.Sector);
   } else {
-    return color_schemes[Math.floor(Math.random() * color_schemes.length)];
+    return ramp[a.properties.Subsector];
   };
 };
 
