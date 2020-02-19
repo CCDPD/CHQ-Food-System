@@ -54,17 +54,18 @@ function getIcon(d) {
   };
 };
 
-function getColor(a,b) {
-  if (a == "home") {
-    return initialStyle(b);
+function getColor(a,b,c,d) {
+  if (b == "home") {
+    return initialStyle(a.properties.Sector);
   } else {
     return color_schemes[Math.floor(Math.random() * color_schemes.length)];
   };
 };
 
-function geojsonMarkerOptions(feature, type) {
+
+function geojsonMarkerOptions(feature, type, filter_list) {
   var icon_choice = getIcon(feature.properties.Sector);
-  var color_choice = getColor(type, feature.properties.Sector);
+  var color_choice = getColor(feature, type, filter_list);
   return L.divIcon({
     className: 'custom-div-icon',
     html: "<div style='background-color:" + color_choice + ";' class='marker-pin'></div><i class='" + icon_choice + "'></i>",
@@ -131,7 +132,7 @@ function filterPoints(){
         var type = "layer"
       };
       return L.marker(latlng, {
-        icon: geojsonMarkerOptions(feature, type)
+        icon: geojsonMarkerOptions(feature, type, filter_list)
       });
     },
     onEachFeature: pointPopup
