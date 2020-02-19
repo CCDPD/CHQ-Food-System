@@ -2,13 +2,13 @@
 
 ## Before Council Meeting
 - [ ] Municipal Boundaries
-- [ ] Unique Symbology
-- [ ] Filter System  
-- [ ] Popups (Address, Category, Tags, Contact Info, Website, Social Media)
-- [ ] Map Legend
+- [X] Unique Symbology
+- [X] Filter System  
+- [X] Popups (Address, Category, Tags, Contact Info, Website, Social Media)
+- [X] Map Legend
 - [ ] transfer sample dataset to new google sheet format
 - [ ] Page Content (text, resource links, graphics, etc.)
-- [ ] Make popups bind to divicon correctly
+- [X] Make popups bind to divicon correctly
 - [X] Address search bar
 - [X] Form Google Sheet Geocoder Script
 
@@ -21,3 +21,4 @@
 - [ ] Show icon category in popup
 - [ ] If there are no points to show on a layer, don't show the layer in the list
 - [ ] Make sure not to post peoples personal information on github
+- [ ] Multiple tag issue (winery being both a processing center and local food outlet)

@@ -6,6 +6,12 @@ var sectors = {
     "sector_color": "#b2df8a",
     "sub_sectors": [
       {
+        "sub_sector_name": "Farm",
+        "sub_sector_icon": "",
+        "show_on_map": "False",
+        "color":"#a6cee3",
+      },
+      {
         "sub_sector_name": "Vegetables",
         "sub_sector_icon": "",
         "show_on_map": "False",

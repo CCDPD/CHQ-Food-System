@@ -36,33 +36,6 @@ var color_schemes = [
   '#303030',
 ];
 
-function generateRamp(){
-  var ramp = {};
-  for (var a in sectors){
-    for (var b in sectors[a].sub_sectors){
-      ramp[sectors[a].sub_sectors[b].sub_sector_name] = color_schemes[Math.floor(Math.random() * color_schemes.length)]
-    };
-  };
-  return ramp;
-};
-
-generateRamp();
-
-function initialStyle(a) {
-  if (a == "Agriculture & Food Production"){
-    return '#b2df8a'
-  } else if (a == "Processing & Value-Added Products"){
-    return '#33a02c'
-  } else if (a == "Aggregation & Wholesale"){
-    return '#a6cee3'
-  } else if (a == "Local Food Outlets"){
-    return '#1f78b4'
-  } else if (a == "Food Loss Management"){
-    return '#fb9a99'
-  } else if (a == "Education & Support"){
-    return '#e31a1c'
-  };
-};
 
 function getIcon(d) {
   for (var a in sectors) {
@@ -107,11 +80,54 @@ function geojsonMarkerOptions(feature, type, filter_list) {
 function pointPopup(feature, layer){
   var content = (
     "<p id='popup-header'>" + feature.properties.Trade_Name + "</p>" +
+    "<p><a id='popup-address' href='https://www.google.com/maps/place/" + feature.properties.Match_addr +"'>" + feature.properties.Match_addr + "</a></p>" +
     "<p id='popup-sector'>" + feature.properties.Sector + "</p>" +
     "<p id='popup-subsector'>" + feature.properties.Subsector + "</p>"
   );
-  layer.bindPopup(content);
+  var websiteHtml = "<p><a id='popup-website' href='" + feature.properties.Website + "'>" + feature.properties.Website + "</a></p>";
+  if(feature.properties.Website != null){
+    content = content + websiteHtml
+  };
+  layer.bindPopup(content, {
+    offset: new L.Point(0,-20),
+    }
+  );
 };
+
+var legend = L.control({position: 'bottomleft'});
+
+legend.onAdd = function (map) {
+  var div = L.DomUtil.create('div', 'info legend');
+  var grades = [];
+  var labels = [];
+  var icons = [];
+  for (var a in sectors) {
+    for (var b in sectors[a].sub_sectors) {
+      if (sectors[a].sub_sectors[b].show_on_map == 'True'){
+        grades.push(sectors[a].sub_sectors[b].color);
+        labels.push(sectors[a].sub_sectors[b].sub_sector_name);
+        icons.push(sectors[a].section_icon_1);
+      };
+    };
+  };
+  if (grades.length == 0){
+    for (var a in sectors) {
+      grades.push(sectors[a].sector_color);
+      labels.push(sectors[a].section_title);
+      icons.push(sectors[a].section_icon_1);
+    };
+  };
+  for (var i = 0; i < grades.length; i++) {
+    div.innerHTML +=
+    // "<div style='background-color:" + grades[i] +
+    // ";' class='marker-pin'></div><i class='" + icons[i] +
+    // "'></i>" + labels[i] + '<br>';
+    '<i style="border-color:' + grades[i] + '" class="mdi ' + icons[i] + '"></i> ' + labels[i] + '<br/>';
+  };
+
+  return div;
+};
+legend.addTo(map);
 
 //GEOJSON Layer
 var geoJSON = L.geoJSON(points, {
@@ -165,7 +181,11 @@ function filterPoints(){
     },
     onEachFeature: pointPopup
   }).addTo(map);
+  legend.remove(map);
+  legend.addTo(map);
 };
+
+
 
 //FILTER GEOJSON COMPLEX VERSION
 // function filterPoints(){

@@ -19,6 +19,10 @@
 
 #popup-sector {}
 
+#popup-address {
+  padding-top: 5px;
+}
+
 #popup-subsector {}
 
 .marker-pin {
@@ -51,3 +55,26 @@
    right: 0;
    margin: 10px auto;
    text-align: center;
+}
+
+ .legend {
+     color: #555;
+ }
+
+ .info {
+     padding: 6px 8px;
+     background: white;
+     background: rgba(255,255,255,0.8);
+     box-shadow: 0 0 15px rgba(0,0,0,0.2);
+     border-radius: 5px;
+ }
+
+ .legend i {
+   background-color: white;
+   color: black;
+   font-size: 16pt;
+   margin-right: 8px;
+   line-height: 35px;
+   border: 5px solid;
+   border-radius: 150px;
+ }
