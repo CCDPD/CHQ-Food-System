@@ -27,7 +27,13 @@ var color_schemes = [
   '#cab2d6',
   '#6a3d9a',
   '#ffff99',
-  '#b15928'
+  '#b15928',
+  '#1fbb8c',
+  '#71f93f',
+  '#6b0296',
+  '#ed5184',
+  '#a18b89',
+  '#303030',
 ];
 
 function generateRamp(){
@@ -68,9 +74,19 @@ function getIcon(d) {
 
 function getColor(a,b,c) {
   if (b == "home") {
-    return initialStyle(a.properties.Sector);
+    for (var d in sectors) {
+      if (sectors[d].section_title == a.properties.Sector) {
+        return sectors[d].sector_color
+      };
+    };
   } else {
-    return ramp[a.properties.Subsector];
+    for (var d in sectors) {
+      for (var e in sectors[d].sub_sectors) {
+        if (sectors[d].sub_sectors[e].sub_sector_name == a.properties.Subsector) {
+          return sectors[d].sub_sectors[e].color
+        };
+      };
+    };
   };
 };
 
