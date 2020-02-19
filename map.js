@@ -116,15 +116,12 @@ function filterPoints(){
         var c = feature.properties.Subsector.split(',');
         for (var d in c) {
           if (filter_list.includes(c[d])) {
-            true_list.push(c);
-          }
-        };
-        if (true_list.length == filter_list.length) {
-          return true
-        } else {
+            return true
+          } else {
           return false
-        }
-      }
+          };
+        };
+      };
     },
     pointToLayer: function (feature, latlng) {
       // return L.circleMarker(latlng, geojsonMarkerOptions(feature));
