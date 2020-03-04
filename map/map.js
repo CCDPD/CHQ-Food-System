@@ -5,7 +5,7 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(map);
 
-// ESRI Geocoder
+// Add ESRI Geocoder to Map
 var searchControl = L.esri.Geocoding.geosearch().addTo(map);
 var results = L.layerGroup().addTo(map);
 searchControl.on('results', function (data) {
@@ -14,28 +14,6 @@ searchControl.on('results', function (data) {
     results.addLayer(L.marker(data.results[i].latlng));
   }
 });
-
-var color_schemes = [
-  '#a6cee3',
-  '#1f78b4',
-  '#b2df8a',
-  '#33a02c',
-  '#fb9a99',
-  '#e31a1c',
-  '#fdbf6f',
-  '#ff7f00',
-  '#cab2d6',
-  '#6a3d9a',
-  '#ffff99',
-  '#b15928',
-  '#1fbb8c',
-  '#71f93f',
-  '#6b0296',
-  '#ed5184',
-  '#a18b89',
-  '#303030',
-];
-
 
 function getIcon(d) {
   for (var a in sectors) {
@@ -63,7 +41,6 @@ function getColor(a,b,c) {
   };
 };
 
-
 function geojsonMarkerOptions(feature, type, filter_list) {
   var icon_choice = getIcon(feature.properties.Sector);
   var color_choice = getColor(feature, type, filter_list);
@@ -75,8 +52,7 @@ function geojsonMarkerOptions(feature, type, filter_list) {
   });
 };
 
-
-// Points Popup
+// Points Popup Function
 function pointPopup(feature, layer){
   var content = (
     "<p id='popup-header'>" + feature.properties.Trade_Name + "</p>" +
@@ -94,8 +70,8 @@ function pointPopup(feature, layer){
   );
 };
 
+//Add Dynamic Legend to Map
 var legend = L.control({position: 'bottomleft'});
-
 legend.onAdd = function (map) {
   var div = L.DomUtil.create('div', 'info legend');
   var grades = [];
@@ -118,25 +94,16 @@ legend.onAdd = function (map) {
     };
   };
   for (var i = 0; i < grades.length; i++) {
-    div.innerHTML +=
-    // "<div style='background-color:" + grades[i] +
-    // ";' class='marker-pin'></div><i class='" + icons[i] +
-    // "'></i>" + labels[i] + '<br>';
-    '<i style="border-color:' + grades[i] + '" class="mdi ' + icons[i] + '"></i> ' + labels[i] + '<br/>';
+    div.innerHTML += '<i style="border-color:' + grades[i] + '" class="mdi ' + icons[i] + '"></i> ' + labels[i] + '<br/>';
   };
-
   return div;
 };
 legend.addTo(map);
 
-//GEOJSON Layer
+//Add GEOJSON Point Layer to Map
 var geoJSON = L.geoJSON(points, {
   pointToLayer: function (feature, latlng) {
-    // return L.circleMarker(latlng, geojsonMarkerOptions(feature));
-    return L.marker(latlng, {
-      icon: geojsonMarkerOptions(feature, "home")
-    });
-  },
+    return L.marker(latlng, {icon: geojsonMarkerOptions(feature, "home")});},
   onEachFeature: pointPopup
 }).addTo(map);
 
@@ -169,7 +136,6 @@ function filterPoints(){
       };
     },
     pointToLayer: function (feature, latlng) {
-      // return L.circleMarker(latlng, geojsonMarkerOptions(feature));
       if (filter_list.length == 0){
         var type = "home"
       } else {
@@ -184,50 +150,3 @@ function filterPoints(){
   legend.remove(map);
   legend.addTo(map);
 };
-
-
-
-//FILTER GEOJSON COMPLEX VERSION
-// function filterPoints(){
-//   map.removeLayer(geoJSON);
-//   var filter_list = [];
-//   for ( var a in sectors ){
-//     for ( var b in sectors[a].sub_sectors ){
-//       if(sectors[a].sub_sectors[b].show_on_map == "True") {
-//         filter_list.push(sectors[a].sub_sectors[b].sub_sector_name);
-//       };
-//     };
-//   };
-//   geoJSON = L.geoJSON(points, {
-//     filter: function(feature) {
-//       if (filter_list.length == 0){
-//         return true;
-//       } else {
-//         var true_list = [];
-//         var c = feature.properties.Subsector.split(',');
-//         for (var d in c) {
-//           if (filter_list.includes(c[d])) {
-//             true_list.push(c);
-//           }
-//         };
-//         if (true_list.length == filter_list.length) {
-//           return true
-//         } else {
-//           return false
-//         }
-//       }
-//     },
-//     pointToLayer: function (feature, latlng) {
-//       // return L.circleMarker(latlng, geojsonMarkerOptions(feature));
-//       if (filter_list.length == 0){
-//         var type = "home"
-//       } else {
-//         var type = "layer"
-//       };
-//       return L.marker(latlng, {
-//         icon: geojsonMarkerOptions(feature, type)
-//       });
-//     },
-//     onEachFeature: pointPopup
-//   }).addTo(map);
-// };
