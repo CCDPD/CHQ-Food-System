@@ -7,7 +7,12 @@ html, body {
   height: 100%;
   /* font-family: 'Raleway', sans-serif; */
   font-family: 'Roboto', sans-serif;
-  font-size: 12pt;
+  font-size: 11pt;
+}
+i {
+  font-family: 'Raleway', sans-serif;
+  font-style: normal;
+
 }
 
 #sidebar-left {
@@ -47,6 +52,13 @@ html, body {
  display: none;
  overflow: hidden;
  background-color:  white;
+}
+
+.description {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 12pt;
+  margin-bottom: 10px;
+  margin-top: 10px;
 }
 
 #page-header {
@@ -118,8 +130,4 @@ input:checked + .slider:before {
 
 .slider.round:before {
   border-radius: 50%;
-}
-
-.switch_label {
-  font-size: 15px;
 }

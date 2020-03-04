@@ -53,7 +53,7 @@ The purpose of this project is to identify, connect, and promote assets within C
 ## Asset Types
 
 ### Agriculture & Food Production
-Food begins with agriculture and farming. The food we consume must first be grown, cultivated, and harvested.  Agriculture & Food Production describes any organization or business that produces raw food products.
+Food begins with agriculture and farming. The food we consume must first be grown, cultivated, and harvested. Agriculture & Food Production describes any organization or business that produces raw food products.
 
 ### Processing & Value-Added Products
 Food processing can provide benefits such as giving foods a longer shelf life, reducing food safety risks, and creating value-added products. Processing & Value-Added Products describes any organization or business that transforms raw foods and ingredients into new products.
@@ -65,7 +65,7 @@ Once food has been produced or processed, it needs to make its way to food outle
 Food makes its way to the consumer and our plates in a variety of ways. Food Outlet describes any organization or business that sells food directly to consumers. This includes supermarkets, restaurants, dining halls, and other places an individual can purchase food.
 
 ### Food Loss Management
-In the United States, over one-third of all available food goes uneaten through loss or waste. Food Loss Management describes any organization or business that manages waste produced at any stage of the food system. 
+In the United States, over one-third of all available food goes uneaten through loss or waste. Food Loss Management describes any organization or business that manages waste produced at any stage of the food system.
 
 ### Education & Support
 There are a variety of resources for people and organizations within the food system. Education & Support describes any organization or business that provides assistance to the community at any stage of the food system.

@@ -58,7 +58,9 @@
 }
 
  .legend {
-     color: #555;
+     color: black;
+     font-family: 'Raleway', sans-serif;
+     font-size: 10pt;
  }
 
  .info {

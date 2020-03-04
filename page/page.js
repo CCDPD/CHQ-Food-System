@@ -28,7 +28,13 @@ for ( var a in sectors) {
   var section_content = document.createElement("DIV");
   section_content.className = "content";
   sidebar.appendChild(section_content);
-  // Dynamically add sub-sectors to sector content
+  // Add Sector Description to Content div
+  var section_descrip = document.createElement("DIV");
+  section_descrip.className = "description";
+  section_content.appendChild(section_descrip);
+  section_descrip.innerHTML = sectors[a].section_description;
+
+  // Dynamically add sub-sectors to sector content div
   for ( var b in sectors[a].sub_sectors) {
     var sub_sections = document.createElement("DIV");
     sub_sections.className = "switch_label";
