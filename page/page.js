@@ -14,7 +14,7 @@ for ( var a in sectors) {
   var section = document.createElement("BUTTON");
   section.type = "button";
   section.className = "collapsible";
-  section.idName = sectors[a].sector_name;
+  section.id = sectors[a].sector_name;
   sidebar.appendChild(section);
   // Add Sector Icon
   var section_icon = document.createElement("I");
@@ -51,6 +51,30 @@ for ( var a in sectors) {
   };
 };
 
+// Add additional resources
+var add_resources_bttn = document.createElement("BUTTON");
+add_resources_bttn.type = "button";
+add_resources_bttn.id = "non-collapsible";
+add_resources_bttn.className = "collapsible";
+sidebar.appendChild(add_resources_bttn);
+var add_resources_title = document.createElement("I");
+add_resources_title.innerHTML = "Contact Us";
+add_resources_bttn.appendChild(add_resources_title);
+var add_resources_content = document.createElement("DIV");
+add_resources_content.className = "content";
+add_resources_content.style = "display: block;";
+add_resources_content.innerHTML = (
+  "<ul style:'list-style-type: none;'>" +
+  "<li><a href='http://37.60.236.155/~planning/' class='add_resources'><span class='mdi mdi-web'></span></a>Planning chautauqua Website</li>" +
+  "<li><a href='mailto:kellerm@co.chautauqua.ny.us' class='add_resources'><span class='mdi mdi-email-newsletter'></span></a>KellerM@co.chautauqua.ny.us</li>" +
+  "<li><a href='tel:7167534066' class='add_resources'><span class='mdi mdi-phone'></span></a>(716) 753 4066</li>" +
+  "<li><a href='https://github.com/bren96/CHQ-Food-System' class='add_resources'><span class='mdi mdi-github-circle'></span></a>Github Project Repository</li>" +
+  "</ul>"
+);
+sidebar.appendChild(add_resources_content);
+
+
+// Collapsible section functions
 var coll = document.getElementsByClassName("collapsible");
 var i;
 

@@ -12,7 +12,12 @@ html, body {
 i {
   font-family: 'Raleway', sans-serif;
   font-style: normal;
+}
 
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
 #sidebar-left {
@@ -35,6 +40,20 @@ i {
  text-align: left;
  outline: none;
  font-size: 18pt;
+}
+
+#non-collapsible {
+ background-color:hsl(113, 33%, 60%);
+ cursor: pointer;
+ padding: 18px;
+ width: 100%;
+ border: 0.5px solid hsl(96, 34%, 60%);
+ text-align: left;
+ outline: none;
+ font-size: 18pt;
+ letter-spacing: 2px;
+ color: hsl(0, 0%, 100%);
+ font-family: 'Raleway', sans-serif;
 }
 
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
@@ -66,7 +85,13 @@ i {
   letter-spacing: 2px;
   color: hsl(0, 0%, 100%);
   font-family: 'Raleway', sans-serif;
-  background-color:hsl(113, 33%, 60%)
+  background-color:hsl(113, 33%, 60%);
+}
+
+#page-header-img {
+  display: block;
+  text-align: center;
+  margin: auto;
 }
 
 /* The switch - the box around the slider */
@@ -130,4 +155,9 @@ input:checked + .slider:before {
 
 .slider.round:before {
   border-radius: 50%;
+}
+
+.add_resources {
+  font-size: 36pt;
+  color: hsl(113, 33%, 60%);
 }
