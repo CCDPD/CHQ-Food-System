@@ -62,7 +62,7 @@ Food processing can provide benefits such as giving foods a longer shelf life, r
 Once food has been produced or processed, it needs to make its way to food outlets where it can be sold to consumers. Products may be aggregated together from multiple sources to create a larger and more reliable supply to meet market demands. Aggregation, Distribution, & Storage describes any organization or business that collects, transports, or preserves raw or processed food products prior to purchasing by consumers.
 
 ### Food Retail/Direct Sales
-Food makes its way to the consumer and our plates in a variety of ways. Food Outlet describes any organization or business that sells food directly to consumers. This includes supermarkets, restaurants, dining halls, and other places an individual can purchase food.
+Food makes its way to the consumer and our plates in a variety of ways. Food Retail/Direct Sales describes any organization or business that sells food directly to consumers. This includes supermarkets, restaurants, dining halls, and other locations an individual can purchase food.
 
 ### Food Loss Management
 In the United States, over one-third of all available food goes uneaten through loss or waste. Food Loss Management describes any organization or business that manages waste produced at any stage of the food system.

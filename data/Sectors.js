@@ -257,7 +257,7 @@ var sectors = {
   "4" : {
     "sector_name" : "Distribution",
     "section_title": "Food Retail/Direct Sales",
-    "section_description": "Food makes its way to the consumer and our plates in a variety of ways. Food Outlet describes any organization or business that sells food directly to consumers. This includes supermarkets, restaurants, dining halls, and other places an individual can purchase food.",
+    "section_description": "Food makes its way to the consumer and our plates in a variety of ways. Food Retail/Direct Sales describes any organization or business that sells food directly to consumers. This includes supermarkets, restaurants, dining halls, and other locations an individual can purchase food.",
     "section_icon_1": "mdi-store",
     "sector_color": "#1f78b4",
     "sub_sectors": [
