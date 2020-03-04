@@ -71,7 +71,7 @@ function pointPopup(feature, layer){
 };
 
 //Add Dynamic Legend to Map
-var legend = L.control({position: 'bottomleft'});
+var legend = L.control({position: 'bottomright'});
 legend.onAdd = function (map) {
   var div = L.DomUtil.create('div', 'info legend');
   var grades = [];

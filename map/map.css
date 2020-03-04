@@ -59,14 +59,14 @@
 
  .legend {
      color: black;
-     font-family: 'Raleway', sans-serif;
-     font-size: 10pt;
+     font-family: 'Roboto', sans-serif;
+     font-size: 12pt;
  }
 
  .info {
      padding: 6px 8px;
      background: white;
-     background: rgba(255,255,255,0.8);
+     background: rgba(255,255,255,0.9);
      box-shadow: 0 0 15px rgba(0,0,0,0.2);
      border-radius: 5px;
  }
