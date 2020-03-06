@@ -7,116 +7,77 @@ var sectors = {
     "sector_color": "#b2df8a",
     "sub_sectors": [
       {
-        "sub_sector_name": "Farm",
-        "sub_sector_icon": "",
+        "sub_sector_name": "Community Garden",
         "show_on_map": "False",
         "color":"#a6cee3",
       },
       {
-        "sub_sector_name": "Vegetables",
-        "sub_sector_icon": "",
-        "show_on_map": "False",
-        "color":"#a6cee3",
-      },
-      {
-        "sub_sector_name": "Fruits/Berries",
-        "sub_sector_icon": "",
+        "sub_sector_name": "Dairy",
         "show_on_map": "False",
         "color":"#1f78b4",
       },
       {
-        "sub_sector_name": "Meat",
-        "sub_sector_icon": "",
+        "sub_sector_name": "Eggs",
         "show_on_map": "False",
         "color":"#b2df8a",
       },
       {
-        "sub_sector_name": "Eggs",
-        "sub_sector_icon": "",
+        "sub_sector_name": "Fish",
         "show_on_map": "False",
         "color":"#33a02c",
       },
       {
-        "sub_sector_name": "Dairy",
-        "sub_sector_icon": "",
+        "sub_sector_name": "Flowers",
         "show_on_map": "False",
         "color":"#fb9a99",
       },
       {
-        "sub_sector_name": "Fish",
-        "sub_sector_icon": "",
+        "sub_sector_name": "Fruits/Berries",
         "show_on_map": "False",
         "color":"#e31a1c",
       },
       {
         "sub_sector_name": "Grains",
-        "sub_sector_icon": "",
         "show_on_map": "False",
         "color":"#fdbf6f",
       },
       {
-        "sub_sector_name": "Nuts",
-        "sub_sector_icon": "",
+        "sub_sector_name": "Honey",
         "show_on_map": "False",
         "color":"#ff7f00",
       },
       {
-        "sub_sector_name": "Honey",
-        "sub_sector_icon": "",
+        "sub_sector_name": "Herbs",
         "show_on_map": "False",
         "color":"#cab2d6",
       },
       {
-        "sub_sector_name": "Maple Syrup",
-        "sub_sector_icon": "",
+        "sub_sector_name": "Hops",
         "show_on_map": "False",
         "color":"#6a3d9a",
       },
       {
-        "sub_sector_name": "Herbs",
-        "sub_sector_icon": "",
+        "sub_sector_name": "Maple Syrup",
         "show_on_map": "False",
         "color":"#ffff99",
       },
       {
-        "sub_sector_name": "Hops",
-        "sub_sector_icon": "",
+        "sub_sector_name": "Meat",
         "show_on_map": "False",
         "color":"#b15928",
       },
       {
-        "sub_sector_name": "Community Garden",
-        "sub_sector_icon": "",
+        "sub_sector_name": "Nuts",
         "show_on_map": "False",
         "color":"#1fbb8c",
       },
       {
-        "sub_sector_name": "Food Safety Plan",
-        "sub_sector_icon": "",
+        "sub_sector_name": "Vegetables",
         "show_on_map": "False",
         "color":"#71f93f",
       },
       {
-        "sub_sector_name": "Certified Organic",
-        "sub_sector_icon": "",
-        "show_on_map": "False",
-        "color":"#6b0296",
-      },
-      {
-        "sub_sector_name": "USDA GAP",
-        "sub_sector_icon": "",
-        "show_on_map": "False",
-        "color":"#ed5184",
-      },
-      {
-        "sub_sector_name": "GFSI Equivalent",
-        "sub_sector_icon": "",
-        "show_on_map": "False",
-        "color":"#a18b89",
-      },
-      {
         "sub_sector_name": "Other",
-        "sub_sector_icon": "",
         "show_on_map": "False",
         "color":"#303030",
       }
@@ -130,59 +91,85 @@ var sectors = {
     "sector_color": "#33a02c",
     "sub_sectors": [
       {
-        "sub_sector_name": "Dairy",
-        "sub_sector_icon": "",
+        "sub_sector_name": "Baked Goods",
         "show_on_map": "False",
         "color":"#a6cee3",
       },
       {
-        "sub_sector_name": "Grains/Baked Goods",
-        "sub_sector_icon": "",
+        "sub_sector_name": "Brewing",
         "show_on_map": "False",
         "color":"#1f78b4",
       },
       {
-        "sub_sector_name": "Prepared/Speciality Foods",
-        "sub_sector_icon": "",
+        "sub_sector_name": "Cider",
         "show_on_map": "False",
         "color":"#b2df8a",
       },
       {
-        "sub_sector_name": "Brewery",
-        "sub_sector_icon": "",
+        "sub_sector_name": "Coffee/Tea",
         "show_on_map": "False",
         "color":"#33a02c",
       },
       {
-        "sub_sector_name": "Winery",
-        "sub_sector_icon": "",
+        "sub_sector_name": "Commercial Kitchen",
         "show_on_map": "False",
         "color":"#fb9a99",
       },
       {
-        "sub_sector_name": "Coffee/Tea",
-        "sub_sector_icon": "",
+        "sub_sector_name": "Dairy",
         "show_on_map": "False",
         "color":"#e31a1c",
       },
       {
-        "sub_sector_name": "Meat Processing",
-        "sub_sector_icon": "",
+        "sub_sector_name": "Distilling",
         "show_on_map": "False",
         "color":"#fdbf6f",
       },
       {
         "sub_sector_name": "Fish Processing",
-        "sub_sector_icon": "",
         "show_on_map": "False",
         "color":"#ff7f00",
       },
       {
-        "sub_sector_name": "Commercial Kitchen",
-        "sub_sector_icon": "",
+        "sub_sector_name": "Fruit Processing",
         "show_on_map": "False",
         "color":"#cab2d6",
       },
+      {
+        "sub_sector_name": "Food Packaging",
+        "show_on_map": "False",
+        "color":"#6a3d9a",
+      },
+      {
+        "sub_sector_name": "Grains Processing",
+        "show_on_map": "False",
+        "color":"#ffff99",
+      },
+      {
+        "sub_sector_name": "Meat Processing",
+        "show_on_map": "False",
+        "color":"#b15928",
+      },
+      {
+        "sub_sector_name": "Prepared/Speciality Foods",
+        "show_on_map": "False",
+        "color":"#1fbb8c",
+      },
+      {
+        "sub_sector_name": "Wine Production",
+        "show_on_map": "False",
+        "color":"#71f93f",
+      },
+      {
+        "sub_sector_name": "Vegetable Processing",
+        "show_on_map": "False",
+        "color":"#ed5184",
+      },
+      {
+        "sub_sector_name": "Other",
+        "show_on_map": "False",
+        "color":"#303030",
+      }
     ]
   },
   "3" : {
@@ -193,65 +180,50 @@ var sectors = {
     "sector_color": "#a6cee3",
     "sub_sectors": [
       {
-        "sub_sector_name": "Aggregation Facility",
-        "sub_sector_icon": "",
+        "sub_sector_name": "Aggregation Facility/Food Hub",
         "show_on_map": "False",
         "color":"#a6cee3",
       },
       {
-        "sub_sector_name": "Packaging",
-        "sub_sector_icon": "",
+        "sub_sector_name": "Broker/Sourcer",
         "show_on_map": "False",
         "color":"#1f78b4",
       },
       {
-        "sub_sector_name": "Food Broker/Sourcer",
-        "sub_sector_icon": "",
+        "sub_sector_name": "Cooperative",
         "show_on_map": "False",
         "color":"#b2df8a",
       },
       {
         "sub_sector_name": "Cold Storage",
-        "sub_sector_icon": "",
         "show_on_map": "False",
         "color":"#33a02c",
       },
       {
         "sub_sector_name": "Dry Storage",
-        "sub_sector_icon": "",
         "show_on_map": "False",
         "color":"#fb9a99",
       },
       {
-        "sub_sector_name": "Distribution",
-        "sub_sector_icon": "",
+        "sub_sector_name": "Food Auction",
         "show_on_map": "False",
         "color":"#e31a1c",
       },
       {
-        "sub_sector_name": "Wholesaler",
-        "sub_sector_icon": "",
+        "sub_sector_name": "Food Distributor",
         "show_on_map": "False",
         "color":"#fdbf6f",
       },
       {
-        "sub_sector_name": "Food Hub",
-        "sub_sector_icon": "",
+        "sub_sector_name": "Wholesaler",
         "show_on_map": "False",
         "color":"#ff7f00",
       },
       {
-        "sub_sector_name": "Co-op",
-        "sub_sector_icon": "",
+        "sub_sector_name": "Other",
         "show_on_map": "False",
-        "color":"#cab2d6",
-      },
-      {
-        "sub_sector_name": "Food Auction",
-        "sub_sector_icon": "",
-        "show_on_map": "False",
-        "color":"#6a3d9a",
-      },
+        "color":"#303030",
+      }
     ]
   },
   "4" : {
@@ -262,65 +234,80 @@ var sectors = {
     "sector_color": "#1f78b4",
     "sub_sectors": [
       {
-        "sub_sector_name": "Convenience Store",
-        "sub_sector_icon": "",
+        "sub_sector_name": "Brewery",
         "show_on_map": "False",
         "color":"#a6cee3",
       },
       {
-        "sub_sector_name": "Grocery Store",
-        "sub_sector_icon": "",
+        "sub_sector_name": "Caterer",
         "show_on_map": "False",
         "color":"#1f78b4",
       },
       {
-        "sub_sector_name": "Farmers Market",
-        "sub_sector_icon": "",
+        "sub_sector_name": "Convenience Store",
         "show_on_map": "False",
         "color":"#b2df8a",
       },
       {
-        "sub_sector_name": "CSA",
-        "sub_sector_icon": "",
+        "sub_sector_name": "Community Supported Agriculture (CSA)",
         "show_on_map": "False",
         "color":"#33a02c",
       },
       {
-        "sub_sector_name": "Farm Store",
-        "sub_sector_icon": "",
+        "sub_sector_name": "Deli",
         "show_on_map": "False",
         "color":"#fb9a99",
       },
       {
-        "sub_sector_name": "Resaurant",
-        "sub_sector_icon": "",
+        "sub_sector_name": "Farmers Market",
         "show_on_map": "False",
         "color":"#e31a1c",
       },
       {
-        "sub_sector_name": "Caterer",
-        "sub_sector_icon": "",
+        "sub_sector_name": "Farm Stand",
         "show_on_map": "False",
         "color":"#fdbf6f",
       },
       {
-        "sub_sector_name": "Brewery",
-        "sub_sector_icon": "",
+        "sub_sector_name": "Farm Store",
         "show_on_map": "False",
         "color":"#ff7f00",
       },
       {
-        "sub_sector_name": "Winery",
-        "sub_sector_icon": "",
+        "sub_sector_name": "Food Delivery Service",
         "show_on_map": "False",
         "color":"#cab2d6",
       },
       {
-        "sub_sector_name": "Institutional Dining Services",
-        "sub_sector_icon": "",
+        "sub_sector_name": "Grocery Store",
         "show_on_map": "False",
         "color":"#6a3d9a",
       },
+      {
+        "sub_sector_name": "Institutional Dining Services",
+        "show_on_map": "False",
+        "color":"#ffff99",
+      },
+      {
+        "sub_sector_name": "Online Ordering",
+        "show_on_map": "False",
+        "color":"#b15928",
+      },
+      {
+        "sub_sector_name": "Resaurant/Bar",
+        "show_on_map": "False",
+        "color":"#1fbb8c",
+      },
+      {
+        "sub_sector_name": "Winery",
+        "show_on_map": "False",
+        "color":"#71f93f",
+      },
+      {
+        "sub_sector_name": "Other",
+        "show_on_map": "False",
+        "color":"#303030",
+      }
     ]
   },
   "5" : {
@@ -331,29 +318,35 @@ var sectors = {
     "sector_color": "#fb9a99",
     "sub_sectors": [
       {
-        "sub_sector_name": "Gleaning",
-        "sub_sector_icon": "",
+        "sub_sector_name": "Anaerobic Digester",
         "show_on_map": "False",
         "color":"#a6cee3",
       },
       {
         "sub_sector_name": "Composting",
-        "sub_sector_icon": "",
         "show_on_map": "False",
         "color":"#1f78b4",
       },
       {
-        "sub_sector_name": "Landfill",
-        "sub_sector_icon": "",
+        "sub_sector_name": "Food Intake",
         "show_on_map": "False",
         "color":"#b2df8a",
       },
       {
-        "sub_sector_name": "Organic Recycling",
-        "sub_sector_icon": "",
+        "sub_sector_name": "Gleaning",
         "show_on_map": "False",
         "color":"#33a02c",
       },
+      {
+        "sub_sector_name": "Landfill",
+        "show_on_map": "False",
+        "color":"#fb9a99",
+      },
+      {
+        "sub_sector_name": "Other",
+        "show_on_map": "False",
+        "color":"#303030",
+      }
     ]
   },
   "6" : {
@@ -364,53 +357,50 @@ var sectors = {
     "sector_color": "#e31a1c",
     "sub_sectors": [
       {
-        "sub_sector_name": "Food Assitance",
-        "sub_sector_icon": "",
+        "sub_sector_name": "Agricultural Resources",
         "show_on_map": "False",
         "color":"#a6cee3",
       },
       {
-        "sub_sector_name": "Emergency Meal Sites",
-        "sub_sector_icon": "",
+        "sub_sector_name": "Business Resources",
         "show_on_map": "False",
         "color":"#1f78b4",
       },
       {
-        "sub_sector_name": "Food Pantry",
-        "sub_sector_icon": "",
+        "sub_sector_name": "Community Resources",
         "show_on_map": "False",
         "color":"#b2df8a",
       },
       {
-        "sub_sector_name": "Community Resources",
-        "sub_sector_icon": "",
+        "sub_sector_name": "Emergency Meal Sites",
         "show_on_map": "False",
         "color":"#33a02c",
       },
       {
-        "sub_sector_name": "Training Opportunties",
-        "sub_sector_icon": "",
+        "sub_sector_name": "Farmland Conservation",
         "show_on_map": "False",
         "color":"#fb9a99",
       },
       {
-        "sub_sector_name": "Research & Education",
-        "sub_sector_icon": "",
+        "sub_sector_name": "Food Assitance",
         "show_on_map": "False",
         "color":"#e31a1c",
       },
       {
-        "sub_sector_name": "Business Resources",
-        "sub_sector_icon": "",
+        "sub_sector_name": "Food Pantry",
         "show_on_map": "False",
         "color":"#fdbf6f",
       },
       {
-        "sub_sector_name": "Farmland Conservation",
-        "sub_sector_icon": "",
+        "sub_sector_name": "Research & Education",
         "show_on_map": "False",
         "color":"#ff7f00",
       },
+      {
+        "sub_sector_name": "Other",
+        "show_on_map": "False",
+        "color":"#303030",
+      }
     ]
   },
 };
