@@ -174,7 +174,7 @@ var sectors = {
   },
   "3" : {
     "sector_name" : "Aggregation",
-    "section_title": "Aggregation & Wholesale",
+    "section_title": "Aggregation, Distribution, & Storage",
     "section_description": "Once food has been produced or processed, it needs to make its way to food outlets where it can be sold to consumers. Products may be aggregated together from multiple sources to create a larger and more reliable supply to meet market demands. Aggregation, Distribution, & Storage describes any organization or business that collects, transports, or preserves raw or processed food products prior to purchasing by consumers.",
     "section_icon_1": "mdi-silo",
     "sector_color": "#a6cee3",
