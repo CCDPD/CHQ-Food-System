@@ -55,14 +55,31 @@ function geojsonMarkerOptions(feature, type, filter_list) {
 // Points Popup Function
 function pointPopup(feature, layer){
   var content = (
-    "<p id='popup-header'>" + feature.properties.Trade_Name + "</p>" +
-    "<p><a id='popup-address' href='https://www.google.com/maps/place/" + feature.properties.Match_addr +"'>" + feature.properties.Match_addr + "</a></p>" +
-    "<p id='popup-sector'>" + feature.properties.Sector + "</p>" +
-    "<p id='popup-subsector'>" + feature.properties.Subsector + "</p>"
+    "<p id='popup-title'>" + feature.properties.Trade_Name + "</p>" +
+    "<div id=popup_content>" +
+    "<p id='popup-header'>Address: </p>" +
+    "<a id='popup-address' href='https://www.google.com/maps/place/'" + feature.properties.Match_addr +"'>" + feature.properties.Match_addr + "</a>" +
+    "<p id='popup-header'>Sector: </p>" +
+    "<p id='popup-sector'> " + feature.properties.Sector + "</p>" +
+    "<p id='popup-header'>Sub-Sectors: </p>" +
+    "<p id='popup-subsector'>" + feature.properties.Subsector + "</p>" +
+    "<p id='popup-header'>Certifications:</p>" +
+    "<p><img src='./img/Organic Badge.svg' id='badges'>" +
+    "<img src='./img/GAP-Logo-300x260.png' id='badges'>" +
+    "<img src='./img/Chautauqua Grown Badge.svg' id='badges'>" +
+    "<img src='./img/Food Safety Plan Badge.svg'id='badges'>" +
+    "<p id='popup-header'>Payment Methods:</p>" +
+    "<p><img src='./img/Cash Only Badge.svg' id='badges'>" +
+    "<img src='./img/DoubleUpFoodBucks.png' id='badges'>" +
+    "<img src='./img/Supplemental_Nutrition_Assistance_Program_logo.svg' id='badges'>" +
+    "<img src='./img/wicnystate.jpg' id='badges'>" +
+    "<img src='./img/shoptauqua-gift-card-image.jpg' id='badges' style='width: 100px'>"
   );
-  var websiteHtml = "<p><a id='popup-website' href='" + feature.properties.Website + "'>" + feature.properties.Website + "</a></p>";
+  var websiteHtml = "<p id='popup-header'> Website:</p><a id='popup-website' href='" + feature.properties.Website + "'>" + feature.properties.Website + "</a></div>";
   if(feature.properties.Website != null){
     content = content + websiteHtml
+  } else {
+    content = content + "</div>"
   };
   layer.bindPopup(content, {
     offset: new L.Point(0,-20),

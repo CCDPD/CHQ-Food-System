@@ -6,7 +6,7 @@
   right: 0;
 }
 
-#popup-header {
+#popup-title {
   background-color: hsl(96, 53%, 71%);
   color: white;
   font-family: 'Raleway', sans-serif;
@@ -17,13 +17,33 @@
   border-radius: 5px;
 }
 
-#popup-sector {}
+#popup-header {
+  font-family: 'Raleway', sans-serif;
+  font-size: 12pt;
+  font-weight: bold;
+}
+
+.leaflet-popup-content {
+  width: 350px !important;
+}
+
+#popup_content {
+  height: 300px;
+  max-width: 600px;
+  overflow: auto;
+  vertical-align: middle;
+}
+
+#badges {
+  width: 90px;
+  height: 90px;
+  padding: 5px;
+}
 
 #popup-address {
   padding-top: 5px;
 }
 
-#popup-subsector {}
 
 .marker-pin {
   width: 30px;
