@@ -74,6 +74,10 @@ add_resources_content.innerHTML = (
   "<li>2 South Portage St., Westfield NY 14787</li>" +
   "<li>(716) 753 4066 </li>" +
   "<li>KellerM@co.chautauqua.ny.us</li>" +
+  "<li>" +
+  "<a href='https://chqgov.com/'><img src='img/Chautauqua_County_ny_seal.png' alt='Chautauqua County' style='width: 100px'></a>" +
+  "<a href='http://37.60.236.155/~planning/planning/food-policy-council/'><img src='img/2---Food-policy-council-logo.gif' alt='Food Policy Council' style='width: 150px'></a>" +
+  "</li>" +
   "</ul>"
 );
 sidebar.appendChild(add_resources_content);
