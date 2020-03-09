@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>CHQ - Food System Map</title>
+    <!-- Add CSS Links -->
     <link
       rel="stylesheet"
       href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
@@ -13,10 +14,11 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300i|Raleway|Roboto&display=swap" rel="stylesheet">
     <!-- Load Esri Leaflet Geocoder from CDN -->
     <link
-    rel="stylesheet"
-    href="https://unpkg.com/esri-leaflet-geocoder@2.3.2/dist/esri-leaflet-geocoder.css"
-    integrity="sha512-IM3Hs+feyi40yZhDH6kV8vQMg4Fh20s9OzInIIAc4nx7aMYMfo+IenRUekoYsHZqGkREUgx0VvlEsgm7nCDW9g=="
-    crossorigin="">
+      rel="stylesheet"
+      href="https://unpkg.com/esri-leaflet-geocoder@2.3.2/dist/esri-leaflet-geocoder.css"
+      integrity="sha512-IM3Hs+feyi40yZhDH6kV8vQMg4Fh20s9OzInIIAc4nx7aMYMfo+IenRUekoYsHZqGkREUgx0VvlEsgm7nCDW9g=="
+      crossorigin="">
+    <link rel="stylesheet" href="plugins/leaflet-locatecontrol-gh-pages/dist/L.Control.Locate.min.css">
 
     <!-- Make sure you put this AFTER Leaflet's CSS -->
     <script
@@ -41,7 +43,7 @@
         <p class="description">The purpose of this project is to identify, connect, and promote assets within Chautauqua County's Food System.</p>
         <div id="page-header-img">
           <img src="img/Food System Diagram.svg" alt="">
-          <p>Click the cateogries below to learn more.</p>
+          <p>Click the categories below to learn more.</p>
         </div>
       </div>
     </div>
@@ -50,6 +52,7 @@
   <footer>
     <script type="text/javascript" src="data/Sectors.js"></script>
     <script type="text/javascript" src="plugins/Leaflet.Icon.Glyph.js"></script>
+    <script type="text/javascript" src="plugins/leaflet-locatecontrol-gh-pages/dist/L.Control.Locate.min.js"></script>
     <script type="text/javascript" src="data/Geocoding_Results_webmercator.geojson"></script>
     <script
     src="https://unpkg.com/esri-leaflet-geocoder@2.3.2/dist/esri-leaflet-geocoder.js"

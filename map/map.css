@@ -23,9 +23,9 @@
   font-weight: bold;
 }
 
-.leaflet-popup-content {
+/* .leaflet-popup-content {
   width: 350px !important;
-}
+} */
 
 #popup_content {
   height: 300px;

@@ -15,6 +15,18 @@ searchControl.on('results', function (data) {
   }
 });
 
+// Add Locator to map
+L.control.locate({
+  icon: "mdi mdi-home",
+  strings: {
+    title: "Show Current Location",
+    popup: "Your Current Location",
+  },
+  showPopup: true,
+
+}).addTo(map);
+
+// Determine Layer Color and Icon, and add layer to map
 function getIcon(d) {
   for (var a in sectors) {
       if (sectors[a].section_title == d ){
@@ -22,7 +34,6 @@ function getIcon(d) {
     };
   };
 };
-
 function getColor(a,b,c) {
   if (b == "home") {
     for (var d in sectors) {
@@ -40,7 +51,6 @@ function getColor(a,b,c) {
     };
   };
 };
-
 function geojsonMarkerOptions(feature, type, filter_list) {
   var icon_choice = getIcon(feature.properties.Sector);
   var color_choice = getColor(feature, type, filter_list);
