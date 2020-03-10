@@ -5,6 +5,19 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(map);
 
+// Add Muni-Bounds layer from ArcGIS Online
+var muni_bounds = L.esri.featureLayer({
+  url: 'https://maps.chautauquacounty.com/server/rest/services/Public/PV_Boundary/MapServer/0',
+  style: {
+    color: "grey",
+    weight: 2,
+    fillColor: 'hsl(0, 0%, 75%)',
+    fillOpacity: 0.1,
+  }
+}).addTo(map);
+muni_bounds.bindTooltip("Test");
+
+
 // Add ESRI Geocoder to Map
 var searchControl = L.esri.Geocoding.geosearch().addTo(map);
 var results = L.layerGroup().addTo(map);
