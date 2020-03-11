@@ -2,8 +2,38 @@ var points = {
 "type": "FeatureCollection",
 "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
 
-"features": [
-{ "type": "Feature", "properties": { "Loc_name": null, "Status": "U", "Score": 0.000000, "Match_type": "A", "Match_addr": null, "Side": null, "SubAdd": null, "User_fld": null, "Addr_type": null, "ARC_Street": "13075 MAIN ST", "ARC_City": "FINDLEY LAKE", "ARC_State": "NY", "ARC_ZIP": "14736", "Owner_Name": "OUR OWN CANDLE COMPANY INC", "Trade_Name": "TWIN DOCKS", "Street": "13075 MAIN ST", "City": "FINDLEY LAKE", "State_Code": "NY", "Zip_Code": 14736, "Country": "USA", "Website": "https:\/\/www.ourowncandlecompany.com\/", "Sector": "Food Retail/Direct Sales", "Subsector": "Retail" }, "geometry": { "type": "Point", "coordinates": [ -75.0, -90.0 ] } },
+"features": [{
+  "type": "Feature",
+  "properties": {
+    "Loc_name": null,
+    "Status": "U",
+    "Score": 0.000000,
+    "Match_type": "A",
+    "Match_addr": null,
+    "Side": null,
+    "SubAdd": null,
+    "User_fld": null,
+    "Addr_type": null,
+    "ARC_Street": "13075 MAIN ST",
+    "ARC_City": "FINDLEY LAKE",
+    "ARC_State": "NY",
+    "ARC_ZIP": "14736",
+    "Owner_Name": "OUR OWN CANDLE COMPANY INC",
+    "Trade_Name": "TWIN DOCKS",
+    "Street": "13075 MAIN ST",
+    "City": "FINDLEY LAKE",
+    "State_Code": "NY",
+    "Zip_Code": 14736,
+    "Country": "USA",
+    "Website": "https:\/\/www.ourowncandlecompany.com\/",
+    "Sector": "Food Retail/Direct Sales",
+    "Subsector": "Retail"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [ -75.0, -90.0 ]
+  }
+},
 { "type": "Feature", "properties": { "Loc_name": "1A_SAM_AP_ZipN", "Status": "M", "Score": 100.000000, "Match_type": "A", "Match_addr": "350 E Fairmount Ave, Lakewood, NY, 14750", "Side": null, "SubAdd": null, "User_fld": "1", "Addr_type": "Address", "ARC_Street": "350 E FAIRMOUNT AVE", "ARC_City": "LAKEWOOD", "ARC_State": "NY", "ARC_ZIP": "14750", "Owner_Name": "WAL-MART STORES EAST LP", "Trade_Name": "WAL-MART SUPERCNTR#1973", "Street": "350 E FAIRMOUNT AVE", "City": "LAKEWOOD", "State_Code": "NY", "Zip_Code": 14750, "Country": "USA", "Website": "walmart.com", "Sector": "Food Retail/Direct Sales", "Subsector": "Grocery Store" }, "geometry": { "type": "Point", "coordinates": [ -79.300005815042596, 42.096774883125029 ] } },
 { "type": "Feature", "properties": { "Loc_name": null, "Status": "U", "Score": 0.000000, "Match_type": "A", "Match_addr": null, "Side": null, "SubAdd": null, "User_fld": null, "Addr_type": null, "ARC_Street": "2864 ROUTE 42", "ARC_City": "FINDLEY LAKE", "ARC_State": "NY", "ARC_ZIP": "14736", "Owner_Name": "DOLGENCORP OF NEW YORK INC", "Trade_Name": "DOLLAR GENERAL #18952", "Street": "2864 ROUTE 42", "City": "FINDLEY LAKE", "State_Code": "NY", "Zip_Code": 14736, "Country": "USA", "Website": "dollargeneral.com", "Sector": "Food Retail/Direct Sales", "Subsector": "Convenience Store" }, "geometry": { "type": "Point", "coordinates": [ -75.0, -90.0 ] } },
 { "type": "Feature", "properties": { "Loc_name": "1A_SAM_AP_ZipN", "Status": "M", "Score": 100.000000, "Match_type": "A", "Match_addr": "2118 Magnolia Ave, Ashville, NY, 14710", "Side": null, "SubAdd": null, "User_fld": "1", "Addr_type": "Address", "ARC_Street": "2118 MAGNOLIA AVE #", "ARC_City": "ASHVILLE", "ARC_State": "NY", "ARC_ZIP": "14710", "Owner_Name": "LAKEVIEW DISCOUNT GROCERY LLC", "Trade_Name": "LAKEVIEW DISCOUNT GROCE", "Street": "2118 MAGNOLIA AVE #", "City": "ASHVILLE", "State_Code": "NY", "Zip_Code": 14710, "Country": "USA", "Website": null, "Sector": "Food Retail/Direct Sales", "Subsector": "Grocery Store" }, "geometry": { "type": "Point", "coordinates": [ -79.369042923861699, 42.091635213883514 ] } },

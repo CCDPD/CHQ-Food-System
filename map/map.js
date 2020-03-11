@@ -6,8 +6,7 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 }).addTo(map);
 
 // Add Muni-Bounds layer from ArcGIS Online
-var muni_bounds = L.esri.featureLayer({
-  url: 'https://maps.chautauquacounty.com/server/rest/services/Public/PV_Boundary/MapServer/0',
+var muni_bounds = L.geoJSON(muniBounds, {
   style: {
     color: "grey",
     weight: 2,
