@@ -15,8 +15,6 @@ var muni_bounds = L.esri.featureLayer({
     fillOpacity: 0.1,
   }
 }).addTo(map);
-muni_bounds.bindTooltip("Test");
-
 
 // Add ESRI Geocoder to Map
 var searchControl = L.esri.Geocoding.geosearch().addTo(map);
