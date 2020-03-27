@@ -72,5 +72,6 @@ There are a variety of resources for people and organizations within the food sy
 
 
 ## Other Resources
+- Geocoder: https://willgeary.github.io/data/2016/11/04/Geocoding-with-Google-Sheets.html
 - https://www.nal.usda.gov/afsic/local-food-systems
 - https://clf.jhsph.edu/publications

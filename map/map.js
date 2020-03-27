@@ -37,32 +37,141 @@ L.control.locate({
 }).addTo(map);
 
 // Determine Layer Color and Icon, and add layer to map
-function getIcon(d) {
-  for (var a in sectors) {
-      if (sectors[a].section_title == d ){
+function getIcon(feature, filter_list) {
+  if (filter_list != null) {
+    var check_list = [];
+    var subsectors = getSubSectors(feature);
+    for (var b in filter_list){
+      if (subsectors.includes(filter_list[b])) {
+        check_list.push("check")
+      };
+    };
+    if (check_list.length == filter_list.length && filter_list.length>0) {
+      return "mdi mdi-star"
+    } else {
+      for (var a in sectors) {
+        if (sectors[a].section_title == feature.properties.Primary_Food_System_Category) {
+          return "mdi " + sectors[a].section_icon_1;
+        };
+      };
+    };
+  } else {
+    for (var a in sectors) {
+      if (sectors[a].section_title == feature.properties.Primary_Food_System_Category) {
         return "mdi " + sectors[a].section_icon_1;
+      };
     };
   };
 };
 function getColor(a,b,c) {
-  if (b == "home") {
-    for (var d in sectors) {
-      if (sectors[d].section_title == a.properties.Sector) {
-        return sectors[d].sector_color
-      };
-    };
-  } else {
-    for (var d in sectors) {
-      for (var e in sectors[d].sub_sectors) {
-        if (sectors[d].sub_sectors[e].sub_sector_name == a.properties.Subsector) {
-          return sectors[d].sub_sectors[e].color
-        };
-      };
+  for (var d in sectors) {
+    if (sectors[d].section_title == a.properties.Primary_Food_System_Category) {
+      return sectors[d].sector_color
     };
   };
 };
+function getDescrip(feature) {
+  var descrip = feature.properties.If_you_would_like_to_provide_a_;
+  var final_list = ["<p id='popup-header'>Description: </p>"];
+  if (descrip != null) {
+    final_list.push("<p>" + descrip + "</p>")
+    var final_html = final_list.join("");
+    return final_html;
+  } else {
+    return "";
+  };
+};
+function getAddress(feature) {
+  address = feature.properties.Full_Address;
+  final_list = ["<p id='popup-header'>Address:</p>"]
+  final_list.push("<a id='popup-address' href='https://www.google.com/maps/place/" + address + "'>" + address + "</a>");
+  return final_list.join("");
+};
+function getSocial(feature){
+  social = feature.properties.Organization_Social_Media;
+  final_list = ["<p id='popup-header'>Social Media:</p>"]
+  if (social != null){
+    final_list.push("<a id='popup-website' href='" + social + "'>" + social + "</a>")
+    return final_list.join("")
+  } else {
+    return ""
+  };
+};
+function getWebsite(feature) {
+  var website = feature.properties.Organization_Website;
+  var final_list = ["<p id='popup-header'> Website:</p>"];
+  if (website != null) {
+    final_list.push("<a id='popup-website' href='" + website + "'>" + website + "</a>")
+    var final_html = final_list.join("");
+    return final_html;
+  } else {
+    return "";
+  };
+};
+function getSubSectors(feature) {
+  var subsectors_list = feature.properties.Subsectors_Joined.split(',');
+  var final_list = [];
+  for (var a in subsectors_list){
+    if (subsectors_list[a] == " ") {
+      delete subsectors_list[a]
+    } else if (subsectors_list[a] == "") {
+      delete subsectors_list[a]
+    } else {
+      final_list.push(subsectors_list[a].trim())
+    };
+  };
+  return final_list;
+};
+function getCerts(feature) {
+  if (feature.properties.Please_indicate_any_certificati != null){
+    certs_list = feature.properties.Please_indicate_any_certificati.split(',');
+    final_list = ["<p id='popup-header'>Certifications:</p>"];
+    check_list = [];
+    for (var a in certs_list){
+      for (var b in certifications_badges){
+        if (certs_list[a].trim() == certifications_badges[b].cert_name){
+          final_list.push(certifications_badges[b].cert_html);
+          check_list.push(certifications_badges[b].cert_name);
+        };
+      };
+      if (check_list.includes(certs_list[a].trim())){} else {
+        final_list.push("<p>" + certs_list[a].trim() + "</p>");
+      };
+    };
+  var final_html = final_list.join("");
+  return final_html;
+  } else {
+    return "<p></p>"
+  };
+};
+function getPayments(feature) {
+  if (feature.properties.Please_indicate_what_payment_me != null){
+    pay_list = feature.properties.Please_indicate_what_payment_me.split(',');
+    final_list = ["<p id='popup-header'>Payment Methods:</p>"];
+    check_list = [];
+    for (var a in pay_list){
+      for (var b in payment_badges){
+        if (pay_list[a].trim() == payment_badges[b].payment_name){
+          final_list.push(payment_badges[b].payment_html);
+          check_list.push(payment_badges[b].payment_name);
+        };
+      };
+      if (check_list.includes(pay_list[a].trim())){} else {
+        final_list.push("<p>" + pay_list[a].trim() + "</p>");
+        check_list.push(pay_list[a].trim());
+      };
+    };
+    if (check_list.includes("Credit Cards")){} else {
+      final_list.push(payment_badges["1"].payment_html)
+    };
+    var final_html = final_list.join("");
+    return final_html;
+  } else {
+    return "<p></p>"
+  };
+};
 function geojsonMarkerOptions(feature, type, filter_list) {
-  var icon_choice = getIcon(feature.properties.Sector);
+  var icon_choice = getIcon(feature, filter_list);
   var color_choice = getColor(feature, type, filter_list);
   return L.divIcon({
     className: 'custom-div-icon',
@@ -75,32 +184,20 @@ function geojsonMarkerOptions(feature, type, filter_list) {
 // Points Popup Function
 function pointPopup(feature, layer){
   var content = (
-    "<p id='popup-title'>" + feature.properties.Trade_Name + "</p>" +
+    "<p id='popup-title'>" + feature.properties.Organization_Name + "</p>" +
     "<div id=popup_content>" +
-    "<p id='popup-header'>Address: </p>" +
-    "<a id='popup-address' href='https://www.google.com/maps/place/'" + feature.properties.Match_addr +"'>" + feature.properties.Match_addr + "</a>" +
+    getDescrip(feature) +
+    getAddress(feature) +
+    getWebsite(feature) +
+    getSocial(feature) +
     "<p id='popup-header'>Sector: </p>" +
-    "<p id='popup-sector'> " + feature.properties.Sector + "</p>" +
+    "<p id='popup-sector'> " + feature.properties.Primary_Food_System_Category + "</p>" +
     "<p id='popup-header'>Sub-Sectors: </p>" +
-    "<p id='popup-subsector'>" + feature.properties.Subsector + "</p>" +
-    "<p id='popup-header'>Certifications:</p>" +
-    "<p><img src='./img/Organic Badge.svg' id='badges'>" +
-    "<img src='./img/GAP-Logo-300x260.png' id='badges'>" +
-    "<img src='./img/Chautauqua Grown Badge.svg' id='badges'>" +
-    "<img src='./img/Food Safety Plan Badge.svg'id='badges'>" +
-    "<p id='popup-header'>Payment Methods:</p>" +
-    "<p><img src='./img/Cash Only Badge.svg' id='badges'>" +
-    "<img src='./img/DoubleUpFoodBucks.png' id='badges'>" +
-    "<img src='./img/Supplemental_Nutrition_Assistance_Program_logo.svg' id='badges'>" +
-    "<img src='./img/wicnystate.jpg' id='badges'>" +
-    "<img src='./img/shoptauqua-gift-card-image.jpg' id='badges' style='width: 100px'>"
+    "<p id='popup-subsector'>" + getSubSectors(feature) + "</p>" +
+    getCerts(feature) +
+    getPayments(feature) +
+    "</div>"
   );
-  var websiteHtml = "<p id='popup-header'> Website:</p><a id='popup-website' href='" + feature.properties.Website + "'>" + feature.properties.Website + "</a></div>";
-  if(feature.properties.Website != null){
-    content = content + websiteHtml
-  } else {
-    content = content + "</div>"
-  };
   layer.bindPopup(content, {
     offset: new L.Point(0,-20),
     }
@@ -117,21 +214,27 @@ legend.onAdd = function (map) {
   for (var a in sectors) {
     for (var b in sectors[a].sub_sectors) {
       if (sectors[a].sub_sectors[b].show_on_map == 'True'){
-        grades.push(sectors[a].sub_sectors[b].color);
+        // grades.push(sectors[a].sub_sectors[b].color);
         labels.push(sectors[a].sub_sectors[b].sub_sector_name);
-        icons.push(sectors[a].section_icon_1);
+        // icons.push(sectors[a].section_icon_1);
       };
     };
   };
-  if (grades.length == 0){
+  if (labels.length == 0){
     for (var a in sectors) {
       grades.push(sectors[a].sector_color);
       labels.push(sectors[a].section_title);
       icons.push(sectors[a].section_icon_1);
     };
-  };
-  for (var i = 0; i < grades.length; i++) {
-    div.innerHTML += '<i style="border-color:' + grades[i] + '" class="mdi ' + icons[i] + '"></i> ' + labels[i] + '<br/>';
+    for (var i = 0; i < labels.length; i++) {
+      div.innerHTML += '<i style="border-color:' + grades[i] + '" class="mdi ' + icons[i] + '"></i> ' + labels[i] + '<br/>';
+    };
+  } else {
+    div.innerHTML += '<i style="border-color:White" class="mdi mdi-star"></i>Selection Match<br/>';
+    div.innerHTML += '<h4>Current Selection</h4>';
+    for (var i = 0; i < labels.length; i++) {
+      div.innerHTML += labels[i] + '<br/>';
+    };
   };
   return div;
 };
@@ -143,7 +246,6 @@ var geoJSON = L.geoJSON(points, {
     return L.marker(latlng, {icon: geojsonMarkerOptions(feature, "home")});},
   onEachFeature: pointPopup
 }).addTo(map);
-
 
 //FILTER GEOJSON SIMPLE VERSION
 function filterPoints(){
@@ -162,12 +264,10 @@ function filterPoints(){
         return true;
       } else {
         var true_list = [];
-        var c = feature.properties.Subsector.split(',');
+        var c = getSubSectors(feature);
         for (var d in c) {
           if (filter_list.includes(c[d])) {
-            return true
-          } else {
-          return false
+            return true;
           };
         };
       };
