@@ -214,9 +214,7 @@ legend.onAdd = function (map) {
   for (var a in sectors) {
     for (var b in sectors[a].sub_sectors) {
       if (sectors[a].sub_sectors[b].show_on_map == 'True'){
-        // grades.push(sectors[a].sub_sectors[b].color);
         labels.push(sectors[a].sub_sectors[b].sub_sector_name);
-        // icons.push(sectors[a].section_icon_1);
       };
     };
   };
@@ -229,16 +227,41 @@ legend.onAdd = function (map) {
     for (var i = 0; i < labels.length; i++) {
       div.innerHTML += '<i style="border-color:' + grades[i] + '" class="mdi ' + icons[i] + '"></i> ' + labels[i] + '<br/>';
     };
-  } else {
-    div.innerHTML += '<i style="border-color:White" class="mdi mdi-star"></i>Selection Match<br/>';
-    div.innerHTML += '<h4>Current Selection</h4>';
-    for (var i = 0; i < labels.length; i++) {
-      div.innerHTML += labels[i] + '<br/>';
-    };
   };
   return div;
 };
 legend.addTo(map);
+
+//Selection Legend
+var selection = L.control({position: 'bottomleft'});
+selection.onAdd = function (map) {
+  var div = L.DomUtil.create('div', 'info legend');
+  var grades = [];
+  var labels = [];
+  var icons = [];
+  for (var a in sectors) {
+    for (var b in sectors[a].sub_sectors) {
+      if (sectors[a].sub_sectors[b].show_on_map == 'True'){
+        // grades.push(sectors[a].sub_sectors[b].color);
+        labels.push(sectors[a].sub_sectors[b].sub_sector_name);
+        // icons.push(sectors[a].section_icon_1);
+      };
+    };
+  };
+  if (labels.length == 0){
+    for (var a in sectors) {
+      grades.push(sectors[a].sector_color);
+      labels.push(sectors[a].section_title);
+      icons.push(sectors[a].section_icon_1);
+    };
+  };
+  div.innerHTML += '<i style="border-color:White" class="mdi mdi-star"></i>Selection Match<br/>';
+  div.innerHTML += '<h4>Current Selection</h4>';
+  for (var i = 0; i < labels.length; i++) {
+    div.innerHTML += labels[i] + '<br/>';
+  };
+  return div;
+};
 
 //Add GEOJSON Point Layer to Map
 var geoJSON = L.geoJSON(points, {
@@ -284,6 +307,8 @@ function filterPoints(){
     },
     onEachFeature: pointPopup
   }).addTo(map);
-  legend.remove(map);
-  legend.addTo(map);
+  selection.remove(map);
+  if (filter_list.length != 0){
+    selection.addTo(map);
+  };
 };
