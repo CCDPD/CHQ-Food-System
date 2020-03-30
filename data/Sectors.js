@@ -351,7 +351,7 @@ var sectors = {
   },
   "6" : {
     "sector_name" : "Education",
-    "section_title": "Education & Support",
+    "section_title": "Food Assistance, Education, & Support",
     "section_description": "There are a variety of resources for people and organizations within the food system. Education & Support describes any organization or business that provides assistance to the community at any stage of the food system.",
     "section_icon_1": "mdi-school",
     "sector_color": "#e31a1c",

@@ -23,11 +23,31 @@ ul {
 
 #sidebar-left {
   height: 100%;
-  width: 400px;
+  max-width: 400px;
+  width: 100%;
   position: fixed;
-  left: 0px;
   background-color: hsl(96, 53%, 71%);
   overflow-y: auto;
+}
+
+#collapsed_sidebar {
+  background-color: hsl(96, 53%, 71%);
+  position: absolute;
+  width: 30px;
+  top: 0;
+  left: 0;
+  bottom: 0;
+
+}
+
+.closebtn {
+  text-decoration: none;
+  color: black;
+  position: absolute;
+  top: 0;
+  right: 10px;
+  font-size: 36px;
+  margin-left: 50px;
 }
 
 /* Style the button that is used to open and close the collapsible content */
@@ -75,6 +95,7 @@ ul {
 }
 
 .description {
+  text-align: center;
   font-family: 'Open Sans', sans-serif;
   font-size: 12pt;
   margin-bottom: 10px;

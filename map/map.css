@@ -1,10 +1,14 @@
 #mapid {
   position: absolute;
-  left: 400px;
+  left:400px;
   top: 0;
   bottom: 0;
   right: 0;
 }
+
+/* .leaflet-popup{
+  max-width: 50vw;
+} */
 
 #popup-title {
   background-color: hsl(96, 53%, 71%);
@@ -29,7 +33,6 @@
 
 #popup_content {
   height: 300px;
-  max-width: 600px;
   overflow: auto;
   vertical-align: middle;
 }
@@ -78,9 +81,10 @@
 }
 
  .legend {
-     color: black;
-     font-family: 'Roboto', sans-serif;
-     font-size: 10pt;
+   max-width: 25vw;
+   color: black;
+   font-family: 'Roboto', sans-serif;
+   font-size: 10pt;
  }
 
  .info {
@@ -99,4 +103,9 @@
    line-height: 35px;
    border: 5px solid;
    border-radius: 150px;
+ }
+
+ .open_sidebar {
+   width: 26px;
+   height: 26px;
  }

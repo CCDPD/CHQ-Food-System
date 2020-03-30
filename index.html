@@ -2,6 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CHQ - Food System Map</title>
     <!-- Add CSS Links -->
     <link
@@ -35,7 +36,12 @@
     <link rel="stylesheet" href="https://cdn.materialdesignicons.com/4.8.95/css/materialdesignicons.min.css">
   </head>
   <body>
+    <div id="collapsed_sidebar">
+      <span style="font-size:30px;cursor:pointer; margin-left:1px;" onclick="openNav()">&#9776;</span><br/>
+      <span id="layer_toggle" class="mdi mdi-layers-remove" style="font-size:30px;cursor:pointer; margin-left:1px;" onclick="toggleLegend()"></span>
+    </div>
     <div id="sidebar-left" class="">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
       <button type="button" class="collapsible" id="page-header">
         Chautauqua County Food System Map
       </button>
@@ -43,6 +49,7 @@
         <p class="description">The purpose of this project is to identify, connect, and promote assets within Chautauqua County's Food System.</p>
         <div id="page-header-img">
           <img src="img/Food System Diagram.svg" alt="">
+          <p>Disclaimer: For the most up to date information, please check in with the business you are trying to reach.</p>
           <p>Click the categories below to learn more.</p>
         </div>
       </div>

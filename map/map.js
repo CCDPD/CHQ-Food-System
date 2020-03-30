@@ -1,7 +1,7 @@
 // standard leaflet map setup
 var map = L.map('mapid');
 map.setView([42.350, -79.306], 10);
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+var tiles = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(map);
 
@@ -212,21 +212,12 @@ legend.onAdd = function (map) {
   var labels = [];
   var icons = [];
   for (var a in sectors) {
-    for (var b in sectors[a].sub_sectors) {
-      if (sectors[a].sub_sectors[b].show_on_map == 'True'){
-        labels.push(sectors[a].sub_sectors[b].sub_sector_name);
-      };
-    };
-  };
-  if (labels.length == 0){
-    for (var a in sectors) {
       grades.push(sectors[a].sector_color);
       labels.push(sectors[a].section_title);
       icons.push(sectors[a].section_icon_1);
-    };
-    for (var i = 0; i < labels.length; i++) {
+  };
+  for (var i = 0; i < labels.length; i++) {
       div.innerHTML += '<i style="border-color:' + grades[i] + '" class="mdi ' + icons[i] + '"></i> ' + labels[i] + '<br/>';
-    };
   };
   return div;
 };

@@ -98,3 +98,28 @@ for (i = 0; i < coll.length; i++) {
     }
   });
 };
+
+document.getElementById("collapsed_sidebar").style.display = "none";
+function openNav() {
+  document.getElementById("sidebar-left").style.width = "100%";
+  document.getElementById("sidebar-left").style.display = "block";
+  document.getElementById("mapid").style.left = "400px";
+}
+
+function closeNav() {
+  document.getElementById("sidebar-left").style.display = "none";
+  document.getElementById("collapsed_sidebar").style.display = "block";
+  document.getElementById("mapid").style.left = "30px";
+  map.invalidateSize();
+}
+
+function toggleLegend() {
+  var legend_button = document.getElementById("layer_toggle");
+  if (legend_button.className == "mdi mdi-layers-remove"){
+    legend.remove(map);
+    legend_button.className = "mdi mdi-layers-plus";
+  } else {
+    legend.addTo(map);
+    legend_button.className = "mdi mdi-layers-remove";
+  };
+};
