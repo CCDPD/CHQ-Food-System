@@ -66,7 +66,7 @@ var points = {
         "Organization_Website" : "https://www.brigiottas.com",
         "Organization_Social_Media" : "https://www.facebook.com/brigiottas/",
         "If_you_would_like_to_provide_a_" : "A family owned and operated store since 1924. Brigiotta's has expanded from it's roots in farming to a specialty Italian store and delicatessen, a wholesale and retail produce vendor, and the area's premier garden center & floral shop.",
-        "Please_indicate_any_certificati" : "GFSI Equivalent (USDA Harmonized GAP Plus+, SQF, Primus, Etc)",
+        "Please_indicate_any_certificati" : "GFSI Equivalent",
         "Primary_Food_System_Category" : "Aggregation, Distribution & Storage",
         "Agriculture___Food_Production_T" : "Flowers, Fruits/Berries, Vegetables",
         "Processing___Value_Added_Produc" : "Fruit Processing, Meat Processing, Vegetable Processing",
