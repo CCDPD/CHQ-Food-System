@@ -32,6 +32,11 @@ var sectors = {
         "color":"#fb9a99",
       },
       {
+        "sub_sector_name": "Grapes",
+        "show_on_map": "False",
+        "color":"#e31a1c",
+      },
+      {
         "sub_sector_name": "Fruits/Berries",
         "show_on_map": "False",
         "color":"#e31a1c",
@@ -297,6 +302,11 @@ var sectors = {
         "sub_sector_name": "Resaurant/Bar",
         "show_on_map": "False",
         "color":"#1fbb8c",
+      },
+      {
+        "sub_sector_name": "U-Pick",
+        "show_on_map": "False",
+        "color":"#71f93f",
       },
       {
         "sub_sector_name": "Winery",
