@@ -1,0 +1,1643 @@
+var points = {
+  "type" : "FeatureCollection",
+  "features" : [
+    {
+      "type" : "Feature",
+      "id" : 1,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          -79.294682299999977,
+          42.139326600000061,
+          0
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 1,
+        "Timestamp" : "43902.4377558333",
+        "Organization_Name" : "Peterson Farm ",
+        "Organization_Street_Address" : "3260 Fluvanna Townline Rd.",
+        "Organization_City_Town" : "Jamestown",
+        "Organization_Zip_Code" : 14701,
+        "Organization_State" : "NY",
+        "Full_Address" : "3260 Fluvanna Townline Rd. Jamestown 14701 NY USA",
+        "Lat" : 42.139326599999997,
+        "Long" : -79.294682299999991,
+        "Organization_Phone_Number" : "716-483-2202",
+        "Organization_Website" : "http://www.petersonfarmswede.com",
+        "Organization_Social_Media" : "https://www.facebook.com/petersonfarmny/",
+        "If_you_would_like_to_provide_a_brief_description_of_your_organiz" : "Small grocery for local foods, we also grow our own sweet corn, squash, pumpkins\n",
+        "Please_indicate_any_certifications_held_by_your_organization_" : "Chautauqua Grown, Beef Quality Assurance, Pork Quality Assurance, Meat Goat Quality Assurance, ",
+        "Primary_Food_System_Category" : "Food Retail / Direct Sales",
+        "Agriculture___Food_Production_Type" : "Meat, Vegetables",
+        "Processing___Value_Added_Products_Type" : "Coffee/Tea",
+        "Aggregation__Distribution____Storage_Type" : "",
+        "Food_Outlet_Type" : "Farm Stand, Farm Store",
+        "Please_indicate_what_payment_methods_you_accept_" : "Credit Cards, Cash",
+        "Food_Loss_Management_Type" : "",
+        "Food_Assistance__Education____Support_Type_" : "",
+        "Additional_Food_System_Categories" : "I do not fit into another category (Submit Survey)",
+        "Subsectors_Joined" : "Meat, Vegetables, Coffee/Tea, , Farm Stand, Farm Store, , "
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 2,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          -79.265861099999938,
+          42.097372600000028,
+          0
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 2,
+        "Timestamp" : "43902.6627928935",
+        "Organization_Name" : "Brigiotta's Farmland Produce & Garden Center, Inc.",
+        "Organization_Street_Address" : "414 Fairmount Avenue",
+        "Organization_City_Town" : "Jamestown",
+        "Organization_Zip_Code" : 14701,
+        "Organization_State" : "NY",
+        "Full_Address" : "414 Fairmount Avenue Jamestown 14701 NY USA",
+        "Lat" : 42.0973726,
+        "Long" : -79.265861099999995,
+        "Organization_Phone_Number" : "716-483-1916",
+        "Organization_Website" : "https://www.brigiottas.com",
+        "Organization_Social_Media" : "https://www.facebook.com/brigiottas/",
+        "If_you_would_like_to_provide_a_brief_description_of_your_organiz" : "A family owned and operated store since 1924. Brigiotta's has expanded from it's roots in farming to a specialty Italian store and delicatessen, a wholesale and retail produce vendor, and the area's premier garden center & floral shop.",
+        "Please_indicate_any_certifications_held_by_your_organization_" : "GFSI Equivalent",
+        "Primary_Food_System_Category" : "Aggregation, Distribution & Storage",
+        "Agriculture___Food_Production_Type" : "Flowers, Fruits/Berries, Vegetables",
+        "Processing___Value_Added_Products_Type" : "Fruit Processing, Meat Processing, Vegetable Processing",
+        "Aggregation__Distribution____Storage_Type" : "Aggregation Facility/Food Hub, Broker/Sourcer, Cold Storage, Dry Storage, Food Distributor, Wholesaler",
+        "Food_Outlet_Type" : "Deli, Farm Store, Restaurant/Bar",
+        "Please_indicate_what_payment_methods_you_accept_" : "Credit Cards, SNAP",
+        "Food_Loss_Management_Type" : "",
+        "Food_Assistance__Education____Support_Type_" : "",
+        "Additional_Food_System_Categories" : "I do not fit into another category (Submit Survey)",
+        "Subsectors_Joined" : "Flowers, Fruits/Berries, Vegetables,Fruit Processing, Meat Processing, Vegetable Processing,Aggregation Facility/Food Hub, Broker/Sourcer, Cold Storage, Dry Storage, Food Distributor, Wholesaler,Deli, Farm Store, Restaurant/Bar,,"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 3,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          -79.231545899999958,
+          42.093329200000028,
+          0
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 3,
+        "Timestamp" : "43906.8076850231",
+        "Organization_Name" : "St. Susan Center",
+        "Organization_Street_Address" : "31 Water St.",
+        "Organization_City_Town" : "Jamestown",
+        "Organization_Zip_Code" : 14701,
+        "Organization_State" : "NY",
+        "Full_Address" : "31 Water St. Jamestown 14701 NY USA",
+        "Lat" : 42.093329199999999,
+        "Long" : -79.2315459,
+        "Organization_Phone_Number" : "716-664-2253",
+        "Organization_Website" : "http://www.stsusancenter.org",
+        "Organization_Social_Media" : "https://www.facebook.com/stsusancenter/?ref=bookmarks",
+        "If_you_would_like_to_provide_a_brief_description_of_your_organiz" : "Soup Kitchen",
+        "Please_indicate_any_certifications_held_by_your_organization_" : "Not applicable",
+        "Primary_Food_System_Category" : "Food Assistance, Education, & Support",
+        "Agriculture___Food_Production_Type" : "",
+        "Processing___Value_Added_Products_Type" : "",
+        "Aggregation__Distribution____Storage_Type" : "",
+        "Food_Outlet_Type" : "",
+        "Please_indicate_what_payment_methods_you_accept_" : "",
+        "Food_Loss_Management_Type" : "",
+        "Food_Assistance__Education____Support_Type_" : "Food Pantry",
+        "Additional_Food_System_Categories" : "I do not fit into another category (Submit Survey)",
+        "Subsectors_Joined" : ",,,,,Food Pantry"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 4,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          -79.57915399999996,
+          42.33146430000005,
+          0
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 4,
+        "Timestamp" : "43907.3909506134",
+        "Organization_Name" : "Original Crunch Roll Factory LLC",
+        "Organization_Street_Address" : "75 Bourne Street",
+        "Organization_City_Town" : "Westfield ",
+        "Organization_Zip_Code" : 14787,
+        "Organization_State" : "NY",
+        "Full_Address" : "75 Bourne Street Westfield  14787 NY USA",
+        "Lat" : 42.3314643,
+        "Long" : -79.579154000000003,
+        "Organization_Phone_Number" : "877-427-8624",
+        "Organization_Website" : "https://crunchrollfactory.com",
+        "Organization_Social_Media" : "https://www.facebook.com/daretocrunch/",
+        "If_you_would_like_to_provide_a_brief_description_of_your_organiz" : "",
+        "Please_indicate_any_certifications_held_by_your_organization_" : "Food Safety Plan in Place",
+        "Primary_Food_System_Category" : "Processing & Value-Added Products Type",
+        "Agriculture___Food_Production_Type" : "",
+        "Processing___Value_Added_Products_Type" : "Prepared/Specialty Foods",
+        "Aggregation__Distribution____Storage_Type" : "",
+        "Food_Outlet_Type" : "Convenience Store, Deli, Grocery Store, Online Ordering, Restaurant/Bar",
+        "Please_indicate_what_payment_methods_you_accept_" : "Credit Cards",
+        "Food_Loss_Management_Type" : "",
+        "Food_Assistance__Education____Support_Type_" : "",
+        "Additional_Food_System_Categories" : "I do not fit into another category (Submit Survey)",
+        "Subsectors_Joined" : ",Prepared/Specialty Foods,,Convenience Store, Deli, Grocery Store, Online Ordering, Restaurant/Bar,,"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 5,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          -79.477646799999945,
+          42.074969500000066,
+          0
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 5,
+        "Timestamp" : "43907.7597347454",
+        "Organization_Name" : "Gods Groceries - Panama United Methodist Churc",
+        "Organization_Street_Address" : "Main St",
+        "Organization_City_Town" : "Panama",
+        "Organization_Zip_Code" : 14767,
+        "Organization_State" : "NY",
+        "Full_Address" : "Main St Panama 14767 NY USA",
+        "Lat" : 42.074969499999987,
+        "Long" : -79.477646800000002,
+        "Organization_Phone_Number" : "716-782-3282",
+        "Organization_Website" : "",
+        "Organization_Social_Media" : "",
+        "If_you_would_like_to_provide_a_brief_description_of_your_organiz" : "We are a food pantry that supplies food to qualified people in the Panama School District.",
+        "Please_indicate_any_certifications_held_by_your_organization_" : "Food Safety Plan in Place",
+        "Primary_Food_System_Category" : "Food Assistance, Education, & Support",
+        "Agriculture___Food_Production_Type" : "",
+        "Processing___Value_Added_Products_Type" : "",
+        "Aggregation__Distribution____Storage_Type" : "",
+        "Food_Outlet_Type" : "",
+        "Please_indicate_what_payment_methods_you_accept_" : "",
+        "Food_Loss_Management_Type" : "",
+        "Food_Assistance__Education____Support_Type_" : "Food Pantry",
+        "Additional_Food_System_Categories" : "I do not fit into another category (Submit Survey)",
+        "Subsectors_Joined" : ",,,,,Food Pantry"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 6,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          -79.457380999999941,
+          42.176983000000064,
+          0
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 6,
+        "Timestamp" : "43907.7906832407",
+        "Organization_Name" : "Hickory Hurst Farm",
+        "Organization_Street_Address" : "4083 West Lake Rd",
+        "Organization_City_Town" : "Mayville",
+        "Organization_Zip_Code" : 14757,
+        "Organization_State" : "NY",
+        "Full_Address" : "4083 West Lake Rd Mayville 14757 NY USA",
+        "Lat" : 42.176983,
+        "Long" : -79.457380999999998,
+        "Organization_Phone_Number" : "716-789-9427",
+        "Organization_Website" : "http://www.gobackyouforgottheflowers.com",
+        "Organization_Social_Media" : "http://www.instagram.com/hickoryhurstfarm",
+        "If_you_would_like_to_provide_a_brief_description_of_your_organiz" : "We are a fourth-generation family farm grows certified organic cut flowers, produce, and herbs. We sell our farm products via our Produce CSA, bouquet subscriptions, wedding/event flowers, and our website. We offer on-farm workshops from flower arranging to making terrariums to seed-saving. ",
+        "Please_indicate_any_certifications_held_by_your_organization_" : "Certified Organic, Chautauqua Grown",
+        "Primary_Food_System_Category" : "Agriculture & Food Production",
+        "Agriculture___Food_Production_Type" : "Flowers, Fruits/Berries, Honey, Herbs, Nuts, Vegetables",
+        "Processing___Value_Added_Products_Type" : "",
+        "Aggregation__Distribution____Storage_Type" : "",
+        "Food_Outlet_Type" : "Farm Store, Community Supported Agriculture (CSA), Online Ordering",
+        "Please_indicate_what_payment_methods_you_accept_" : "",
+        "Food_Loss_Management_Type" : "",
+        "Food_Assistance__Education____Support_Type_" : "Education",
+        "Additional_Food_System_Categories" : "I do not fit into another category (Submit Survey)",
+        "Subsectors_Joined" : "Flowers, Fruits/Berries, Honey, Herbs, Nuts, Vegetables,,,Farm Store, Community Supported Agriculture (CSA), Online Ordering,,Education"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 7,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          -79.452010299999984,
+          42.128001400000073,
+          0
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 7,
+        "Timestamp" : "43908.4743712731",
+        "Organization_Name" : "Good Grass Farm",
+        "Organization_Street_Address" : "2943 Open Meadows Rd.",
+        "Organization_City_Town" : "Ashville",
+        "Organization_Zip_Code" : 14710,
+        "Organization_State" : "NY",
+        "Full_Address" : "2943 Open Meadows Rd. Ashville 14710 NY USA",
+        "Lat" : 42.128001400000002,
+        "Long" : -79.452010299999998,
+        "Organization_Phone_Number" : "716-640-7554",
+        "Organization_Website" : "https://www.goodgrassfarm.com",
+        "Organization_Social_Media" : "https://www.facebook.com/goodgrassfarm/",
+        "If_you_would_like_to_provide_a_brief_description_of_your_organiz" : "We are a pasture based farm offering pasture raised chicken, turkey, 100% grass fed beef, produce, and berries. We are conveniently located within 10 miles of Chautauqua Institution, Bemus Point, and Lakewood, NY. We welcome all customers or potential customers to come out for a visit and see for yourself where and how it's raised or grown. We do it without ANY herbicides, pesticides, antibiotics, chemical fertilizers or growth hormones. Just good food, without the residuals! Shop online and pick-up at the farm.",
+        "Please_indicate_any_certifications_held_by_your_organization_" : "",
+        "Primary_Food_System_Category" : "Agriculture & Food Production",
+        "Agriculture___Food_Production_Type" : "Fruits/Berries, Honey, Herbs, Meat, Vegetables",
+        "Processing___Value_Added_Products_Type" : "",
+        "Aggregation__Distribution____Storage_Type" : "",
+        "Food_Outlet_Type" : "Farm Stand, Farm Store, Food Delivery Service, Online Ordering",
+        "Please_indicate_what_payment_methods_you_accept_" : "",
+        "Food_Loss_Management_Type" : "",
+        "Food_Assistance__Education____Support_Type_" : "",
+        "Additional_Food_System_Categories" : "I do not fit into another category (Submit Survey)",
+        "Subsectors_Joined" : "Fruits/Berries, Honey, Herbs, Meat, Vegetables,,,Farm Stand, Farm Store, Food Delivery Service, Online Ordering,,"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 8,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          -79.333419499999934,
+          42.441576700000041,
+          0
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 8,
+        "Timestamp" : "43908.6511547569",
+        "Organization_Name" : "Om Nohm Gluten Free , llc",
+        "Organization_Street_Address" : "45 Temple Street, Suite A",
+        "Organization_City_Town" : "Fredonia",
+        "Organization_Zip_Code" : 14063,
+        "Organization_State" : "NY",
+        "Full_Address" : "45 Temple Street, Suite A Fredonia 14063 NY USA",
+        "Lat" : 42.441576699999999,
+        "Long" : -79.333419499999991,
+        "Organization_Phone_Number" : "585-322-6864",
+        "Organization_Website" : "https://www.omnohm.com",
+        "Organization_Social_Media" : "https://www.facebook.com/omnohm",
+        "If_you_would_like_to_provide_a_brief_description_of_your_organiz" : "Dedicated gluten free bakery and vegetarian cafe,food truck, farmers market booth and restaurant supplier.  Gluten free support for those with specialized food needs.",
+        "Please_indicate_any_certifications_held_by_your_organization_" : "",
+        "Primary_Food_System_Category" : "Food Retail / Direct Sales",
+        "Agriculture___Food_Production_Type" : "",
+        "Processing___Value_Added_Products_Type" : "Baked Goods, Prepared/Speciality Foods",
+        "Aggregation__Distribution____Storage_Type" : "Food Supplier",
+        "Food_Outlet_Type" : "Bakery, Restaurant/Bar",
+        "Please_indicate_what_payment_methods_you_accept_" : "Credit Cards, Can accept double up and snap at farmers market",
+        "Food_Loss_Management_Type" : "",
+        "Food_Assistance__Education____Support_Type_" : "Community Resources",
+        "Additional_Food_System_Categories" : "I do not fit into another category (Submit Survey)",
+        "Subsectors_Joined" : ",Baked Goods, Prepared/Speciality Foods,Food Supplier,Bakery, Restaurant/Bar,,Community Resources"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 9,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          -79.332349799999974,
+          42.477636200000063,
+          0
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 9,
+        "Timestamp" : "43908.7258450463",
+        "Organization_Name" : "The Salvation Army",
+        "Organization_Street_Address" : "704 Central Avenue",
+        "Organization_City_Town" : "Dunkirk",
+        "Organization_Zip_Code" : 14048,
+        "Organization_State" : "NY",
+        "Full_Address" : "704 Central Avenue Dunkirk 14048 NY USA",
+        "Lat" : 42.477636199999999,
+        "Long" : -79.332349800000003,
+        "Organization_Phone_Number" : "716-366-3701",
+        "Organization_Website" : "https://empire.salvationarmy.org/EmpireNY/Dunkirk",
+        "Organization_Social_Media" : "https://www.facebook.com/TheSalvationArmyDunkirk/",
+        "If_you_would_like_to_provide_a_brief_description_of_your_organiz" : "We exist to meet the physical and spiritual needs of our neighbors without discrimination.  In Dunkirk we have an emergency food pantry, after school tutoring, basketball year round youth programming, church services, and more!",
+        "Please_indicate_any_certifications_held_by_your_organization_" : "",
+        "Primary_Food_System_Category" : "Food Assistance, Education, & Support",
+        "Agriculture___Food_Production_Type" : "",
+        "Processing___Value_Added_Products_Type" : "",
+        "Aggregation__Distribution____Storage_Type" : "",
+        "Food_Outlet_Type" : "",
+        "Please_indicate_what_payment_methods_you_accept_" : "",
+        "Food_Loss_Management_Type" : "",
+        "Food_Assistance__Education____Support_Type_" : "Food Pantry, Education, Community Resource",
+        "Additional_Food_System_Categories" : "I do not fit into another category (Submit Survey)",
+        "Subsectors_Joined" : ",,,,,Food Pantry, Education, Community Resource"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 10,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          -79.109833999999978,
+          42.145729000000074,
+          0
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 10,
+        "Timestamp" : "43911.6728939468",
+        "Organization_Name" : "Abers Acres",
+        "Organization_Street_Address" : "884, Route 394",
+        "Organization_City_Town" : "Kennedy",
+        "Organization_Zip_Code" : 14747,
+        "Organization_State" : "NY",
+        "Full_Address" : "884, Route 394 Kennedy 14747 NY USA",
+        "Lat" : 42.145729000000003,
+        "Long" : -79.109833999999992,
+        "Organization_Phone_Number" : "716-267-2431",
+        "Organization_Website" : "http://abersacres.com/",
+        "Organization_Social_Media" : "https://www.facebook.com/Abers-Acres-320194824774/",
+        "If_you_would_like_to_provide_a_brief_description_of_your_organiz" : "Certified organic fruit and vegetable farm",
+        "Please_indicate_any_certifications_held_by_your_organization_" : "Certified Organic, Chautauqua Grown, Food Safety Plan in Place, USDA GAP",
+        "Primary_Food_System_Category" : "Agriculture & Food Production",
+        "Agriculture___Food_Production_Type" : "Flowers, Fruits/Berries, Herbs, Vegetables",
+        "Processing___Value_Added_Products_Type" : "Baked Goods",
+        "Aggregation__Distribution____Storage_Type" : "Food Supplier",
+        "Food_Outlet_Type" : "Farmers Market, Farm Stand",
+        "Please_indicate_what_payment_methods_you_accept_" : "Credit Cards, Cash, SNAP, WIC, Double Up Food Bucks",
+        "Food_Loss_Management_Type" : "",
+        "Food_Assistance__Education____Support_Type_" : "",
+        "Additional_Food_System_Categories" : "I do not fit into another category (Submit Survey)",
+        "Subsectors_Joined" : "Flowers, Fruits/Berries, Herbs, Vegetables,Baked Goods,Food Supplier,Farmers Market, Farm Stand,,"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 11,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          -79.199223599999982,
+          42.117479400000036,
+          0
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 11,
+        "Timestamp" : "43914.6300311806",
+        "Organization_Name" : "Falconer Farmers Market",
+        "Organization_Street_Address" : "101 W. Main St., Falconer, NY 14733",
+        "Organization_City_Town" : "Falconer",
+        "Organization_Zip_Code" : 14733,
+        "Organization_State" : "NY",
+        "Full_Address" : "101 W. Main St., Falconer, NY 14733 Falconer 14733 NY USA",
+        "Lat" : 42.117479400000001,
+        "Long" : -79.19922360000001,
+        "Organization_Phone_Number" : "716-665-2050",
+        "Organization_Website" : "",
+        "Organization_Social_Media" : "",
+        "If_you_would_like_to_provide_a_brief_description_of_your_organiz" : "Our Farmers Market will not be running this year (2020).",
+        "Please_indicate_any_certifications_held_by_your_organization_" : "Chautauqua Grown, Food Safety Plan in Place",
+        "Primary_Food_System_Category" : "Food Retail / Direct Sales",
+        "Agriculture___Food_Production_Type" : "",
+        "Processing___Value_Added_Products_Type" : "",
+        "Aggregation__Distribution____Storage_Type" : "",
+        "Food_Outlet_Type" : "Farmers Market",
+        "Please_indicate_what_payment_methods_you_accept_" : "Credit Cards, SNAP, WIC",
+        "Food_Loss_Management_Type" : "",
+        "Food_Assistance__Education____Support_Type_" : "",
+        "Additional_Food_System_Categories" : "I do not fit into another category (Submit Survey)",
+        "Subsectors_Joined" : ",,,Farmers Market,,"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 12,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          -79.759607899999935,
+          41.998839200000077,
+          0
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 12,
+        "Timestamp" : "43917.9696831944",
+        "Organization_Name" : "Todd Bayle Farm",
+        "Organization_Street_Address" : "10640 Stateline Road",
+        "Organization_City_Town" : "Clymer ",
+        "Organization_Zip_Code" : 14724,
+        "Organization_State" : "NY",
+        "Full_Address" : "10640 Stateline Road Clymer  14724 NY USA",
+        "Lat" : 41.998839199999999,
+        "Long" : -79.759607899999992,
+        "Organization_Phone_Number" : "814-462-7270",
+        "Organization_Website" : "None",
+        "Organization_Social_Media" : "",
+        "If_you_would_like_to_provide_a_brief_description_of_your_organiz" : "",
+        "Please_indicate_any_certifications_held_by_your_organization_" : "Certified Organic",
+        "Primary_Food_System_Category" : "Agriculture & Food Production",
+        "Agriculture___Food_Production_Type" : "Dairy, Maple Syrup, Meat",
+        "Processing___Value_Added_Products_Type" : "",
+        "Aggregation__Distribution____Storage_Type" : "",
+        "Food_Outlet_Type" : "",
+        "Please_indicate_what_payment_methods_you_accept_" : "",
+        "Food_Loss_Management_Type" : "",
+        "Food_Assistance__Education____Support_Type_" : "",
+        "Additional_Food_System_Categories" : "I do not fit into another category (Submit Survey)",
+        "Subsectors_Joined" : "Dairy, Maple Syrup, Meat,,,,,"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 13,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          -79.602942499999983,
+          42.292887600000029,
+          0
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 13,
+        "Timestamp" : "43920.9943934028",
+        "Organization_Name" : "Toboggan Hill Farm",
+        "Organization_Street_Address" : "8380 Hardscrabble Road",
+        "Organization_City_Town" : "Westfield",
+        "Organization_Zip_Code" : 14787,
+        "Organization_State" : "NY",
+        "Full_Address" : "8380 Hardscrabble Road Westfield 14787 NY USA",
+        "Lat" : 42.2928876,
+        "Long" : -79.602942499999997,
+        "Organization_Phone_Number" : "716-326-2060",
+        "Organization_Website" : "www.tobogganhillfarm.com",
+        "Organization_Social_Media" : "",
+        "If_you_would_like_to_provide_a_brief_description_of_your_organiz" : "We are a diversified farm using sustainable methods.We sell pork, lamb, goat meat, and eggs. We have a market garden and we offer a CSA. We also sell at farmers' markets.",
+        "Please_indicate_any_certifications_held_by_your_organization_" : "Chautauqua Grown",
+        "Primary_Food_System_Category" : "Agriculture & Food Production",
+        "Agriculture___Food_Production_Type" : "Eggs, Maple Syrup, Meat, Vegetables",
+        "Processing___Value_Added_Products_Type" : "",
+        "Aggregation__Distribution____Storage_Type" : "",
+        "Food_Outlet_Type" : "Community Supported Agriculture (CSA)",
+        "Please_indicate_what_payment_methods_you_accept_" : "",
+        "Food_Loss_Management_Type" : "",
+        "Food_Assistance__Education____Support_Type_" : "",
+        "Additional_Food_System_Categories" : "I do not fit into another category (Submit Survey)",
+        "Subsectors_Joined" : "Eggs, Maple Syrup, Meat, Vegetables,,,Community Supported Agriculture (CSA),,"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 14,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          -79.605183999999952,
+          42.306207000000029,
+          0
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 14,
+        "Timestamp" : "43928.7291592708",
+        "Organization_Name" : "Johnson Estate Winery",
+        "Organization_Street_Address" : "8419 West Route 20",
+        "Organization_City_Town" : "Westfield",
+        "Organization_Zip_Code" : 14787,
+        "Organization_State" : "NY",
+        "Full_Address" : "8419 West Route 20 Westfield 14787 NY USA",
+        "Lat" : 42.306207000000001,
+        "Long" : -79.605183999999994,
+        "Organization_Phone_Number" : "716-326-2191",
+        "Organization_Website" : "www.JohnsonWinery.com",
+        "Organization_Social_Media" : "https://www.Facebook.com/JohnsonWinery",
+        "If_you_would_like_to_provide_a_brief_description_of_your_organiz" : "Fully-integrated winery - estate-grown, produced and bottled wines.",
+        "Please_indicate_any_certifications_held_by_your_organization_" : "Not applicable",
+        "Primary_Food_System_Category" : "Agriculture & Food Production",
+        "Agriculture___Food_Production_Type" : "Grapes for wine",
+        "Processing___Value_Added_Products_Type" : "Wine Production",
+        "Aggregation__Distribution____Storage_Type" : "",
+        "Food_Outlet_Type" : "Winery",
+        "Please_indicate_what_payment_methods_you_accept_" : "",
+        "Food_Loss_Management_Type" : "",
+        "Food_Assistance__Education____Support_Type_" : "",
+        "Additional_Food_System_Categories" : "I do not fit into another category (Submit Survey)",
+        "Subsectors_Joined" : "Grapes for wine,Wine Production,,Winery,,"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 15,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          -79.527820299999973,
+          42.350075300000071,
+          0
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 15,
+        "Timestamp" : "43928.7356423264",
+        "Organization_Name" : "Concord Grape Belt Heritage Association/ Grape Discovery Center",
+        "Organization_Street_Address" : "8305 West Main Road",
+        "Organization_City_Town" : "Westfield",
+        "Organization_Zip_Code" : 14787,
+        "Organization_State" : "NY",
+        "Full_Address" : "8305 West Main Road Westfield 14787 NY USA",
+        "Lat" : 42.3500753,
+        "Long" : -79.527820300000002,
+        "Organization_Phone_Number" : "716-326-2003",
+        "Organization_Website" : "www.grapediscoverycenter.com",
+        "Organization_Social_Media" : "",
+        "If_you_would_like_to_provide_a_brief_description_of_your_organiz" : "A nonprofit center for learning, exploring, tasting and shopping for Concord grape related products.",
+        "Please_indicate_any_certifications_held_by_your_organization_" : "Not applicable",
+        "Primary_Food_System_Category" : "Food Assistance, Education, & Support",
+        "Agriculture___Food_Production_Type" : "",
+        "Processing___Value_Added_Products_Type" : "",
+        "Aggregation__Distribution____Storage_Type" : "",
+        "Food_Outlet_Type" : "",
+        "Please_indicate_what_payment_methods_you_accept_" : "",
+        "Food_Loss_Management_Type" : "",
+        "Food_Assistance__Education____Support_Type_" : "Agricultural Resources, Community Resource, Education",
+        "Additional_Food_System_Categories" : "I do not fit into another category (Submit Survey)",
+        "Subsectors_Joined" : ",,,,,Agricultural Resources, Community Resource, Education"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 16,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          -79.082979999999964,
+          42.080228000000034,
+          0
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 16,
+        "Timestamp" : "43928.7369128472",
+        "Organization_Name" : "Hilltop Livestock ",
+        "Organization_Street_Address" : "1884 Emory Hill Rd",
+        "Organization_City_Town" : "Frewsburg",
+        "Organization_Zip_Code" : 14738,
+        "Organization_State" : "NY",
+        "Full_Address" : "1884 Emory Hill Rd Frewsburg 14738 NY USA",
+        "Lat" : 42.080227999999998,
+        "Long" : -79.082979999999992,
+        "Organization_Phone_Number" : "716-969-2870",
+        "Organization_Website" : "",
+        "Organization_Social_Media" : "https://www.facebook.com/Hilltoplivestock/",
+        "If_you_would_like_to_provide_a_brief_description_of_your_organiz" : "",
+        "Please_indicate_any_certifications_held_by_your_organization_" : "",
+        "Primary_Food_System_Category" : "Agriculture & Food Production",
+        "Agriculture___Food_Production_Type" : "Eggs, Meat",
+        "Processing___Value_Added_Products_Type" : "",
+        "Aggregation__Distribution____Storage_Type" : "",
+        "Food_Outlet_Type" : "",
+        "Please_indicate_what_payment_methods_you_accept_" : "",
+        "Food_Loss_Management_Type" : "",
+        "Food_Assistance__Education____Support_Type_" : "",
+        "Additional_Food_System_Categories" : "I do not fit into another category (Submit Survey)",
+        "Subsectors_Joined" : "Eggs, Meat,,,,,"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 17,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          -79.220087299999989,
+          42.115968200000054,
+          0
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 17,
+        "Timestamp" : "43928.7457099537",
+        "Organization_Name" : "Cornell Cooperative Extension of Chautauqua County",
+        "Organization_Street_Address" : "525 Falconer Street",
+        "Organization_City_Town" : "Jamestown",
+        "Organization_Zip_Code" : 14702,
+        "Organization_State" : "NY",
+        "Full_Address" : "525 Falconer Street Jamestown 14702 NY USA",
+        "Lat" : 42.115968199999998,
+        "Long" : -79.220087300000003,
+        "Organization_Phone_Number" : "716-664-9502",
+        "Organization_Website" : "www.cce.cornell.edu/chautauqua",
+        "Organization_Social_Media" : "https://m.me/CCEChautauqua",
+        "If_you_would_like_to_provide_a_brief_description_of_your_organiz" : "For over a century, Cornell Cooperative Extension has worked in partnership with Chautauqua County government and Cornell University to address priority needs in agriculture, youth development, and nutrition. Our signature programs continue to provide residents with valuable and unique access to scientific research and practical education—enabling individuals to improve their lives and communities.",
+        "Please_indicate_any_certifications_held_by_your_organization_" : "",
+        "Primary_Food_System_Category" : "Food Assistance, Education, & Support",
+        "Agriculture___Food_Production_Type" : "",
+        "Processing___Value_Added_Products_Type" : "",
+        "Aggregation__Distribution____Storage_Type" : "",
+        "Food_Outlet_Type" : "",
+        "Please_indicate_what_payment_methods_you_accept_" : "",
+        "Food_Loss_Management_Type" : "",
+        "Food_Assistance__Education____Support_Type_" : "Agricultural Resources, Business Resources, Community Resource, Farmland Conservation, Food Assistance Program (Ex. WIC, SNAP), Research, Education",
+        "Additional_Food_System_Categories" : "I do not fit into another category (Submit Survey)",
+        "Subsectors_Joined" : ",,,,,Agricultural Resources, Business Resources, Community Resource, Farmland Conservation, Food Assistance Program (Ex. WIC, SNAP), Research, Education"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 18,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          -79.721465399999943,
+          42.080371300000024,
+          0
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 18,
+        "Timestamp" : "43928.7626754745",
+        "Organization_Name" : "Schwab’s Dairy ",
+        "Organization_Street_Address" : "1841 Route 426",
+        "Organization_City_Town" : "Clymer",
+        "Organization_Zip_Code" : 14724,
+        "Organization_State" : "NY",
+        "Full_Address" : "1841 Route 426 Clymer 14724 NY USA",
+        "Lat" : 42.080371300000003,
+        "Long" : -79.7214654,
+        "Organization_Phone_Number" : "814-873-5499",
+        "Organization_Website" : "",
+        "Organization_Social_Media" : "",
+        "If_you_would_like_to_provide_a_brief_description_of_your_organiz" : "Dairy farm ",
+        "Please_indicate_any_certifications_held_by_your_organization_" : "Not applicable",
+        "Primary_Food_System_Category" : "Agriculture & Food Production",
+        "Agriculture___Food_Production_Type" : "Dairy",
+        "Processing___Value_Added_Products_Type" : "",
+        "Aggregation__Distribution____Storage_Type" : "",
+        "Food_Outlet_Type" : "",
+        "Please_indicate_what_payment_methods_you_accept_" : "",
+        "Food_Loss_Management_Type" : "",
+        "Food_Assistance__Education____Support_Type_" : "",
+        "Additional_Food_System_Categories" : "I do not fit into another category (Submit Survey)",
+        "Subsectors_Joined" : "Dairy,,,,,"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 19,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          -79.166740999999945,
+          42.084238900000059,
+          0
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 19,
+        "Timestamp" : "43928.7798037037",
+        "Organization_Name" : "Carlberg Farm Produce",
+        "Organization_Street_Address" : "1621 Carlberg Rd. ",
+        "Organization_City_Town" : "Jamestown ",
+        "Organization_Zip_Code" : 14701,
+        "Organization_State" : "NY",
+        "Full_Address" : "1621 Carlberg Rd.  Jamestown  14701 NY USA",
+        "Lat" : 42.084238900000003,
+        "Long" : -79.166741000000002,
+        "Organization_Phone_Number" : "716-969-3525",
+        "Organization_Website" : "Www.carlbergfarm.webs.com",
+        "Organization_Social_Media" : "https://www.facebook.com/Carlbergfarmproduce/",
+        "If_you_would_like_to_provide_a_brief_description_of_your_organiz" : "Family owned farm growing fresh produce at a road-side wagon on the corner of Route 380 and Carlberg Rd., Jamestown. ",
+        "Please_indicate_any_certifications_held_by_your_organization_" : "Chautauqua Grown",
+        "Primary_Food_System_Category" : "Agriculture & Food Production",
+        "Agriculture___Food_Production_Type" : "Eggs, Fruits/Berries, Meat, Vegetables",
+        "Processing___Value_Added_Products_Type" : "",
+        "Aggregation__Distribution____Storage_Type" : "",
+        "Food_Outlet_Type" : "Farm Stand",
+        "Please_indicate_what_payment_methods_you_accept_" : "",
+        "Food_Loss_Management_Type" : "",
+        "Food_Assistance__Education____Support_Type_" : "",
+        "Additional_Food_System_Categories" : "I do not fit into another category (Submit Survey)",
+        "Subsectors_Joined" : "Eggs, Fruits/Berries, Meat, Vegetables,,,Farm Stand,,"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 20,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          -79.220087299999989,
+          42.115968200000054,
+          0
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 20,
+        "Timestamp" : "43928.7929942708",
+        "Organization_Name" : "Chautauqua CCE Master Gardeners",
+        "Organization_Street_Address" : "525 Falconer St.",
+        "Organization_City_Town" : "Jamestown ",
+        "Organization_Zip_Code" : 14702,
+        "Organization_State" : "NY",
+        "Full_Address" : "525 Falconer St. Jamestown  14702 NY USA",
+        "Lat" : 42.115968199999998,
+        "Long" : -79.220087300000003,
+        "Organization_Phone_Number" : "716-664-9502",
+        "Organization_Website" : "cornell.edu/chautauqua/gardening",
+        "Organization_Social_Media" : "",
+        "If_you_would_like_to_provide_a_brief_description_of_your_organiz" : "We provide community support in science based gardening",
+        "Please_indicate_any_certifications_held_by_your_organization_" : "Not applicable",
+        "Primary_Food_System_Category" : "Food Assistance, Education, & Support",
+        "Agriculture___Food_Production_Type" : "Community Garden, Herbs, Vegetables",
+        "Processing___Value_Added_Products_Type" : "",
+        "Aggregation__Distribution____Storage_Type" : "",
+        "Food_Outlet_Type" : "",
+        "Please_indicate_what_payment_methods_you_accept_" : "",
+        "Food_Loss_Management_Type" : "",
+        "Food_Assistance__Education____Support_Type_" : "Community Resource, Education",
+        "Additional_Food_System_Categories" : "I do not fit into another category (Submit Survey)",
+        "Subsectors_Joined" : "Community Garden, Herbs, Vegetables,,,,,Community Resource, Education"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 21,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          -79.487261999999987,
+          42.363557000000071,
+          0
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 21,
+        "Timestamp" : "43928.8236649884",
+        "Organization_Name" : "Vinehaven Vineyards / Jay D. Hardenburg",
+        "Organization_Street_Address" : "6618 Webster Road",
+        "Organization_City_Town" : "Portland",
+        "Organization_Zip_Code" : 14769,
+        "Organization_State" : "NY",
+        "Full_Address" : "6618 Webster Road Portland 14769 NY USA",
+        "Lat" : 42.363557,
+        "Long" : -79.487262000000001,
+        "Organization_Phone_Number" : "716-792-9523",
+        "Organization_Website" : "N/A",
+        "Organization_Social_Media" : "",
+        "If_you_would_like_to_provide_a_brief_description_of_your_organiz" : "Concord and Niagara grape farm",
+        "Please_indicate_any_certifications_held_by_your_organization_" : "Welch's / National Grape Sustainable Agriculture Program",
+        "Primary_Food_System_Category" : "Agriculture & Food Production",
+        "Agriculture___Food_Production_Type" : "Fruits/Berries",
+        "Processing___Value_Added_Products_Type" : "",
+        "Aggregation__Distribution____Storage_Type" : "",
+        "Food_Outlet_Type" : "",
+        "Please_indicate_what_payment_methods_you_accept_" : "",
+        "Food_Loss_Management_Type" : "",
+        "Food_Assistance__Education____Support_Type_" : "",
+        "Additional_Food_System_Categories" : "I do not fit into another category (Submit Survey)",
+        "Subsectors_Joined" : "Fruits/Berries,,,,,"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 22,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          -79.382990999999947,
+          42.446059000000048,
+          0
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 22,
+        "Timestamp" : "43928.824905706",
+        "Organization_Name" : "Stand Fast Farm",
+        "Organization_Street_Address" : "4899 Van Buren Road",
+        "Organization_City_Town" : "Dunkirk",
+        "Organization_Zip_Code" : 14048,
+        "Organization_State" : "NY",
+        "Full_Address" : "4899 Van Buren Road Dunkirk 14048 NY USA",
+        "Lat" : 42.446058999999998,
+        "Long" : -79.38299099999999,
+        "Organization_Phone_Number" : "716-338-2072",
+        "Organization_Website" : "www.standfastbeef.com",
+        "Organization_Social_Media" : "https://www.facebook.com/standfastbeef/",
+        "If_you_would_like_to_provide_a_brief_description_of_your_organiz" : "We raise 100% grass fed beef birth to finish and do not use hormones. All beef with our label on it is from an animal that never received antibiotics for any reason. We practice rotational grazing and seek to mimic natural systems in the way our cattle live. We also raise chickens and turkeys on pasture and feed them organic soy free grain. Our offering will include grass fed lamb in 2021. ",
+        "Please_indicate_any_certifications_held_by_your_organization_" : "",
+        "Primary_Food_System_Category" : "Agriculture & Food Production",
+        "Agriculture___Food_Production_Type" : "Meat",
+        "Processing___Value_Added_Products_Type" : "",
+        "Aggregation__Distribution____Storage_Type" : "",
+        "Food_Outlet_Type" : "Farmers Market, Food Delivery Service, Online Ordering",
+        "Please_indicate_what_payment_methods_you_accept_" : "Credit Cards, Cash",
+        "Food_Loss_Management_Type" : "",
+        "Food_Assistance__Education____Support_Type_" : "",
+        "Additional_Food_System_Categories" : "I do not fit into another category (Submit Survey)",
+        "Subsectors_Joined" : "Meat,,,Farmers Market, Food Delivery Service, Online Ordering,,"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 23,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          -79.478934999999979,
+          42.382483000000036,
+          0
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 23,
+        "Timestamp" : "43928.8974665393",
+        "Organization_Name" : "Trebor Vineyards",
+        "Organization_Street_Address" : "8814 Onthank Rd",
+        "Organization_City_Town" : "Portland",
+        "Organization_Zip_Code" : 14769,
+        "Organization_State" : "NY",
+        "Full_Address" : "8814 Onthank Rd Portland 14769 NY USA",
+        "Lat" : 42.382483000000001,
+        "Long" : -79.478934999999993,
+        "Organization_Phone_Number" : "716-672-9076",
+        "Organization_Website" : "N/A",
+        "Organization_Social_Media" : "",
+        "If_you_would_like_to_provide_a_brief_description_of_your_organiz" : "175 acre grape farm. Blackberries formerly at roadside stand by order and appointment",
+        "Please_indicate_any_certifications_held_by_your_organization_" : "",
+        "Primary_Food_System_Category" : "Agriculture & Food Production",
+        "Agriculture___Food_Production_Type" : "Fruits/Berries",
+        "Processing___Value_Added_Products_Type" : "",
+        "Aggregation__Distribution____Storage_Type" : "",
+        "Food_Outlet_Type" : "",
+        "Please_indicate_what_payment_methods_you_accept_" : "",
+        "Food_Loss_Management_Type" : "",
+        "Food_Assistance__Education____Support_Type_" : "",
+        "Additional_Food_System_Categories" : "I do not fit into another category (Submit Survey)",
+        "Subsectors_Joined" : "Fruits/Berries,,,,,"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 24,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          -79.053348999999969,
+          42.362591000000066,
+          0
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 24,
+        "Timestamp" : "43929.3054006944",
+        "Organization_Name" : "South Dayton Food Pantry",
+        "Organization_Street_Address" : "327 Pine Street",
+        "Organization_City_Town" : "South Dayton",
+        "Organization_Zip_Code" : 14138,
+        "Organization_State" : "NY",
+        "Full_Address" : "327 Pine Street South Dayton 14138 NY USA",
+        "Lat" : 42.362590999999988,
+        "Long" : -79.053349000000011,
+        "Organization_Phone_Number" : "716-988-3232",
+        "Organization_Website" : "",
+        "Organization_Social_Media" : "",
+        "If_you_would_like_to_provide_a_brief_description_of_your_organiz" : "Food distribution based on income and family size",
+        "Please_indicate_any_certifications_held_by_your_organization_" : "",
+        "Primary_Food_System_Category" : "Food Assistance, Education, & Support",
+        "Agriculture___Food_Production_Type" : "",
+        "Processing___Value_Added_Products_Type" : "",
+        "Aggregation__Distribution____Storage_Type" : "",
+        "Food_Outlet_Type" : "",
+        "Please_indicate_what_payment_methods_you_accept_" : "",
+        "Food_Loss_Management_Type" : "",
+        "Food_Assistance__Education____Support_Type_" : "Food Pantry",
+        "Additional_Food_System_Categories" : "I do not fit into another category (Submit Survey)",
+        "Subsectors_Joined" : ",,,,,Food Pantry"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 25,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          -78.135268499999938,
+          42.739092200000073,
+          0
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 25,
+        "Timestamp" : "43929.3108006134",
+        "Organization_Name" : "Cornell Cooperative Extension - Harvest NY",
+        "Organization_Street_Address" : "36 Center St.",
+        "Organization_City_Town" : "Warsaw, NY",
+        "Organization_Zip_Code" : 14569,
+        "Organization_State" : "NY",
+        "Full_Address" : "36 Center St. Warsaw, NY 14569 NY USA",
+        "Lat" : 42.739092199999988,
+        "Long" : -78.135268499999995,
+        "Organization_Phone_Number" : "585-689-9163",
+        "Organization_Website" : "https://harvestny.cce.cornell.edu/",
+        "Organization_Social_Media" : "",
+        "If_you_would_like_to_provide_a_brief_description_of_your_organiz" : "The Farm Strategic Planning Specialist on the Harvest NY team provides producers assistance with farmstead development, facility layout, and environmental planning to optimize production on dairy, crop, and livestock farms.\n",
+        "Please_indicate_any_certifications_held_by_your_organization_" : "Not applicable",
+        "Primary_Food_System_Category" : "Food Assistance, Education, & Support",
+        "Agriculture___Food_Production_Type" : "",
+        "Processing___Value_Added_Products_Type" : "",
+        "Aggregation__Distribution____Storage_Type" : "",
+        "Food_Outlet_Type" : "",
+        "Please_indicate_what_payment_methods_you_accept_" : "",
+        "Food_Loss_Management_Type" : "",
+        "Food_Assistance__Education____Support_Type_" : "Agricultural Resources, Business Resource, Education",
+        "Additional_Food_System_Categories" : "I do not fit into another category (Submit Survey)",
+        "Subsectors_Joined" : ",,,,,Agricultural Resources, Business Resource, Education"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 26,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          -79.080356999999935,
+          42.411384000000055,
+          0
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 26,
+        "Timestamp" : "43929.3238045718",
+        "Organization_Name" : "David Ivett",
+        "Organization_Street_Address" : "9510 South Dayton Silver Creek Rd.",
+        "Organization_City_Town" : "Forestville",
+        "Organization_Zip_Code" : 14062,
+        "Organization_State" : "NY",
+        "Full_Address" : "9510 South Dayton Silver Creek Rd. Forestville 14062 NY USA",
+        "Lat" : 42.411383999999998,
+        "Long" : -79.080356999999992,
+        "Organization_Phone_Number" : "716-988-3688",
+        "Organization_Website" : "",
+        "Organization_Social_Media" : "",
+        "If_you_would_like_to_provide_a_brief_description_of_your_organiz" : "Beef Farm",
+        "Please_indicate_any_certifications_held_by_your_organization_" : "Chautauqua Grown, BQA Producer",
+        "Primary_Food_System_Category" : "Food Retail / Direct Sales",
+        "Agriculture___Food_Production_Type" : "Meat",
+        "Processing___Value_Added_Products_Type" : "",
+        "Aggregation__Distribution____Storage_Type" : "",
+        "Food_Outlet_Type" : "Farm Store, Sales hamburg,order halves quarters",
+        "Please_indicate_what_payment_methods_you_accept_" : "Cash",
+        "Food_Loss_Management_Type" : "",
+        "Food_Assistance__Education____Support_Type_" : "",
+        "Additional_Food_System_Categories" : "I do not fit into another category (Submit Survey)",
+        "Subsectors_Joined" : "Meat,,,Farm Store, Sales hamburg,order halves quarters,,"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 27,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          -79.579606999999953,
+          42.31295300000005,
+          0
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 27,
+        "Timestamp" : "43929.3318029051",
+        "Organization_Name" : "Eggert Farms",
+        "Organization_Street_Address" : "31 South Gale St",
+        "Organization_City_Town" : "Westfield",
+        "Organization_Zip_Code" : 14787,
+        "Organization_State" : "NY",
+        "Full_Address" : "31 South Gale St Westfield 14787 NY USA",
+        "Lat" : 42.312953,
+        "Long" : -79.579606999999996,
+        "Organization_Phone_Number" : "716-753-0556",
+        "Organization_Website" : "",
+        "Organization_Social_Media" : "",
+        "If_you_would_like_to_provide_a_brief_description_of_your_organiz" : "Concord and Niagara Vineyards",
+        "Please_indicate_any_certifications_held_by_your_organization_" : "Not applicable",
+        "Primary_Food_System_Category" : "Agriculture & Food Production",
+        "Agriculture___Food_Production_Type" : "Fruits/Berries",
+        "Processing___Value_Added_Products_Type" : "",
+        "Aggregation__Distribution____Storage_Type" : "",
+        "Food_Outlet_Type" : "",
+        "Please_indicate_what_payment_methods_you_accept_" : "",
+        "Food_Loss_Management_Type" : "",
+        "Food_Assistance__Education____Support_Type_" : "",
+        "Additional_Food_System_Categories" : "I do not fit into another category (Submit Survey)",
+        "Subsectors_Joined" : "Fruits/Berries,,,,,"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 28,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          -79.634372799999937,
+          42.033266000000026,
+          0
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 28,
+        "Timestamp" : "43929.3318187963",
+        "Organization_Name" : "Willow Springs Farm",
+        "Organization_Street_Address" : "806 Clymer Sherman Rd",
+        "Organization_City_Town" : "Clymer",
+        "Organization_Zip_Code" : 14724,
+        "Organization_State" : "NY",
+        "Full_Address" : "806 Clymer Sherman Rd Clymer 14724 NY USA",
+        "Lat" : 42.033265999999998,
+        "Long" : -79.634372800000008,
+        "Organization_Phone_Number" : "716-640-1586",
+        "Organization_Website" : "",
+        "Organization_Social_Media" : "https://www.facebook.com/willowspringsfarm20/",
+        "If_you_would_like_to_provide_a_brief_description_of_your_organiz" : "Family farm raising beef for local families. We also raise feeder cattle to sell to larger operations. ",
+        "Please_indicate_any_certifications_held_by_your_organization_" : "Chautauqua Grown",
+        "Primary_Food_System_Category" : "Agriculture & Food Production",
+        "Agriculture___Food_Production_Type" : "Eggs, Meat",
+        "Processing___Value_Added_Products_Type" : "",
+        "Aggregation__Distribution____Storage_Type" : "",
+        "Food_Outlet_Type" : "",
+        "Please_indicate_what_payment_methods_you_accept_" : "",
+        "Food_Loss_Management_Type" : "",
+        "Food_Assistance__Education____Support_Type_" : "",
+        "Additional_Food_System_Categories" : "I do not fit into another category (Submit Survey)",
+        "Subsectors_Joined" : "Eggs, Meat,,,,,"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 29,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          -79.481791499999986,
+          42.372942600000044,
+          0
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 29,
+        "Timestamp" : "43929.3408375926",
+        "Organization_Name" : "Olde Chautauqua Farms",
+        "Organization_Street_Address" : "6645 West Main Rd",
+        "Organization_City_Town" : "Portland",
+        "Organization_Zip_Code" : 14769,
+        "Organization_State" : "NY",
+        "Full_Address" : "6645 West Main Rd Portland 14769 NY USA",
+        "Lat" : 42.372942599999988,
+        "Long" : -79.4817915,
+        "Organization_Phone_Number" : "716-792-9440",
+        "Organization_Website" : "",
+        "Organization_Social_Media" : "http://www.facebook.com/OCF9440",
+        "If_you_would_like_to_provide_a_brief_description_of_your_organiz" : "Olde Chautauqua Farms offers u-pick cherries and asparagus, along with pre-picked gladiolus. Our cherry orchards are full of several varieties of both sweet and sour cherries that ripen at many different times throughout the season. Visit our farm for a fun, family oriented experience and talk with the staff to learn more about their operation! ",
+        "Please_indicate_any_certifications_held_by_your_organization_" : "Chautauqua Grown, Food Safety Plan in Place",
+        "Primary_Food_System_Category" : "Agriculture & Food Production",
+        "Agriculture___Food_Production_Type" : "Flowers, Fruits/Berries, Vegtables",
+        "Processing___Value_Added_Products_Type" : "",
+        "Aggregation__Distribution____Storage_Type" : "",
+        "Food_Outlet_Type" : "",
+        "Please_indicate_what_payment_methods_you_accept_" : "",
+        "Food_Loss_Management_Type" : "",
+        "Food_Assistance__Education____Support_Type_" : "",
+        "Additional_Food_System_Categories" : "I do not fit into another category (Submit Survey)",
+        "Subsectors_Joined" : "Flowers, Fruits/Berries, Vegtables,,,,,"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 30,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          -79.584662399999957,
+          42.326696800000036,
+          0
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 30,
+        "Timestamp" : "43929.3963945486",
+        "Organization_Name" : "Growers Co-op",
+        "Organization_Street_Address" : "112 N Portage St",
+        "Organization_City_Town" : "Westfield",
+        "Organization_Zip_Code" : 14787,
+        "Organization_State" : "NY",
+        "Full_Address" : "112 N Portage St Westfield 14787 NY USA",
+        "Lat" : 42.326696800000001,
+        "Long" : -79.584662399999999,
+        "Organization_Phone_Number" : "716-326-3161",
+        "Organization_Website" : "www.concordgrapejuice.com",
+        "Organization_Social_Media" : "https://www.facebook.com/growerscoop/?ref=aymt_homepage_panel&eid=ARA-NCUEeP7l-VxlwgVfaeg3mmAVE-zh0-bN0fSRFZjMIsgp3TNlNiJNTRyAoEJ-5JM5k_6FumjJeOy-",
+        "If_you_would_like_to_provide_a_brief_description_of_your_organiz" : "Specialists in turning fruits into juices, concentrates, and purees, since 1929.",
+        "Please_indicate_any_certifications_held_by_your_organization_" : "Certified Organic, GFSI Equivalent, OU kosher, Triangle K kosher, HACCP",
+        "Primary_Food_System_Category" : "Processing & Value-Added Products",
+        "Agriculture___Food_Production_Type" : "",
+        "Processing___Value_Added_Products_Type" : "Brewing, Cider, Distilling, Fruit Processing, Wine Production",
+        "Aggregation__Distribution____Storage_Type" : "",
+        "Food_Outlet_Type" : "",
+        "Please_indicate_what_payment_methods_you_accept_" : "",
+        "Food_Loss_Management_Type" : "",
+        "Food_Assistance__Education____Support_Type_" : "",
+        "Additional_Food_System_Categories" : "I do not fit into another category (Submit Survey)",
+        "Subsectors_Joined" : ",Brewing, Cider, Distilling, Fruit Processing, Wine Production,,,,"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 31,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          -78.459017999999958,
+          42.205611000000033,
+          0
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 31,
+        "Timestamp" : "43929.448342963",
+        "Organization_Name" : "Tan Childs Blueberries & Chestnuts",
+        "Organization_Street_Address" : "4755 Five Mile Rd",
+        "Organization_City_Town" : "Hinsdale",
+        "Organization_Zip_Code" : 14743,
+        "Organization_State" : "NY",
+        "Full_Address" : "4755 Five Mile Rd Hinsdale 14743 NY USA",
+        "Lat" : 42.205610999999998,
+        "Long" : -78.459018,
+        "Organization_Phone_Number" : "716-557-2189",
+        "Organization_Website" : "n/a",
+        "Organization_Social_Media" : "https://www.facebook.com/tanchildsblueberry/",
+        "If_you_would_like_to_provide_a_brief_description_of_your_organiz" : "sell premium blueberries at farmers markets/timberland",
+        "Please_indicate_any_certifications_held_by_your_organization_" : "Not applicable",
+        "Primary_Food_System_Category" : "Agriculture & Food Production",
+        "Agriculture___Food_Production_Type" : "Fruits/Berries",
+        "Processing___Value_Added_Products_Type" : "Fruit Processing, jam",
+        "Aggregation__Distribution____Storage_Type" : "",
+        "Food_Outlet_Type" : "",
+        "Please_indicate_what_payment_methods_you_accept_" : "",
+        "Food_Loss_Management_Type" : "",
+        "Food_Assistance__Education____Support_Type_" : "",
+        "Additional_Food_System_Categories" : "I do not fit into another category (Submit Survey)",
+        "Subsectors_Joined" : "Fruits/Berries,Fruit Processing, jam,,,,"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 32,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          -79.442957999999976,
+          42.165970000000073,
+          0
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 32,
+        "Timestamp" : "43929.565824213",
+        "Organization_Name" : "Spas Farm LLC",
+        "Organization_Street_Address" : "3781 Morley Rd",
+        "Organization_City_Town" : "Ashville",
+        "Organization_Zip_Code" : 14710,
+        "Organization_State" : "NY",
+        "Full_Address" : "3781 Morley Rd Ashville 14710 NY USA",
+        "Lat" : 42.165970000000002,
+        "Long" : -79.44295799999999,
+        "Organization_Phone_Number" : "716-789-4374",
+        "Organization_Website" : "spasfarm.com",
+        "Organization_Social_Media" : "Spas Farm  (facebook)",
+        "If_you_would_like_to_provide_a_brief_description_of_your_organiz" : "We provide grassfed and grass finished beef directly to customers for their freezers and through our Farm Store.",
+        "Please_indicate_any_certifications_held_by_your_organization_" : "Chautauqua Grown",
+        "Primary_Food_System_Category" : "Agriculture & Food Production",
+        "Agriculture___Food_Production_Type" : "Meat",
+        "Processing___Value_Added_Products_Type" : "",
+        "Aggregation__Distribution____Storage_Type" : "",
+        "Food_Outlet_Type" : "Farm Store, Most of our beef sold is picked up by the customer at the processor.",
+        "Please_indicate_what_payment_methods_you_accept_" : "Cash, personal checks",
+        "Food_Loss_Management_Type" : "",
+        "Food_Assistance__Education____Support_Type_" : "",
+        "Additional_Food_System_Categories" : "I do not fit into another category (Submit Survey)",
+        "Subsectors_Joined" : "Meat,,,Farm Store, Most of our beef sold is picked up by the customer at the processor.,,"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 33,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          -79.220087299999989,
+          42.115968200000054,
+          0
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 33,
+        "Timestamp" : "43929.6594076157",
+        "Organization_Name" : "Cornell Cooperative Extension of Chautauqua County",
+        "Organization_Street_Address" : "525 Falconer Street",
+        "Organization_City_Town" : "Jamestown",
+        "Organization_Zip_Code" : 14701,
+        "Organization_State" : "NY",
+        "Full_Address" : "525 Falconer Street Jamestown 14701 NY USA",
+        "Lat" : 42.115968199999998,
+        "Long" : -79.220087300000003,
+        "Organization_Phone_Number" : "716-664-9502",
+        "Organization_Website" : "http://chautauqua.cce.cornell.edu/",
+        "Organization_Social_Media" : "https://www.facebook.com/CCEChautauqua/",
+        "If_you_would_like_to_provide_a_brief_description_of_your_organiz" : "",
+        "Please_indicate_any_certifications_held_by_your_organization_" : "Chautauqua Grown",
+        "Primary_Food_System_Category" : "Agriculture & Food Production",
+        "Agriculture___Food_Production_Type" : "Community Garden, Dairy, Eggs, Fish, Flowers, Fruits/Berries, Grains, Grapes, Honey, Herbs, Hops, Maple Syrup, Meat, Vegetables",
+        "Processing___Value_Added_Products_Type" : "",
+        "Aggregation__Distribution____Storage_Type" : "",
+        "Food_Outlet_Type" : "",
+        "Please_indicate_what_payment_methods_you_accept_" : "",
+        "Food_Loss_Management_Type" : "",
+        "Food_Assistance__Education____Support_Type_" : "Agricultural Resources, Business Resources, Community Resource, Food Assistance Program (Ex. WIC, SNAP), Education",
+        "Additional_Food_System_Categories" : "I do not fit into another category (Submit Survey)",
+        "Subsectors_Joined" : "Community Garden, Dairy, Eggs, Fish, Flowers, Fruits/Berries, Grains, Grapes, Honey, Herbs, Hops, Maple Syrup, Meat, Vegetables,,,,,Agricultural Resources, Business Resources, Community Resource, Food Assistance Program (Ex. WIC, SNAP), Education"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 34,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          -79.593615499999942,
+          42.16144840000004,
+          0
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 34,
+        "Timestamp" : "43929.6633178241",
+        "Organization_Name" : "Sherman Central School",
+        "Organization_Street_Address" : "127 Park St ",
+        "Organization_City_Town" : "Sherman ",
+        "Organization_Zip_Code" : 14781,
+        "Organization_State" : "NY",
+        "Full_Address" : "127 Park St  Sherman  14781 NY USA",
+        "Lat" : 42.161448399999998,
+        "Long" : -79.593615499999999,
+        "Organization_Phone_Number" : "716-761-4815",
+        "Organization_Website" : "Sherman csd.org",
+        "Organization_Social_Media" : "https://www.facebook.com/ShermanCentralSchool/",
+        "If_you_would_like_to_provide_a_brief_description_of_your_organiz" : "Pk-12 school",
+        "Please_indicate_any_certifications_held_by_your_organization_" : "Not applicable",
+        "Primary_Food_System_Category" : "Food Assistance, Education, & Support",
+        "Agriculture___Food_Production_Type" : "",
+        "Processing___Value_Added_Products_Type" : "",
+        "Aggregation__Distribution____Storage_Type" : "",
+        "Food_Outlet_Type" : "",
+        "Please_indicate_what_payment_methods_you_accept_" : "",
+        "Food_Loss_Management_Type" : "",
+        "Food_Assistance__Education____Support_Type_" : "Community Resource, Emergency Meal Sites, Education, School",
+        "Additional_Food_System_Categories" : "I do not fit into another category (Submit Survey)",
+        "Subsectors_Joined" : ",,,,,Community Resource, Emergency Meal Sites, Education, School"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 35,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          -79.516728899999976,
+          42.257476700000041,
+          0
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 35,
+        "Timestamp" : "43929.6703483449",
+        "Organization_Name" : "Chautauqua Lake CSD",
+        "Organization_Street_Address" : "100 N Erie St",
+        "Organization_City_Town" : "Mayville",
+        "Organization_Zip_Code" : 14757,
+        "Organization_State" : "NY",
+        "Full_Address" : "100 N Erie St Mayville 14757 NY USA",
+        "Lat" : 42.257476699999998,
+        "Long" : -79.516728900000004,
+        "Organization_Phone_Number" : "716-753-5824",
+        "Organization_Website" : "www.clake.org",
+        "Organization_Social_Media" : "",
+        "If_you_would_like_to_provide_a_brief_description_of_your_organiz" : "k-12 School",
+        "Please_indicate_any_certifications_held_by_your_organization_" : "Not applicable",
+        "Primary_Food_System_Category" : "Food Assistance, Education, & Support",
+        "Agriculture___Food_Production_Type" : "",
+        "Processing___Value_Added_Products_Type" : "",
+        "Aggregation__Distribution____Storage_Type" : "",
+        "Food_Outlet_Type" : "",
+        "Please_indicate_what_payment_methods_you_accept_" : "",
+        "Food_Loss_Management_Type" : "",
+        "Food_Assistance__Education____Support_Type_" : "Community Resource, Education",
+        "Additional_Food_System_Categories" : "I do not fit into another category (Submit Survey)",
+        "Subsectors_Joined" : ",,,,,Community Resource, Education"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 36,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          -79.266169399999967,
+          42.257196100000044,
+          0
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 36,
+        "Timestamp" : "43929.6903584954",
+        "Organization_Name" : "Cassadaga Valley School District",
+        "Organization_Street_Address" : "43 Sinclair Drive",
+        "Organization_City_Town" : "Sinclairville ",
+        "Organization_Zip_Code" : 14782,
+        "Organization_State" : "NY",
+        "Full_Address" : "43 Sinclair Drive Sinclairville  14782 NY USA",
+        "Lat" : 42.257196100000002,
+        "Long" : -79.266169399999995,
+        "Organization_Phone_Number" : "716-962-8581",
+        "Organization_Website" : "www.cvcougars.org",
+        "Organization_Social_Media" : "http://www.cvcougars.org",
+        "If_you_would_like_to_provide_a_brief_description_of_your_organiz" : "",
+        "Please_indicate_any_certifications_held_by_your_organization_" : "Food Safety Plan in Place",
+        "Primary_Food_System_Category" : "Food Assistance, Education, & Support",
+        "Agriculture___Food_Production_Type" : "",
+        "Processing___Value_Added_Products_Type" : "",
+        "Aggregation__Distribution____Storage_Type" : "",
+        "Food_Outlet_Type" : "",
+        "Please_indicate_what_payment_methods_you_accept_" : "",
+        "Food_Loss_Management_Type" : "",
+        "Food_Assistance__Education____Support_Type_" : "Education",
+        "Additional_Food_System_Categories" : "I do not fit into another category (Submit Survey)",
+        "Subsectors_Joined" : ",,,,,Education"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 37,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          -79.143327199999987,
+          42.542570600000033,
+          0
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 37,
+        "Timestamp" : "43929.7159423727",
+        "Organization_Name" : "Erdle Farm",
+        "Organization_Street_Address" : "12229 Hanford Road",
+        "Organization_City_Town" : "Silver Creek",
+        "Organization_Zip_Code" : 14136,
+        "Organization_State" : "NY",
+        "Full_Address" : "12229 Hanford Road Silver Creek 14136 NY USA",
+        "Lat" : 42.542570599999998,
+        "Long" : -79.143327200000002,
+        "Organization_Phone_Number" : "716-410-5775",
+        "Organization_Website" : "",
+        "Organization_Social_Media" : "",
+        "If_you_would_like_to_provide_a_brief_description_of_your_organiz" : "We are a berry and grape farm with u-pick, retail and wholesale fruit.",
+        "Please_indicate_any_certifications_held_by_your_organization_" : "USDA GAP",
+        "Primary_Food_System_Category" : "Agriculture & Food Production",
+        "Agriculture___Food_Production_Type" : "Flowers, Fruits/Berries, Grapes, Honey",
+        "Processing___Value_Added_Products_Type" : "",
+        "Aggregation__Distribution____Storage_Type" : "",
+        "Food_Outlet_Type" : "",
+        "Please_indicate_what_payment_methods_you_accept_" : "",
+        "Food_Loss_Management_Type" : "",
+        "Food_Assistance__Education____Support_Type_" : "",
+        "Additional_Food_System_Categories" : "I do not fit into another category (Submit Survey)",
+        "Subsectors_Joined" : "Flowers, Fruits/Berries, Grapes, Honey,,,,,"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 38,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          -79.16278989999995,
+          42.53266300000007,
+          0
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 38,
+        "Timestamp" : "43929.7183269676",
+        "Organization_Name" : "Silver Creek Central School District ",
+        "Organization_Street_Address" : "1 dickinson street",
+        "Organization_City_Town" : "SILVER CREEK",
+        "Organization_Zip_Code" : 14136,
+        "Organization_State" : "NY",
+        "Full_Address" : "1 dickinson street SILVER CREEK 14136 NY USA",
+        "Lat" : 42.532662999999999,
+        "Long" : -79.162789899999993,
+        "Organization_Phone_Number" : "716-934-2603",
+        "Organization_Website" : "Www.Silvercreekschools.org",
+        "Organization_Social_Media" : "https://www.facebook.com/SilverCreekCSDOfficial/",
+        "If_you_would_like_to_provide_a_brief_description_of_your_organiz" : "",
+        "Please_indicate_any_certifications_held_by_your_organization_" : "Food Safety Plan in Place",
+        "Primary_Food_System_Category" : "Food Retail / Direct Sales",
+        "Agriculture___Food_Production_Type" : "",
+        "Processing___Value_Added_Products_Type" : "",
+        "Aggregation__Distribution____Storage_Type" : "",
+        "Food_Outlet_Type" : "Institutional Dining Services",
+        "Please_indicate_what_payment_methods_you_accept_" : "Cash, Free and reduced meal applications ",
+        "Food_Loss_Management_Type" : "",
+        "Food_Assistance__Education____Support_Type_" : "Community Resource",
+        "Additional_Food_System_Categories" : "I do not fit into another category (Submit Survey)",
+        "Subsectors_Joined" : ",,,Institutional Dining Services,,Community Resource"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 39,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          -79.344333399999982,
+          42.087836700000025,
+          0
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 39,
+        "Timestamp" : "43929.8485442708",
+        "Organization_Name" : "Big Tree Maple",
+        "Organization_Street_Address" : "2040 Holly Lane ",
+        "Organization_City_Town" : "Lakewood",
+        "Organization_Zip_Code" : 14750,
+        "Organization_State" : "NY",
+        "Full_Address" : "2040 Holly Lane  Lakewood 14750 NY USA",
+        "Lat" : 42.087836699999997,
+        "Long" : -79.344333399999996,
+        "Organization_Phone_Number" : "716-487-7633",
+        "Organization_Website" : "www.bigtreemaple.com",
+        "Organization_Social_Media" : "www.facebook.com/btmaple",
+        "If_you_would_like_to_provide_a_brief_description_of_your_organiz" : "We are a family operated maple syrup farm.  We sell our maple products at our farm site store and on line.",
+        "Please_indicate_any_certifications_held_by_your_organization_" : "Chautauqua Grown",
+        "Primary_Food_System_Category" : "Agriculture & Food Production",
+        "Agriculture___Food_Production_Type" : "Maple Syrup",
+        "Processing___Value_Added_Products_Type" : "Maple candy, Maple cream, granulated sugar, other maple specialitys",
+        "Aggregation__Distribution____Storage_Type" : "",
+        "Food_Outlet_Type" : "",
+        "Please_indicate_what_payment_methods_you_accept_" : "",
+        "Food_Loss_Management_Type" : "",
+        "Food_Assistance__Education____Support_Type_" : "",
+        "Additional_Food_System_Categories" : "I do not fit into another category (Submit Survey)",
+        "Subsectors_Joined" : "Maple Syrup,Maple candy, Maple cream, granulated sugar, other maple specialitys,,,,"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 40,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          -79.049601899999971,
+          42.360907900000029,
+          0
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 40,
+        "Timestamp" : "43929.9073169213",
+        "Organization_Name" : "South Dayton Mobile Farmers' Market",
+        "Organization_Street_Address" : "Rt 322 and Park Street",
+        "Organization_City_Town" : "South Dayton",
+        "Organization_Zip_Code" : 14138,
+        "Organization_State" : "NY",
+        "Full_Address" : "Rt 322 and Park Street South Dayton 14138 NY USA",
+        "Lat" : 42.360907900000001,
+        "Long" : -79.049601899999999,
+        "Organization_Phone_Number" : "719-672-9004",
+        "Organization_Website" : "don't have",
+        "Organization_Social_Media" : "southdaytonmobilefarmersmarket@facebook.com",
+        "If_you_would_like_to_provide_a_brief_description_of_your_organiz" : "summer farmers' market",
+        "Please_indicate_any_certifications_held_by_your_organization_" : "Chautauqua Grown",
+        "Primary_Food_System_Category" : "Agriculture & Food Production",
+        "Agriculture___Food_Production_Type" : "Eggs, Fruits/Berries, Herbs, Vegetables, baked goods",
+        "Processing___Value_Added_Products_Type" : "",
+        "Aggregation__Distribution____Storage_Type" : "",
+        "Food_Outlet_Type" : "Farmers Market",
+        "Please_indicate_what_payment_methods_you_accept_" : "Credit Cards, Cash, FMNP",
+        "Food_Loss_Management_Type" : "",
+        "Food_Assistance__Education____Support_Type_" : "",
+        "Additional_Food_System_Categories" : "I do not fit into another category (Submit Survey)",
+        "Subsectors_Joined" : "Eggs, Fruits/Berries, Herbs, Vegetables, baked goods,,,Farmers Market,,"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 41,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          -79.231898399999977,
+          42.111697000000049,
+          0
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 41,
+        "Timestamp" : "43930.3148825231",
+        "Organization_Name" : "Jamestown Public Schools ",
+        "Organization_Street_Address" : "159 Buffalo Street ",
+        "Organization_City_Town" : "Jamestown",
+        "Organization_Zip_Code" : 14701,
+        "Organization_State" : "NY",
+        "Full_Address" : "159 Buffalo Street  Jamestown 14701 NY USA",
+        "Lat" : 42.111696999999999,
+        "Long" : -79.231898399999992,
+        "Organization_Phone_Number" : "716-483-4366",
+        "Organization_Website" : "jpsny.org",
+        "Organization_Social_Media" : "",
+        "If_you_would_like_to_provide_a_brief_description_of_your_organiz" : "",
+        "Please_indicate_any_certifications_held_by_your_organization_" : "",
+        "Primary_Food_System_Category" : "Food Assistance, Education, & Support",
+        "Agriculture___Food_Production_Type" : "",
+        "Processing___Value_Added_Products_Type" : "",
+        "Aggregation__Distribution____Storage_Type" : "",
+        "Food_Outlet_Type" : "",
+        "Please_indicate_what_payment_methods_you_accept_" : "",
+        "Food_Loss_Management_Type" : "",
+        "Food_Assistance__Education____Support_Type_" : "School ",
+        "Additional_Food_System_Categories" : "I do not fit into another category (Submit Survey)",
+        "Subsectors_Joined" : ",,,,,School "
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 42,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          -79.625247899999977,
+          42.021245100000044,
+          0
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 42,
+        "Timestamp" : "43930.3469702662",
+        "Organization_Name" : "Clymer Central School",
+        "Organization_Street_Address" : "8672 E. Main Street, Clymer, NY 14724",
+        "Organization_City_Town" : "Clymer",
+        "Organization_Zip_Code" : 14724,
+        "Organization_State" : "NY",
+        "Full_Address" : "8672 E. Main Street, Clymer, NY 14724 Clymer 14724 NY USA",
+        "Lat" : 42.021245100000002,
+        "Long" : -79.625247899999991,
+        "Organization_Phone_Number" : "716-355-2014",
+        "Organization_Website" : "Clymer Central School",
+        "Organization_Social_Media" : "Clymer Central School",
+        "If_you_would_like_to_provide_a_brief_description_of_your_organiz" : "UPK-12 School Cafeteria",
+        "Please_indicate_any_certifications_held_by_your_organization_" : "Food Safety Plan in Place",
+        "Primary_Food_System_Category" : "Food Retail / Direct Sales",
+        "Agriculture___Food_Production_Type" : "",
+        "Processing___Value_Added_Products_Type" : "",
+        "Aggregation__Distribution____Storage_Type" : "",
+        "Food_Outlet_Type" : "Institutional Dining Services",
+        "Please_indicate_what_payment_methods_you_accept_" : "Cash, Check, Online Payments",
+        "Food_Loss_Management_Type" : "",
+        "Food_Assistance__Education____Support_Type_" : "",
+        "Additional_Food_System_Categories" : "I do not fit into another category (Submit Survey)",
+        "Subsectors_Joined" : ",,,Institutional Dining Services,,"
+      }
+    },
+  ]
+}

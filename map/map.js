@@ -71,7 +71,7 @@ function getColor(a,b,c) {
   };
 };
 function getDescrip(feature) {
-  var descrip = feature.properties.If_you_would_like_to_provide_a_;
+  var descrip = feature.properties.If_you_would_like_to_provide_a_brief_description_of_your_organiz;
   var final_list = ["<p id='popup-header'>Description: </p>"];
   if (descrip != null) {
     final_list.push("<p>" + descrip + "</p>")
@@ -123,8 +123,9 @@ function getSubSectors(feature) {
   return final_list;
 };
 function getCerts(feature) {
-  if (feature.properties.Please_indicate_any_certificati != null){
-    certs_list = feature.properties.Please_indicate_any_certificati.split(',');
+  var point_cert = feature.properties.Please_indicate_any_certifications_held_by_your_organization_;
+  if (point_cert != "Not applicable" && point_cert != ""){
+    certs_list = point_cert.split(',');
     final_list = ["<p id='popup-header'>Certifications:</p>"];
     check_list = [];
     for (var a in certs_list){
@@ -145,8 +146,8 @@ function getCerts(feature) {
   };
 };
 function getPayments(feature) {
-  if (feature.properties.Please_indicate_what_payment_me != null){
-    pay_list = feature.properties.Please_indicate_what_payment_me.split(',');
+  if (feature.properties.Please_indicate_what_payment_methods_you_accept_ != ""){
+    pay_list = feature.properties.Please_indicate_what_payment_methods_you_accept_.split(',');
     final_list = ["<p id='popup-header'>Payment Methods:</p>"];
     check_list = [];
     for (var a in pay_list){
