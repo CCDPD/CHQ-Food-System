@@ -73,7 +73,7 @@ function getColor(a,b,c) {
 function getDescrip(feature) {
   var descrip = feature.properties.If_you_would_like_to_provide_a_brief_description_of_your_organiz;
   var final_list = ["<p id='popup-header'>Description: </p>"];
-  if (descrip != null) {
+  if (descrip != null && descrip != "0" && descrip != 0) {
     final_list.push("<p>" + descrip + "</p>")
     var final_html = final_list.join("");
     return final_html;
@@ -90,7 +90,7 @@ function getAddress(feature) {
 function getSocial(feature){
   social = feature.properties.Organization_Social_Media;
   final_list = ["<p id='popup-header'>Social Media:</p>"]
-  if (social != null){
+  if (social != null && social != 0 && social != "0"){
     final_list.push("<a id='popup-website' href='" + social + "'>" + social + "</a>")
     return final_list.join("")
   } else {
@@ -100,7 +100,7 @@ function getSocial(feature){
 function getWebsite(feature) {
   var website = feature.properties.Organization_Website;
   var final_list = ["<p id='popup-header'> Website:</p>"];
-  if (website != null) {
+  if (website != null && website != 0 && website != "0") {
     final_list.push("<a id='popup-website' href='" + website + "'>" + website + "</a>")
     var final_html = final_list.join("");
     return final_html;
@@ -124,7 +124,7 @@ function getSubSectors(feature) {
 };
 function getCerts(feature) {
   var point_cert = feature.properties.Please_indicate_any_certifications_held_by_your_organization_;
-  if (point_cert != "Not applicable" && point_cert != ""){
+  if (point_cert != "Not applicable" && point_cert != "" && point_cert != 0 && point_cert !="0"){
     certs_list = point_cert.split(',');
     final_list = ["<p id='popup-header'>Certifications:</p>"];
     check_list = [];
@@ -146,7 +146,8 @@ function getCerts(feature) {
   };
 };
 function getPayments(feature) {
-  if (feature.properties.Please_indicate_what_payment_methods_you_accept_ != ""){
+  var point_pay = feature.properties.Please_indicate_what_payment_methods_you_accept_;
+  if (point_pay != "" && point_pay != null && point_pay != 0 && point_pay != "0"){
     pay_list = feature.properties.Please_indicate_what_payment_methods_you_accept_.split(',');
     final_list = ["<p id='popup-header'>Payment Methods:</p>"];
     check_list = [];
