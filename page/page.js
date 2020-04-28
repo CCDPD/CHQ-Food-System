@@ -65,7 +65,7 @@ add_resources_content.className = "content";
 add_resources_content.style = "display: block;";
 add_resources_content.innerHTML = (
   "<ul style:'list-style-type: none;'>" +
-  "<li><a href='http://37.60.236.155/~planning/' class='add_resources'><span class='mdi mdi-web'></span></a>" +
+  "<li><a href='http://planningchautauqua.com' class='add_resources'><span class='mdi mdi-web'></span></a>" +
   "<a href='https://www.google.com/maps/place/Chautauqua+County+Department+of+Planning/@42.3218653,-79.5806164,17z/data=!4m13!1m7!3m6!1s0x882d461215a00489:0x519024237137596a!2s2+S+Portage+St,+Westfield,+NY+14787!3b1!8m2!3d42.3218614!4d-79.5784277!3m4!1s0x882d47348b60ada9:0xc6f49db434674350!8m2!3d42.3218614!4d-79.5784277' class='add_resources'><span class='mdi mdi-map-marker'></span></a>" +
   "<a href='mailto:kellerm@co.chautauqua.ny.us' class='add_resources'><span class='mdi mdi-email'></span></a>" +
   "<a href='tel:7167534066' class='add_resources'><span class='mdi mdi-phone'></span></a>" +
@@ -76,7 +76,7 @@ add_resources_content.innerHTML = (
   "<li>KellerM@co.chautauqua.ny.us</li>" +
   "<li>" +
   "<a href='https://chqgov.com/'><img src='img/Chautauqua_County_ny_seal.png' alt='Chautauqua County' style='width: 100px'></a>" +
-  "<a href='http://37.60.236.155/~planning/planning/food-policy-council/'><img src='img/2---Food-policy-council-logo.gif' alt='Food Policy Council' style='width: 150px'></a>" +
+  "<a href='http://planningchautauqua.com/planning/food-policy-council/'><img src='img/2---Food-policy-council-logo.gif' alt='Food Policy Council' style='width: 150px'></a>" +
   "</li>" +
   "</ul>"
 );
