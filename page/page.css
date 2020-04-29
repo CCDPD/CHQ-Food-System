@@ -60,7 +60,39 @@ ul {
  border: 0.5px solid hsl(96, 34%, 60%);
  text-align: left;
  outline: none;
- font-size: 18pt;
+ font-size: 16pt;
+ float: left;
+ display: inline;
+}
+
+#sector_section{
+  /* height: 75px; */
+}
+
+.section_left {
+  float: left;
+  width: 20%;
+  text-align: center;
+  font-size: 32pt;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.section_middle {
+  float: left;
+  width: 60%;
+  text-align: center;
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+
+.section_right {
+  float: left;
+  width: 20%;
+  text-align: center;
+  font-size: 32pt;
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
 
 #non-collapsible {

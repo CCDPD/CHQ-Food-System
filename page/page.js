@@ -7,23 +7,33 @@ function checked_subsector(a,b) {
   filterPoints();
 };
 
-
+// Dynamically create sector sections
 for ( var a in sectors) {
   var sidebar = document.getElementById("sidebar-left");
   // Create Sector Section
   var section = document.createElement("BUTTON");
   section.type = "button";
   section.className = "collapsible";
-  section.id = sectors[a].sector_name;
+  section.id = "sector_section";
   sidebar.appendChild(section);
   // Add Sector Icon
+  var section_icon_p = document.createElement("P");
+  section_icon_p.className = "section_left";
+  section.appendChild(section_icon_p)
   var section_icon = document.createElement("I");
   section_icon.className = "mdi " + sectors[a].section_icon_1;
-  section.appendChild(section_icon);
+  section_icon_p.appendChild(section_icon);
   // Add Sector Title
   var section_title = document.createElement("P");
-  section_icon.innerHTML = sectors[a].section_title;
-  section.appendChild(section_title)
+  section_title.innerHTML = sectors[a].section_title;
+  section_title.className = "section_middle";
+  section.appendChild(section_title);
+  // Add plus icon
+  var section_toggle = document.createElement("P");
+  section_toggle.innerHTML = "+";
+  section_toggle.className = "section_right";
+  section_toggle.id = sectors[a].section_title;
+  section.appendChild(section_toggle);
   // Add Sector Content DIV
   var section_content = document.createElement("DIV");
   section_content.className = "content";
@@ -93,9 +103,15 @@ for (i = 0; i < coll.length; i++) {
     var content = this.nextElementSibling;
     if (content.style.display === "block") {
       content.style.display = "none";
+      if (this.lastChild.innerHTML == "-"){
+        this.lastChild.innerHTML = "+";
+      };
     } else {
       content.style.display = "block";
-    }
+      if (this.lastChild.innerHTML == "+"){
+        this.lastChild.innerHTML = "-";
+      };
+    };
   });
 };
 
