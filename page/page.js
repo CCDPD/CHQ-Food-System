@@ -7,7 +7,20 @@ function checked_subsector(a,b) {
   filterPoints();
 };
 
+
 // Dynamically create sector sections
+// first create subsectors_list
+var subsectors_list = [];
+for (var a in points.features){
+  var c = points.features[a].properties.Subsectors_Joined.split(",");
+  for (var b in c) {
+    if (subsectors_list.includes(c[b].trim())) {
+      continue
+    } else {
+      subsectors_list.push(c[b].trim());
+    };
+  };
+};
 for ( var a in sectors) {
   var sidebar = document.getElementById("sidebar-left");
   // Create Sector Section
@@ -46,18 +59,23 @@ for ( var a in sectors) {
 
   // Dynamically add sub-sectors to sector content div
   for ( var b in sectors[a].sub_sectors) {
-    var sub_sections = document.createElement("DIV");
-    sub_sections.className = "switch_label";
-    section_content.appendChild(sub_sections);
-    var sub_sector = sectors[a].sub_sectors[b].sub_sector_name
-    sub_sections.innerHTML = sub_sector;
-    var input_element = document.createElement("INPUT");
-    input_element.type = "checkbox";
-    sub_sections.appendChild(input_element);
-    input_element.setAttribute("onclick","checked_subsector(" + a + "," +b + ")");
-    // var span_element = document.createElement("SPAN");
-    // span_element.className = "slider round";
-    // input_element.appendChild(span_element);
+    // if the sub_sector is not in the points dataset
+    if (subsectors_list.includes(sectors[a].sub_sectors[b].sub_sector_name)){
+      var sub_sections = document.createElement("DIV");
+      sub_sections.className = "switch_label";
+      section_content.appendChild(sub_sections);
+      var sub_sector = sectors[a].sub_sectors[b].sub_sector_name
+      sub_sections.innerHTML = sub_sector;
+      var input_element = document.createElement("INPUT");
+      input_element.type = "checkbox";
+      sub_sections.appendChild(input_element);
+      input_element.setAttribute("onclick","checked_subsector(" + a + "," +b + ")");
+      // var span_element = document.createElement("SPAN");
+      // span_element.className = "slider round";
+      // input_element.appendChild(span_element);
+    } else {
+      continue
+    };
   };
 };
 
@@ -120,14 +138,14 @@ function openNav() {
   document.getElementById("sidebar-left").style.width = "100%";
   document.getElementById("sidebar-left").style.display = "block";
   document.getElementById("mapid").style.left = "400px";
-}
+};
 
 function closeNav() {
   document.getElementById("sidebar-left").style.display = "none";
   document.getElementById("collapsed_sidebar").style.display = "block";
   document.getElementById("mapid").style.left = "30px";
   map.invalidateSize();
-}
+};
 
 function toggleLegend() {
   var legend_button = document.getElementById("layer_toggle");
