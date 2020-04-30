@@ -58,7 +58,6 @@ ul {
  padding: 18px;
  width: 100%;
  border: 0.5px solid hsl(96, 34%, 60%);
- text-align: left;
  outline: none;
  font-size: 16pt;
  float: left;
@@ -101,7 +100,6 @@ ul {
  padding: 18px;
  width: 100%;
  border: 0.5px solid hsl(96, 34%, 60%);
- text-align: left;
  outline: none;
  font-size: 18pt;
  letter-spacing: 2px;
@@ -141,6 +139,7 @@ ul {
   color: hsl(0, 0%, 100%);
   font-family: 'Raleway', sans-serif;
   background-color:hsl(113, 33%, 60%);
+  text-align: center;
 }
 
 #page-header-img {
