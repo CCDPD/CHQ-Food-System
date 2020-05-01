@@ -163,9 +163,9 @@ function getPayments(feature) {
         check_list.push(pay_list[a].trim());
       };
     };
-    if (check_list.includes("Credit Cards")){} else {
-      final_list.push(payment_badges["1"].payment_html)
-    };
+    // if (check_list.includes("Credit Cards")){} else {
+    //   final_list.push(payment_badges["1"].payment_html)
+    // };
     var final_html = final_list.join("");
     return final_html;
   } else {
