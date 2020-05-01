@@ -45,8 +45,25 @@
       <button type="button" class="collapsible" id="page-header">
         Chautauqua County Food System Map
       </button>
-      <div class="content" id="page-header-content" style="display: none;">
+      <div class="content" id="page-header-content" style="display: block;">
         <p class="description">The purpose of this project is to identify, connect, and promote assets within Chautauqua County's Food System.</p>
+        <div class="dropdown_section">
+          <div class="">
+            <label for="Sector">Sector:</label>
+            <select id="Sector" onchange="generate_sub_dropdown()">
+              <option value="Default">Select Sector</option>
+            </select>
+          </div>
+          <div class="">
+            <label for="Sub-Sector">Sub-Sector:</label>
+            <select id="Sub-Sector" class="" name="">
+              <option value="Default">Select Sub-sector</option>
+            </select>
+          </div>
+          <div class="">
+            <button type="button" name="button">Search</button>
+          </div>
+        </div>
         <div id="page-header-img">
           <img src="img/Food System Diagram.svg" alt="">
           <p>For the most up to date information, please check in with the business you are trying to reach.</p>
