@@ -49,19 +49,19 @@
         <p class="description">The purpose of this project is to identify, connect, and promote assets within Chautauqua County's Food System.</p>
         <div class="dropdown_section">
           <div class="">
-            <label for="Sector">Sector:</label>
-            <select id="Sector" onchange="generate_sub_dropdown()">
-              <option value="Default">Select Sector</option>
+            <label for="Sector">Select Sector:</label>
+            <select id="Sector" onchange="populate_sub_sector_dropdown()">
+              <option value="Default">All Sectors</option>
             </select>
           </div>
           <div class="">
-            <label for="Sub-Sector">Sub-Sector:</label>
-            <select id="Sub-Sector" class="" name="">
-              <option value="Default">Select Sub-sector</option>
+            <label for="Sub-Sector">Select Sub-Sector:</label>
+            <select id="Sub-Sector">
+              <option value="Default">All Sub-Sectors</option>
             </select>
           </div>
           <div class="">
-            <button type="button" name="button">Search</button>
+            <button id="Search_Button" type="button" name="button" onclick="search_map()">Search</button>
           </div>
         </div>
         <div id="page-header-img">

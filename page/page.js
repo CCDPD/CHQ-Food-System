@@ -1,66 +1,90 @@
-function checked_subsector(a,b) {
-  if(sectors[a].sub_sectors[b].show_on_map == "True") {
-    sectors[a].sub_sectors[b].show_on_map = "False";
-  } else if (sectors[a].sub_sectors[b].show_on_map == "False"){
-    sectors[a].sub_sectors[b].show_on_map = "True"
+function clear_search(){
+  for (var a in sectors){
+    for (var b in sectors[a].sub_sectors){
+      if(sectors[a].sub_sectors[b].show_on_map == "True") {
+        sectors[a].sub_sectors[b].show_on_map = "False";
+      };
+    };
   };
-  filterPoints();
 };
 
 
-for (var a in sectors){
-  var sidebar = document.getElementById("sidebar-left");
-  var sector_dropwdown = document.getElementById("Sector");
-  var sector_option = document.createElement("OPTION");
-  sector_option.value = sectors[a].section_title;
-  sector_option.innerHTML = sectors[a].section_title;
-  sector_option.className= "sector_option";
-  sector_dropwdown.appendChild(sector_option);
-  for (var b in sectors[a].sub_sectors) {
+function populate_sector_dropdown(){
+  for (var a in sectors){
     var sidebar = document.getElementById("sidebar-left");
-    var subsector_dropwdown = document.getElementById("Sub-Sector");
-    var sub_sector_option = document.createElement("OPTION");
-    sub_sector_option.value = sectors[a].sub_sectors[b].sub_sector_name;
-    sub_sector_option.innerHTML = sectors[a].sub_sectors[b].sub_sector_name;
-    sub_sector_option.className = "sub_sector_option";
-    subsector_dropwdown.appendChild(sub_sector_option);
+    var sector_dropwdown = document.getElementById("Sector");
+    var sector_option = document.createElement("OPTION");
+    sector_option.value = a;
+    sector_option.innerHTML = sectors[a].section_title;
+    sector_option.className= "sector_option";
+    sector_dropwdown.appendChild(sector_option);
   };
 };
 
-function generate_sub_dropdown(){
+function populate_sub_sector_dropdown(){
   var option_remove = document.getElementsByClassName("sub_sector_option")
   while (option_remove.length > 0){
     option_remove[0].parentNode.removeChild(option_remove[0])
   };
-  var select = document.getElementById("Sector").value;
-  if (select == "Default") {
+  var sector_selection = document.getElementById("Sector").value;
+  if (sector_selection == "Default"){
     for (var a in sectors){
-      for (var b in sectors[a].sub_sectors) {
+      for (var b in sectors[a].sub_sectors){
         var sidebar = document.getElementById("sidebar-left");
         var subsector_dropwdown = document.getElementById("Sub-Sector");
         var sub_sector_option = document.createElement("OPTION");
-        sub_sector_option.value = sectors[a].sub_sectors[b].sub_sector_name;
+        sub_sector_option.value = b;
         sub_sector_option.innerHTML = sectors[a].sub_sectors[b].sub_sector_name;
         sub_sector_option.className = "sub_sector_option";
         subsector_dropwdown.appendChild(sub_sector_option);
       };
     };
   } else {
-    for (var a in sectors){
-      if (sectors[a].section_title == select){
-        for (var b in sectors[a].sub_sectors) {
-          var sidebar = document.getElementById("sidebar-left");
-          var subsector_dropwdown = document.getElementById("Sub-Sector");
-          var sub_sector_option = document.createElement("OPTION");
-          sub_sector_option.value = sectors[a].sub_sectors[b].sub_sector_name;
-          sub_sector_option.innerHTML = sectors[a].sub_sectors[b].sub_sector_name;
-          sub_sector_option.className = "sub_sector_option";
-          subsector_dropwdown.appendChild(sub_sector_option);
-        };
-      };
+    for (var b in sectors[sector_selection].sub_sectors){
+      var sidebar = document.getElementById("sidebar-left");
+      var subsector_dropwdown = document.getElementById("Sub-Sector");
+      var sub_sector_option = document.createElement("OPTION");
+      sub_sector_option.value = [sector_selection,b];
+      sub_sector_option.innerHTML = sectors[sector_selection].sub_sectors[b].sub_sector_name;
+      sub_sector_option.className = "sub_sector_option";
+      subsector_dropwdown.appendChild(sub_sector_option);
     };
   };
 };
+
+
+function search_map(){
+  clear_search();
+  var sector_selection = document.getElementById("Sector").value;
+  var sub_sector_selection = document.getElementById("Sub-Sector").value;
+  var grouped = [sector_selection,sub_sector_selection];
+  if (grouped[0]=="Default" && grouped[1]=="Default"){
+    filterPoints();
+  } else if (grouped[0]=="Default" && grouped[1]!="Default"){
+    checked_subsectors(sub_sector_selection)
+    filterPoints();
+  } else if (grouped[0]!="Default" && grouped[1]=="Default"){
+    for (var a in sectors[grouped[0]].sub_sectors){
+      checked_subsector(grouped[0],a)
+    };
+    filterPoints();
+  } else if (grouped[0]!="Default" && grouped[1]!="Default"){
+    checked_subsector(grouped[1][0],grouped[1][2]);
+    filterPoints();
+  };
+  closeNav();
+};
+
+function checked_subsector(a,b) {
+  if(sectors[a].sub_sectors[b].show_on_map == "True") {
+    sectors[a].sub_sectors[b].show_on_map = "False";
+  } else if (sectors[a].sub_sectors[b].show_on_map == "False"){
+    sectors[a].sub_sectors[b].show_on_map = "True"
+  };
+};
+
+populate_sector_dropdown();
+populate_sub_sector_dropdown();
 
 // // Dynamically create sector sections
 // // first create subsectors_list
