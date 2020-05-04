@@ -42,7 +42,7 @@ ul {
 
 .closebtn {
   text-decoration: none;
-  color: black;
+  color: hsl(0, 0%, 26%);
   position: absolute;
   top: 0;
   right: 10px;
