@@ -250,7 +250,7 @@ var sectors = {
         "show_on_map": "False",
       },
       {
-        "sub_sector_name": "Resaurant/Bar",
+        "sub_sector_name": "Restaurant/Bar",
         "show_on_map": "False",
       },
       {
