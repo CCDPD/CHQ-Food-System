@@ -32,7 +32,7 @@
 } */
 
 #popup_content {
-  height: 300px;
+  height: 150px;
   overflow: auto;
   vertical-align: middle;
 }
