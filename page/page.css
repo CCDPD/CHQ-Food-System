@@ -23,8 +23,8 @@ ul {
 
 #sidebar-left {
   height: 100%;
-  max-width: 400px;
-  width: 100%;
+  max-width: 100vw;
+  width: 500px;
   position: fixed;
   background-color: hsl(96, 53%, 71%);
   overflow-y: auto;
