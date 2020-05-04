@@ -135,9 +135,9 @@ for (i = 0; i < coll.length; i++) {
 
 document.getElementById("collapsed_sidebar").style.display = "none";
 function openNav() {
-  document.getElementById("sidebar-left").style.width = "500px";
+  document.getElementById("sidebar-left").style.width = "480px";
   document.getElementById("sidebar-left").style.display = "block";
-  document.getElementById("mapid").style.left = "500px";
+  document.getElementById("mapid").style.left = "480px";
 };
 
 function closeNav() {
