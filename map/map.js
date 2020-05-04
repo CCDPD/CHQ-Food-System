@@ -101,7 +101,7 @@ function getWebsite(feature) {
   var website = feature.properties.Organization_Website;
   var final_list = ["<p id='popup-header'> Website:</p>"];
   if (website != null && website != 0 && website != "0") {
-    final_list.push("<a id='popup-website' href='" + website + "'>" + website + "</a>")
+    final_list.push("<a id='popup-website' target='_blank' href='" + website + "'>" + website + "</a>")
     var final_html = final_list.join("");
     return final_html;
   } else {
