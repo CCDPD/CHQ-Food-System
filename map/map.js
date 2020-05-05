@@ -87,7 +87,7 @@ function getDescrip(feature) {
 function getAddress(feature) {
   address = feature.properties.Full_Address;
   final_list = ["<p id='popup-header'>Address:</p>"];
-  final_list.push("<a id='popup-address' href='https://www.google.com/maps/place/" + address + "'>" + address + "</a>");
+  final_list.push("<a id='popup-address' target='_blank' href='https://www.google.com/maps/place/" + address + "'>" + address + "</a>");
   return final_list.join("");
 };
 function getPhone(feature){
@@ -105,7 +105,7 @@ function getSocial(feature){
   social = feature.properties.Organization_Social_Media;
   final_list = ["<p id='popup-header'>Social Media:</p>"]
   if (social != null && social != 0 && social != "0"){
-    final_list.push("<a id='popup-website' href='" + social + "'>" + social + "</a>")
+    final_list.push("<a id='popup-website' target='_blank' href='" + social + "'>" + social + "</a>")
     return final_list.join("")
   } else {
     return ""
@@ -162,28 +162,11 @@ function getCerts(feature) {
 function getPayments(feature) {
   var point_pay = feature.properties.Please_indicate_what_payment_me;
   if (point_pay != "" && point_pay != null && point_pay != 0 && point_pay != "0"){
-    pay_list = point_pay.split(',');
     final_list = ["<p id='popup-header'>Payment Methods:</p>"];
-    check_list = [];
-    for (var a in pay_list){
-      for (var b in payment_badges){
-        if (pay_list[a].trim() == payment_badges[b].payment_name){
-          final_list.push(payment_badges[b].payment_html);
-          check_list.push(payment_badges[b].payment_name);
-        };
-      };
-      if (check_list.includes(pay_list[a].trim())){} else {
-        final_list.push("<p>" + pay_list[a].trim() + "</p>");
-        check_list.push(pay_list[a].trim());
-      };
-    };
-    // if (check_list.includes("Credit Cards")){} else {
-    //   final_list.push(payment_badges["1"].payment_html)
-    // };
-    var final_html = final_list.join("");
-    return final_html;
+    final_list.push("<p>" + point_pay + "</p>")
+    return final_list.join("");
   } else {
-    return "<p></p>"
+    return "";
   };
 };
 function geojsonMarkerOptions(feature, type, filter_list) {

@@ -9,10 +9,10 @@ var certifications_badges = {
   },
   "3" : {
     cert_name : "Chautauqua Grown",
-    cert_html : "<img src='./img/Chautauqua Grown Badge.svg' id='badges'> title='Chautauqua Grown' alt='Chautauqua Grown'",
+    cert_html : "<img src='./img/Chautauqua Grown Badge.svg' id='badges' title='Chautauqua Grown' alt='Chautauqua Grown'>",
   },
   "4" : {
     cert_name : "Food Safety Plan in Place",
-    cert_html : "<img src='./img/Food Safety Plan Badge.svg'id='badges' title='Food Safety Plan in Place' alt='Food Safety Plan in Place'>",
+    cert_html : "<img src='./img/Food Safety Plan Badge.svg' id='badges' title='Food Safety Plan in Place' alt='Food Safety Plan in Place'>",
   },
 };
