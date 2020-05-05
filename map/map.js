@@ -241,14 +241,9 @@ selection.onAdd = function (map) {
       };
     };
   };
-  if (labels.length == 0){
-    for (var a in sectors) {
-      grades.push(sectors[a].sector_color);
-      labels.push(sectors[a].section_title);
-      icons.push(sectors[a].section_icon_1);
-    };
+  if (labels.length > 1){
+    div.innerHTML += '<i style="border-color:White" class="mdi mdi-star"></i>Selection Match<br/>';
   };
-  div.innerHTML += '<i style="border-color:White" class="mdi mdi-star"></i>Selection Match<br/>';
   div.innerHTML += '<h4>Current Selection</h4>';
   for (var i = 0; i < labels.length; i++) {
     div.innerHTML += labels[i] + '<br/>';
