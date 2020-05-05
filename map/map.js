@@ -117,7 +117,7 @@ function getSubSectors(feature) {
     } else if (subsectors_list[a] == "") {
       delete subsectors_list[a]
     } else {
-      final_list.push(subsectors_list[a].trim())
+      final_list.push(subsectors_list[a])
     };
   };
   return final_list;
