@@ -42,11 +42,14 @@ function getIcon(feature, filter_list) {
     var check_list = [];
     var subsectors = getSubSectors(feature);
     for (var b in filter_list){
-      if (subsectors.includes(filter_list[b])) {
-        check_list.push("check")
+      for (var c in subsectors){
+        if (subsectors[c].trim() == filter_list[b]) {
+          check_list.push("check")
+        };
       };
     };
-    if (check_list.length == filter_list.length && filter_list.length>0) {
+    // console.log(filter_list, check_list);
+    if (check_list.length == filter_list.length && filter_list.length>1) {
       return "mdi mdi-star"
     } else {
       for (var a in sectors) {
