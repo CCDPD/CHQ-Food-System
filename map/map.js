@@ -86,10 +86,21 @@ function getDescrip(feature) {
 };
 function getAddress(feature) {
   address = feature.properties.Full_Address;
-  final_list = ["<p id='popup-header'>Address:</p>"]
+  final_list = ["<p id='popup-header'>Address:</p>"];
   final_list.push("<a id='popup-address' href='https://www.google.com/maps/place/" + address + "'>" + address + "</a>");
   return final_list.join("");
 };
+function getPhone(feature){
+  phone = feature.properties.Organization_Phone_Number;
+  final_list = ["<p id='popup-header'>Phone:</p>"];
+  if (phone != null && phone != "0" && phone != 0) {
+    final_list.push("<p>" + phone + "</p>");
+    return final_list.join("");
+  } else {
+    return "";
+  };
+};
+
 function getSocial(feature){
   social = feature.properties.Organization_Social_Media;
   final_list = ["<p id='popup-header'>Social Media:</p>"]
@@ -193,6 +204,7 @@ function pointPopup(feature, layer){
     "<div id=popup_content>" +
     getDescrip(feature) +
     getAddress(feature) +
+    getPhone(feature) +
     getWebsite(feature) +
     getSocial(feature) +
     "<p id='popup-header'>Sector: </p>" +
