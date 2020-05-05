@@ -259,7 +259,7 @@ selection.onAdd = function (map) {
   if (labels.length > 1){
     div.innerHTML += '<i style="border-color:White" class="mdi mdi-star"></i>Selection Match<br/>';
   };
-  div.innerHTML += '<h4>Current Selection</h4>';
+  div.innerHTML += '<h4>Active Selection</h4>';
   for (var i = 0; i < labels.length; i++) {
     div.innerHTML += labels[i] + '<br/>';
   };
