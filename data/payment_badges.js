@@ -17,6 +17,6 @@ var payment_badges = {
   },
   "5": {
     payment_name: "Shoptauqua Gift Card",
-    payment_html: "<img src='./img/shoptauqua-gift-card-image.jpg' id='badges' title='Shoptqauqua Gift Card' style='width: 50px' alt='Shoptauqua Gift Card'>",
+    payment_html: "<img src='./img/shoptauqua-gift-card-image.jpg' style='width: 80px;' id='badges' title='Shoptauqua Gift Card' alt='Shoptauqua Gift Card'>",
   }
 };
