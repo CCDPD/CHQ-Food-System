@@ -33,7 +33,7 @@ function populate_sub_sector_dropdown(){
         var sidebar = document.getElementById("sidebar-left");
         var subsector_dropwdown = document.getElementById("Sub-Sector");
         var sub_sector_option = document.createElement("OPTION");
-        sub_sector_option.value = b;
+        sub_sector_option.value = [a,b];
         sub_sector_option.innerHTML = sectors[a].sub_sectors[b].sub_sector_name;
         sub_sector_option.className = "sub_sector_option";
         subsector_dropwdown.appendChild(sub_sector_option);
@@ -61,7 +61,9 @@ function search_map(){
   if (grouped[0]=="Default" && grouped[1]=="Default"){
     filterPoints();
   } else if (grouped[0]=="Default" && grouped[1]!="Default"){
-    checked_subsectors(sub_sector_selection)
+    var a = grouped[1][0];
+    var b = grouped[1][2];
+    checked_subsector(a,b);
     filterPoints();
   } else if (grouped[0]!="Default" && grouped[1]=="Default"){
     for (var a in sectors[grouped[0]].sub_sectors){
