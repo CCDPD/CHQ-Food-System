@@ -72,7 +72,7 @@ ul {
 
 #sidebar-left {
   height: 100%;
-  max-width: 100vw;
+  max-width: 480px;
   width: 100%;
   position: fixed;
   background-color: hsl(96, 53%, 71%);

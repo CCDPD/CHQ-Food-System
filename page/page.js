@@ -217,7 +217,7 @@ document.getElementById("collapsed_sidebar").style.display = "none";
 function openNav() {
   document.getElementById("sidebar-left").style.width = "480px";
   document.getElementById("sidebar-left").style.display = "block";
-  document.getElementById("mapid").style.left = "100vw";
+  document.getElementById("mapid").style.left = "480px";
 };
 
 function closeNav() {
