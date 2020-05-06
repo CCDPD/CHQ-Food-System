@@ -12,7 +12,7 @@
       crossorigin=""/>
     <link rel="stylesheet" href="map/map.css">
     <link rel="stylesheet" href="page/page.css">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300i|Raleway|Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Raleway|Roboto&display=swap" rel="stylesheet">
     <!-- Load Esri Leaflet Geocoder from CDN -->
     <link
       rel="stylesheet"
@@ -36,39 +36,42 @@
     <link rel="stylesheet" href="https://cdn.materialdesignicons.com/4.8.95/css/materialdesignicons.min.css">
   </head>
   <body>
-    <div id="collapsed_sidebar">
-      <span style="font-size:30px;cursor:pointer; margin-left:1px;" onclick="openNav()">&#9776;</span><br/>
-      <span id="layer_toggle" class="mdi mdi-layers-remove" style="font-size:30px;cursor:pointer; margin-left:1px;" onclick="toggleLegend()"></span>
-    </div>
-    <div id="sidebar-left" class="">
-      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-      <button type="button" class="collapsible" id="page-header">
-        Chautauqua County Food System Map
-      </button>
-      <div class="content" id="page-header-content" style="display: block;">
-        <p class="description">The purpose of this project is to identify, connect, and promote assets within Chautauqua County's Food System.</p>
+    <div id="sidebar-left">
+      <div class="description_header">
+        <h1>Chautauqua County Food System Map</h1>
+      </div>
+      <div class="description">
+        <div class="description_content">
+        <h2>Identifying, Connecting & Promoting Chautauqua's Food Assets</h2>
+        <p>Developed by the Chautauqua County Division of Planning & Community Development in cooperation with the Chautauqua County Food Policy Council.</p>
         <div class="dropdown_section">
-          <div class="">
+          <div>
             <label for="Sector">Select Sector:</label>
             <select class="select-css" id="Sector" onchange="populate_sub_sector_dropdown()">
               <option value="Default">All Sectors</option>
             </select>
           </div>
-          <div class="">
+          <div>
             <label for="Sub-Sector">Select Sub-Sector:</label>
             <select class="select-css" id="Sub-Sector" style>
               <option value="Default">All Sub-Sectors</option>
             </select>
           </div>
-          <div class="">
+          <div>
             <button id="Search_Button" type="button" name="button" onclick="search_map()">SEARCH</button>
           </div>
         </div>
-        <div id="page-header-img">
+      </div>
+      </div>
+        <!-- <div id="page-header-img">
           <img src="img/Food System Diagram.svg" alt="">
           <p>For the most up to date information, please check in with the business you are trying to reach.</p>
         </div>
-      </div>
+      </div> -->
+    </div>
+    <div id="collapsed_sidebar">
+      <span class='mdi mdi-keyboard-backspace' style="font-size:28px; cursor:pointer; margin-left:1px;" onclick="openNav()"></span><br/>
+      <!-- <span id="layer_toggle" class="mdi mdi-layers-remove" style="font-size:30px;cursor:pointer; margin-left:1px;" onclick="toggleLegend()"></span> -->
     </div>
     <div id="mapid"></div>
   </body>

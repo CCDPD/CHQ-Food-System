@@ -1,14 +1,11 @@
 #mapid {
   position: absolute;
-  left:480px;
-  top: 0;
+  top: 100vh;
   bottom: 0;
   right: 0;
-}
+  left: 30px;
 
-/* .leaflet-popup{
-  max-width: 50vw;
-} */
+}
 
 #popup-title {
   background-color: hsl(96, 53%, 71%);

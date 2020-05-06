@@ -74,7 +74,7 @@ function search_map(){
     checked_subsector(grouped[1][0],grouped[1][2]);
     filterPoints();
   };
-  // closeNav();
+  closeNav();
 };
 
 function checked_subsector(a,b) {
@@ -192,38 +192,38 @@ populate_sub_sector_dropdown();
 
 
 // Collapsible section functions
-var coll = document.getElementsByClassName("collapsible");
-var i;
-
-for (i = 0; i < coll.length; i++) {
-  coll[i].addEventListener("click", function() {
-    // this.classList.toggle("active");
-    var content = this.nextElementSibling;
-    if (content.style.display === "block") {
-      content.style.display = "none";
-      if (this.lastChild.innerHTML == "-"){
-        this.lastChild.innerHTML = "+";
-      };
-    } else {
-      content.style.display = "block";
-      if (this.lastChild.innerHTML == "+"){
-        this.lastChild.innerHTML = "-";
-      };
-    };
-  });
-};
+// var coll = document.getElementsByClassName("collapsible");
+// var i;
+//
+// for (i = 0; i < coll.length; i++) {
+//   coll[i].addEventListener("click", function() {
+//     // this.classList.toggle("active");
+//     var content = this.nextElementSibling;
+//     if (content.style.display === "block") {
+//       content.style.display = "none";
+//       if (this.lastChild.innerHTML == "-"){
+//         this.lastChild.innerHTML = "+";
+//       };
+//     } else {
+//       content.style.display = "block";
+//       if (this.lastChild.innerHTML == "+"){
+//         this.lastChild.innerHTML = "-";
+//       };
+//     };
+//   });
+// };
 
 document.getElementById("collapsed_sidebar").style.display = "none";
 function openNav() {
   document.getElementById("sidebar-left").style.width = "100%";
   document.getElementById("sidebar-left").style.display = "block";
-  document.getElementById("mapid").style.left = "480px";
+  document.getElementById("mapid").style.top = "100vh";
 };
 
 function closeNav() {
   document.getElementById("sidebar-left").style.display = "none";
   document.getElementById("collapsed_sidebar").style.display = "block";
-  document.getElementById("mapid").style.left = "30px";
+  document.getElementById("mapid").style.top = "0";
   map.invalidateSize();
 };
 
