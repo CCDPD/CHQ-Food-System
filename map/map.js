@@ -239,10 +239,10 @@ selection.onAdd = function (map) {
       };
     };
   };
-  if (labels.length > 1){
-    div.innerHTML += '<i style="border-color:White" class="mdi mdi-star"></i>Selection Match<br/>';
-  };
-  div.innerHTML += '<h4>Active Selection</h4>';
+  // if (labels.length > 1){
+  //   div.innerHTML += '<i style="border-color:White" class="mdi mdi-star"></i>Selection Match<br/>';
+  // };
+  div.innerHTML += '<h2>Active Selection</h2>';
   for (var i = 0; i < labels.length; i++) {
     div.innerHTML += labels[i] + '<br/>';
   };
