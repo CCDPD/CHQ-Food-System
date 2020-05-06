@@ -74,7 +74,7 @@ function search_map(){
     checked_subsector(grouped[1][0],grouped[1][2]);
     filterPoints();
   };
-  closeNav();
+  // closeNav();
 };
 
 function checked_subsector(a,b) {
