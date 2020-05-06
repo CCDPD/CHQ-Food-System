@@ -221,7 +221,7 @@ legend.onAdd = function (map) {
   };
   return div;
 };
-legend.addTo(map);
+// legend.addTo(map);
 
 //Selection Legend
 var selection = L.control({position: 'bottomleft'});
