@@ -70,6 +70,15 @@ ul {
   color: white;
 }
 
+#Search_Button:hover{
+  margin-top: 10px;
+  background-color: white;
+  padding: 16px;
+  border: 2px solid #007cb2;
+  border-radius: 8px;
+  color: #007cb2;
+}
+
 #sidebar-left {
   height: 100%;
   max-width: 480px;
