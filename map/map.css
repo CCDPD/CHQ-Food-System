@@ -1,15 +1,11 @@
 #mapid {
   position: absolute;
-  /* left:400px; */
-  /* left: 0; */
-  top: 0;
+  top: 100vh;
   bottom: 0;
   right: 0;
-}
+  left: 30px;
 
-/* .leaflet-popup{
-  max-width: 50vw;
-} */
+}
 
 #popup-title {
   background-color: hsl(96, 53%, 71%);
@@ -33,14 +29,14 @@
 } */
 
 #popup_content {
-  height: 300px;
+  height: 200px;
   overflow: auto;
   vertical-align: middle;
 }
 
 #badges {
-  width: 90px;
-  height: 90px;
+  width: 60px;
+  height: 60px;
   padding: 5px;
 }
 
@@ -85,7 +81,7 @@
    max-width: 25vw;
    color: black;
    font-family: 'Roboto', sans-serif;
-   font-size: 10pt;
+   font-size: 9pt;
  }
 
  .info {
