@@ -1,11 +1,10 @@
-[ ] CONVERT TO ASSEMBLY CSS
-[ ] Filter listings based on Sector Selected
-[ ] Generate sub-sector options based on selected sector
-[ ] Filter listings based on sub-sector(s) selected
-[ ] Clear selection button
-[ ] Break navLinks into ABOUT, SEARCH, LIST
-[ ] Add mdn icons and more colors to map markers
-[ ] Add more content to popup
-[ ] Add images to descriptions of asset types
-[ ] Add certification badges
-[ ] 
+Filter Tab:
+- Description
+- Filter Listings based on selected Sector
+- Generate sub-sectors based on selected Sector
+- Clear selection
+
+Map
+- Add mdn icons and more colors to the map markers
+- add more content to popups
+- Add certification badges

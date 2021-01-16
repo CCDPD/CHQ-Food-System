@@ -13,20 +13,22 @@
 </head>
 <body>
     <div class='flex-parent viewport-full relative scroll-hidden'>
-        <div id='sidebar' class='sidebar flex-child w-full w240-ml absolute static-ml left bottom'>
-            <div class='flex-parent flex-parent--column hmax-full-ml viewport-third bg-white'>
+        <div id='sidebar' class='sidebar flex-child w-full w360-ml absolute static-ml left bottom'>
+            <div class='flex-parent flex-parent--column h-full-ml viewport-third bg-white'>
                 <div class='flex-child grid px12 py12 color-gray-light border-b'>
                     <div class="col col--6 txt-bold color-gray-dark">CHQ Food System Map</div>
                     <div class="col col--auto color-gray-dark"></div>
-                    <div class="navIcons col col--1 color-gray-dark active-navIcon"><svg class='icon w24 h24'><use xlink:href='#icon-home'/></svg></div>
-                    <div class="navIcons col col--1 color-gray-dark"><svg class='icon w24 h24'><use xlink:href='#icon-filter'/></svg></div>
-                    <div class="navIcons col col--1 color-gray-dark"><svg class='icon w24 h24'><use xlink:href='#icon-inspect'/></svg></div>
+                    <div id='home' class="navIcons col col--1 color-gray-dark active-navIcon"><svg class='icon w24 h24'><use xlink:href='#icon-home'/></svg></div>
+                    <div id='filter' class="navIcons col col--1 color-gray-dark"><svg class='icon w24 h24'><use xlink:href='#icon-filter'/></svg></div>
+                    <div id='inspect' class="navIcons col col--1 color-gray-dark"><svg class='icon w24 h24'><use xlink:href='#icon-inspect'/></svg></div>
                 </div>
                 <div class='flex-child px12 py12 h-full scroll-styled scroll-auto'>
-                    <div id="home" class="tabContent active-tabContent">
+                    <div id="homeContent" class="tabContent active-tabContent">
                         <div class="txt-em">
-                            Welcome to the CHQ Food System Map! The purpose of this project is to identify, connect, and promote sectors within Chautauqua County's Food System. Use the Filter and Inspect tools to explore the map. <strong>Scroll to read more.</strong>
+                            Welcome to the CHQ Food System Map! The purpose of this project is to identify, connect, and promote sectors within Chautauqua County's Food System. Use the Filter and Inspect tools to explore the map. <strong class="none-mxl none-ml block">Scroll to read more.</strong>
                         </div>
+                        <br>
+                        <img class="block-mxl block-ml none" src="img\Food System Diagram.svg" alt="">
                         <br>
                         <div class="txt-bold">Agriculture & Food Production</div>
                         <div class="txt-light">
@@ -65,7 +67,7 @@
                         <img class="footerImg" src="img\Chautauqua_County_ny_seal.png" alt="County Seal">
                         <img class="footerImg" src="img\2---Food-policy-council-logo.gif" alt="Food Policy Council Logo">
                     </div>
-                    <div id="filter" class="tabContent">
+                    <div id="filterContent" class="tabContent">
                         <select name="Primary Sector" id="">
                             <option value="All">All Sectors</option>
                             <option value="Production">Agriculture & Production</option>
@@ -76,9 +78,13 @@
                             <option value="Eduction">Education & Support</option>
                         </select>
                     </div>
-                    <div id='listings' class='listings tabContent'></div>
+                    <div id='inspectContent' class="tabContent">
+                        <div id='listings' class='listings'></div>
+                    </div>
                 </div>
-                <footer class='px12 py6 bg-green-faint txt-xs color-gray-dark'>CCDPD - Brendan Cullen | 2021 </footer>
+                <footer class='px12 py6 bg-green-faint txt-xs color-gray-dark'>
+                    CCDPD - Brendan Cullen | 2021
+                </footer>
             </div>
         </div>
         <div id='map' class='map flex-child flex-child--grow viewport-twothirds viewport-full-ml'></div>

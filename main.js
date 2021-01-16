@@ -123,7 +123,6 @@ function buildLocationList(data, map) {
           for (var i=0; i < data.features.length; i++) {
             if (this.id === "link-" + data.features[i].properties.id) {
               var clickedListing = data.features[i];
-              closeNav(map);
               flyTopoint(clickedListing);
               createPopUp(clickedListing);
             }
@@ -138,6 +137,7 @@ function buildLocationList(data, map) {
   });
 };
 
+
 // Use Mapbox GL JS's `flyTo` to move the camera smoothly a given center point.
 function flyTopoint(currentFeature) {
   map.flyTo({
@@ -145,6 +145,7 @@ function flyTopoint(currentFeature) {
     zoom: 15
   });
 };
+
 
 // Create a Mapbox GL JS `Popup`.
 function createPopUp(currentFeature) {
@@ -157,19 +158,32 @@ function createPopUp(currentFeature) {
     .addTo(map);
 };
 
-function openTab(element){
-  navIcons = document.getElementsByClassName('navIcons')
-  for (var i=0; i<navIcons.length; i++){
-    var navClasses = navIcons[i].classList;
-    var classLen = navClasses.length;
-    for (var x=0; x<classLen; x++){
-      if (navClasses[x] == 'active-navIcon'){
-        navClasses.remove('active-navIcon')
+
+// toggle active-navIcon and active-tabContent
+function removeActive(elements, activeName){
+  for (var i=0; i<elements.length; i++){
+    var elementClasses = elements[i].classList;
+    for (var x=0; x<elementClasses.length; x++){
+      if (elementClasses[x] == activeName){
+        elementClasses.remove(activeName);
         break
       };
     };
   };
+};
+
+
+function openTab(element){
+  // toggle navIcons
+  var navIcons = document.getElementsByClassName('navIcons');
+  removeActive(navIcons, 'active-navIcon');
   element.classList.add("active-navIcon");
+
+  // toggle tabDivs
+  var tabDivs = document.getElementsByClassName('tabContent');
+  removeActive(tabDivs, 'active-tabContent')
+  var contentID = (element.id + 'Content');
+  document.getElementById(contentID).classList.add('active-tabContent')
 };
 
 var navIcons = document.getElementsByClassName('navIcons');
