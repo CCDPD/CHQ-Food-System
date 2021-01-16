@@ -1,0 +1,108 @@
+#mapid {
+  position: absolute;
+  top: 100vh;
+  bottom: 0;
+  right: 0;
+  left: 30px;
+
+}
+
+#popup-title {
+  background-color: hsl(96, 53%, 71%);
+  color: white;
+  font-family: 'Raleway', sans-serif;
+  margin: 0;
+  text-align: center;
+  font-size: 16pt;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+#popup-header {
+  font-family: 'Raleway', sans-serif;
+  font-size: 12pt;
+  font-weight: bold;
+}
+
+/* .leaflet-popup-content {
+  width: 350px !important;
+} */
+
+#popup_content {
+  height: 200px;
+  overflow: auto;
+  vertical-align: middle;
+}
+
+#badges {
+  width: 60px;
+  height: 60px;
+  padding: 5px;
+}
+
+#popup-address {
+  padding-top: 5px;
+}
+
+
+.marker-pin {
+  width: 30px;
+  height: 30px;
+  border-radius: 50% 50% 50% 0;
+  /* background: #c30b82; */
+  position: absolute;
+  transform: rotate(-45deg);
+  left: 50%;
+  top: 50%;
+  margin: -15px 0 0 -15px;
+}
+/* //to draw white circle */
+.marker-pin::after {
+    content: '';
+    width: 24px;
+    height: 24px;
+    margin: 3px 0 0 3px;
+    background: #fff;
+    position: absolute;
+    border-radius: 50%;
+ }
+/* // to align icon */
+.custom-div-icon i {
+   position: absolute;
+   width: 22px;
+   font-size: 12pt;
+   left: 0;
+   right: 0;
+   margin: 10px auto;
+   text-align: center;
+}
+
+ .legend {
+   max-width: 25vw;
+   color: black;
+   font-family: 'Roboto', sans-serif;
+   font-size: 9pt;
+ }
+
+ .info {
+     padding: 6px 8px;
+     background: white;
+     background: rgba(255,255,255,0.9);
+     box-shadow: 0 0 15px rgba(0,0,0,0.2);
+     border-radius: 5px;
+ }
+
+ .legend i {
+   background-color: white;
+   color: black;
+   font-size: 16pt;
+   margin-right: 8px;
+   line-height: 35px;
+   border: 5px solid;
+   border-radius: 150px;
+ }
+
+ .open_sidebar {
+   width: 26px;
+   height: 26px;
+ }

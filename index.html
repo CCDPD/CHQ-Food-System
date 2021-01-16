@@ -1,95 +1,66 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html>
   <head>
-    <meta charset="utf-8">
+    <meta charset='utf-8' />
+    <title>CHQ Food System</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CHQ - Food System Map</title>
-    <!-- Add CSS Links -->
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
-      integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
-      crossorigin=""/>
-    <link rel="stylesheet" href="map/map.css">
-    <link rel="stylesheet" href="page/page.css">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Raleway|Roboto&display=swap" rel="stylesheet">
-    <!-- Load Esri Leaflet Geocoder from CDN -->
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/esri-leaflet-geocoder@2.3.2/dist/esri-leaflet-geocoder.css"
-      integrity="sha512-IM3Hs+feyi40yZhDH6kV8vQMg4Fh20s9OzInIIAc4nx7aMYMfo+IenRUekoYsHZqGkREUgx0VvlEsgm7nCDW9g=="
-      crossorigin="">
-    <link rel="stylesheet" href="Plugins/leaflet-locatecontrol-gh-pages/dist/L.Control.Locate.min.css">
-
-    <!-- Make sure you put this AFTER Leaflet's CSS -->
-    <script
-      src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
-      integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
-      crossorigin="">
-    </script>
-    <script
-      src="https://unpkg.com/esri-leaflet@2.3.3/dist/esri-leaflet.js"
-      integrity="sha512-cMQ5e58BDuu1pr9BQ/eGRn6HaR6Olh0ofcHFWe5XesdCITVuSBiBZZbhCijBe5ya238f/zMMRYIMIIg1jxv4sQ=="
-      crossorigin="">
-    </script>
-    <script src="https://kit.fontawesome.com/d686df2664.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdn.materialdesignicons.com/4.8.95/css/materialdesignicons.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700' rel='stylesheet'>
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v2.0.1/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v2.0.1/mapbox-gl.css' rel='stylesheet' />
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <div id="sidebar-left">
-      <div class="description_header">
+    <div id='sidebar' class='sidebar'>
+      <div class='grid--gut6'>
+        <div class="col col--3"><h1 >CHQ Food System Map</h1></div>
+        <div class="col col--1">ABOUT</div>
+        <div class="col col--1">SEARCH</div>
+        <div class="col col--1">LIST</div>
       </div>
-      <div class="description">
-        <div class="description_content">
-          <h1>Chautauqua County Food System Map</h1>
-          <h4>Identifying, Connecting & Promoting Chautauqua's Food Assets</h4>
-          <p>Developed by the Chautauqua County Division of Planning & Community Development in cooperation with the Chautauqua County Food Policy Council.</p>
-        <div class="dropdown_section">
-          <div>
-            <label for="Sector">Select Sector:</label>
-            <select class="select-css" id="Sector" onchange="populate_sub_sector_dropdown()">
-              <option value="Default">All Sectors</option>
-            </select>
-          </div>
-          <div>
-            <label for="Sub-Sector">Select Sub-Sector:</label>
-            <select class="select-css" id="Sub-Sector" style>
-              <option value="Default">All Sub-Sectors</option>
-            </select>
-          </div>
-          <div>
-            <button id="Search_Button" type="button" name="button" onclick="search_map()">SEARCH</button>
-          </div>
+      <button id='defaultOpen' class="tabLink" onclick="openPage('about', this)">ABOUT</button>
+      <button class="tabLink" onclick="openPage('listings', this)">SEARCH</button>      
+      <div id="about" class="tabContent">
+        <em>The purpose of this project is to identify, connect, and promote assets within Chautauqua County's Food System. Use the SEARCH tab to filter the map and learn more about the food system assets of Chautauqua County.</em>
+        <img id='foodDiagram' src="img\Food System Diagram.svg" alt="Food System Diagram">
+        <h3>Asset Types</h3>
+        <h4>Agriculture & Food Production</h4>
+        <p>Food begins with agriculture and farming. The food we consume must first be grown, cultivated, and harvested. Agriculture & Food Production describes any organization or business that produces raw food products.</p>
+        <h4>Processing & Value-Added Products</h4>
+        <p>Food processing can provide benefits such as giving foods a longer shelf life, reducing food safety risks, and creating value-added products. Processing & Value-Added Products describes any organization or business that transforms raw foods and ingredients into new products.</p>
+        <h4>Aggregation, Distribution & Storage</h4>
+        <p>Once food has been produced or processed, it needs to make its way to food outlets where it can be sold to consumers. Products may be aggregated together from multiple sources to create a larger and more reliable supply to meet market demands. Aggregation, Distribution, & Storage describes any organization or business that collects, transports, or preserves raw or processed food products prior to purchasing by consumers.</p>
+        <h4>Food Retail / Direct Sales</h4>
+        <p>Food makes its way to the consumer and our plates in a variety of ways. Food Retail/Direct Sales describes any organization or business that sells food directly to consumers. This includes supermarkets, restaurants, dining halls, and other locations an individual can purchase food.</p>
+        <h4>Food Loss Management</h4>
+        <p>In the United States, over one-third of all available food goes uneaten through loss or waste. Food Loss Management describes any organization or business that manages waste produced at any stage of the food system.</p>
+        <h4>Food Assistance, Education, & Support</h4>
+        <p>There are a variety of resources for people and organizations within the food system. Education & Support describes any organization or business that provides assistance to the community at any stage of the food system.</p>
+        <h3>Author</h3>
+        <p>Produced by Chautauqua County Department of Planning & Development in partnership with the Chautauqua County Food Policy Council</p>
+        <div>
+          <img class="footerImg" src="img\Chautauqua_County_ny_seal.png" alt="County Seal">
+          <img class="footerImg" src="img\2---Food-policy-council-logo.gif" alt="Food Policy Council Logo">
         </div>
       </div>
+      <div id='listings' class='listings tabContent'>
+        <select name="Primary Sector" id="">
+          <option value="All">All Sectors</option>
+          <option value="Production">Agriculture & Production</option>
+          <option value="Processing">Processing & Value-Add</option>
+          <option value="Aggregation">Aggregation & Storage</option>
+          <option value="Distribution">Distribution</option>
+          <option value="Waste">Waste Management</option>
+          <option value="Eduction">Education & Support</option>
+        </select>
+        <!-- <div id='listings' class="listings"></div> -->
       </div>
-        <!-- <div id="page-header-img">
-          <img src="img/Food System Diagram.svg" alt="">
-          <p>For the most up to date information, please check in with the business you are trying to reach.</p>
-        </div>
-      </div> -->
     </div>
-    <div id="collapsed_sidebar">
-      <span class='mdi mdi-keyboard-backspace' style="font-size:28px; cursor:pointer; margin-left:1px;" onclick="openNav()"></span><br/>
-      <!-- <span id="layer_toggle" class="mdi mdi-layers-remove" style="font-size:30px;cursor:pointer; margin-left:1px;" onclick="toggleLegend()"></span> -->
+    <div id='map' class='map'></div>
+    <div id='openBtn' class="map-overlay top">
+      <button class="openbtn">&#9776;</button>
     </div>
-    <div id="mapid"></div>
   </body>
-  <footer>
-    <script type="text/javascript" src="Plugins\polyfills.js"></script>
-    <script type="text/javascript" src="data/Sectors.js"></script>
-    <script type="text/javascript" src="data/certifications_badges.js"></script>
-    <script type="text/javascript" src="data/payment_badges.js"></script>
-    <script type="text/javascript" src="Plugins/Leaflet.Icon.Glyph.js"></script>
-    <script type="text/javascript" src="Plugins/leaflet-locatecontrol-gh-pages/dist/L.Control.Locate.min.js"></script>
-    <script type="text/javascript" src="data/current_assets.geojson"></script>
-    <script type="text/javascript" src="data/MuniBounds.json"></script>
-    <script
-    src="https://unpkg.com/esri-leaflet-geocoder@2.3.2/dist/esri-leaflet-geocoder.js"
-    integrity="sha512-8twnXcrOGP3WfMvjB0jS5pNigFuIWj4ALwWEgxhZ+mxvjF5/FBPVd5uAxqT8dd2kUmTVK9+yQJ4CmTmSg/sXAQ=="
-    crossorigin="">
-    </script>
-    <script type="text/javascript" src="map/map.js"></script>
-    <script type="text/javascript" src="page/page.js"></script>
-  </footer>
+  <script src="data/current_assets.json"></script>
+  <script src="data/Sectors.js"></script>
+  <script src="main.js"></script>
 </html>
