@@ -15,7 +15,7 @@
     <div class='flex-parent viewport-full relative scroll-hidden'>
         <div id='sidebar' class='sidebar flex-child w-full w240-ml absolute static-ml left bottom'>
             <div class='flex-parent flex-parent--column hmax-full-ml viewport-third bg-white'>
-                <div class='flex-child grid px12 py12 color-gray-light border-b '>
+                <div class='flex-child grid px12 py12 color-gray-light border-b'>
                     <div class="col col--6 txt-bold color-gray-dark">CHQ Food System Map</div>
                     <div class="col col--auto color-gray-dark"></div>
                     <div class="navIcons col col--1 color-gray-dark active-navIcon"><svg class='icon w24 h24'><use xlink:href='#icon-home'/></svg></div>
@@ -24,13 +24,9 @@
                 </div>
                 <div class='flex-child px12 py12 h-full scroll-styled scroll-auto'>
                     <div id="home" class="tabContent active-tabContent">
-                        <div class="grid">
-                            <div class="txt-em txt-s col col--6">
-                                Welcome to the CHQ Food System Map. The purpose of this project is to identify, connect, and promote assets within Chautauqua County's Food System.
-                            </div>
-                            <img class="col col--6" id='foodDiagram' src="img\Food System Diagram.svg" alt="Food System Diagram">
+                        <div class="txt-em">
+                            Welcome to the CHQ Food System Map! The purpose of this project is to identify, connect, and promote sectors within Chautauqua County's Food System. Use the Filter and Inspect tools to explore the map. <strong>Scroll to read more.</strong>
                         </div>
-                        <div class="txt-h3">Asset Types</div>
                         <br>
                         <div class="txt-bold">Agriculture & Food Production</div>
                         <div class="txt-light">
@@ -62,23 +58,25 @@
                             There are a variety of resources for people and organizations within the food system. Education & Support describes any organization or business that provides assistance to the community at any stage of the food system.
                         </div>
                         <br>
-                        <div class="txt-h3">Author</div>
-                        <div class="text-light">Produced by Chautauqua County Department of Planning & Development in partnership with the Chautauqua County Food Policy Council</div>
+                        <div class="txt-bold">Author</div>
+                        <div class="txt-light">
+                            Produced by the Chautauqua County Department of Planning & Development in partnership with the Food Policy Council of Chautauqua County
+                        </div>
                         <img class="footerImg" src="img\Chautauqua_County_ny_seal.png" alt="County Seal">
                         <img class="footerImg" src="img\2---Food-policy-council-logo.gif" alt="Food Policy Council Logo">
                     </div>
-                    <div id='listings' class='listings tabContent'>
+                    <div id="filter" class="tabContent">
                         <select name="Primary Sector" id="">
-                        <option value="All">All Sectors</option>
-                        <option value="Production">Agriculture & Production</option>
-                        <option value="Processing">Processing & Value-Add</option>
-                        <option value="Aggregation">Aggregation & Storage</option>
-                        <option value="Distribution">Distribution</option>
-                        <option value="Waste">Waste Management</option>
-                        <option value="Eduction">Education & Support</option>
+                            <option value="All">All Sectors</option>
+                            <option value="Production">Agriculture & Production</option>
+                            <option value="Processing">Processing & Value-Add</option>
+                            <option value="Aggregation">Aggregation & Storage</option>
+                            <option value="Distribution">Distribution</option>
+                            <option value="Waste">Waste Management</option>
+                            <option value="Eduction">Education & Support</option>
                         </select>
-                        <!-- <div id='listings' class="listings"></div> -->
                     </div>
+                    <div id='listings' class='listings tabContent'></div>
                 </div>
                 <footer class='px12 py6 bg-green-faint txt-xs color-gray-dark'>CCDPD - Brendan Cullen | 2021 </footer>
             </div>

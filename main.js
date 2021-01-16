@@ -158,5 +158,29 @@ function createPopUp(currentFeature) {
 };
 
 function openTab(element){
-  console.log(element);
+  navIcons = document.getElementsByClassName('navIcons')
+  for (var i=0; i<navIcons.length; i++){
+    var navClasses = navIcons[i].classList;
+    var classLen = navClasses.length;
+    for (var x=0; x<classLen; x++){
+      if (navClasses[x] == 'active-navIcon'){
+        navClasses.remove('active-navIcon')
+        break
+      };
+    };
+  };
+  element.classList.add("active-navIcon");
 };
+
+var navIcons = document.getElementsByClassName('navIcons');
+for (var i=0; i<navIcons.length; i++){
+  navIcons[i].addEventListener('click', function(){
+    openTab(this);
+  });
+};
+
+
+
+  // each.addEventListener.addEventListener('click', function(e){
+  //   openTab(e);
+  // });
