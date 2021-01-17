@@ -195,6 +195,9 @@ for (var i=0; i<navIcons.length; i++){
 
 
 
-  // each.addEventListener.addEventListener('click', function(e){
-  //   openTab(e);
-  // });
+function primarySectorChange(){
+  selectedSector = document.getElementById("PrimarySector").value;
+  subSectorDiv = document.getElementById('subSectorsDiv');
+  console.log(sectors[selectedSector]["sub_sectors"])
+
+};

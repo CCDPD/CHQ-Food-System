@@ -68,15 +68,29 @@
                         <img class="footerImg" src="img\2---Food-policy-council-logo.gif" alt="Food Policy Council Logo">
                     </div>
                     <div id="filterContent" class="tabContent">
-                        <select name="Primary Sector" id="">
-                            <option value="All">All Sectors</option>
-                            <option value="Production">Agriculture & Production</option>
-                            <option value="Processing">Processing & Value-Add</option>
-                            <option value="Aggregation">Aggregation & Storage</option>
-                            <option value="Distribution">Distribution</option>
-                            <option value="Waste">Waste Management</option>
-                            <option value="Eduction">Education & Support</option>
-                        </select>
+                        <!-- <div class="txt-em">
+                            Use the tools below to filter the markers on the map. Click the CLEAR button to refresh the query.
+                        </div>
+                        <br> -->
+                        <div class='select-container'>
+                            <select id='PrimarySector' name="Primary Sector" class='select' onchange="primarySectorChange()">
+                                <option value="All">All Sectors</option>
+                                <option value="Production">Agriculture & Food Production</option>
+                                <option value="Processing">Processing & Value-Added Products</option>
+                                <option value="Aggregation">Aggregation, Distribution & Storage</option>
+                                <option value="Distribution">Food Retail / Direct Sales</option>
+                                <option value="Waste">Food Waste Management</option>
+                                <option value="Eduction">Food Assistance, Education & Support</option>
+                            </select>
+                            <div class='select-arrow'></div>
+                        </div>
+                        <br>
+                        <div id='subSectorsDiv'></div>
+                        <br>
+                        <button class='btn btn--stroke'>
+                            <svg class='icon w24 h24'><use xlink:href='#icon-refresh'/></svg>
+                        </button>
+
                     </div>
                     <div id='inspectContent' class="tabContent">
                         <div id='listings' class='listings'></div>

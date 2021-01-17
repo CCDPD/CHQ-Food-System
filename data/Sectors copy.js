@@ -6,51 +6,150 @@ var sectors = {
     "section_icon_1": "mdi-sprout",
     "sector_color": "#b2df8a",
     "sub_sectors": [
-        "Community Garden",
-        "Dairy",
-        "Eggs",
-        "Fish",
-        "Flowers",
-        "Grapes",
-        "Fruits/Berries",
-        "Grains",
-        "Honey",
-        "Herbs",
-        "Hops",
-        "Maple Syrup",
-        "Meat",
-        "Nuts",
-        "Vegetables",
-        "Other",
+      {
+        "sub_sector_name": "Community Garden",
+        "show_on_map": "False",
+      },
+      {
+        "sub_sector_name": "Dairy",
+        "show_on_map": "False",
+      },
+      {
+        "sub_sector_name": "Eggs",
+        "show_on_map": "False",
+      },
+      {
+        "sub_sector_name": "Fish",
+        "show_on_map": "False",
+      },
+      {
+        "sub_sector_name": "Flowers",
+        "show_on_map": "False",
+      },
+      {
+        "sub_sector_name": "Grapes",
+        "show_on_map": "False",
+      },
+      {
+        "sub_sector_name": "Fruits/Berries",
+        "show_on_map": "False",
+      },
+      {
+        "sub_sector_name": "Grains",
+        "show_on_map": "False",
+      },
+      {
+        "sub_sector_name": "Honey",
+        "show_on_map": "False",
+      },
+      {
+        "sub_sector_name": "Herbs",
+        "show_on_map": "False",
+      },
+      {
+        "sub_sector_name": "Hops",
+        "show_on_map": "False",
+      },
+      {
+        "sub_sector_name": "Maple Syrup",
+        "show_on_map": "False",
+      },
+      {
+        "sub_sector_name": "Meat",
+        "show_on_map": "False",
+      },
+      {
+        "sub_sector_name": "Nuts",
+        "show_on_map": "False",
+      },
+      {
+        "sub_sector_name": "Vegetables",
+        "show_on_map": "False",
+      },
+      {
+        "sub_sector_name": "Other",
+        "show_on_map": "False",
+      }
     ]
   },
-  "Processing" : {
+  "2" : {
     "sector_name" : "Processing",
     "section_title": "Processing & Value-Added Products",
     "section_description": "Food processing can provide benefits such as giving foods a longer shelf life, reducing food safety risks, and creating value-added products. Processing & Value-Added Products describes any organization or business that transforms raw foods and ingredients into new products.",
     "section_icon_1": "mdi-dolly",
     "sector_color": "#33a02c",
     "sub_sectors": [
-        "Baked Goods",
-        "Brewing",
-        "Cider",
-        "Coffee/Tea",
-        "Commercial Kitchen",
-        "Dairy",
-        "Distilling",
-        "Fish Processing",
-        "Fruit Processing",
-        "Food Packaging",
-        "Grains Processing",
-        "Maple Processing",
-        "Meat Processing",
-        "Prepared/Speciality Foods",
-        "Wine Production",
-        "Vegetable Processing",
-        "Other",
+      {
+        "sub_sector_name": "Baked Goods",
+        "show_on_map": "False",
+      },
+      {
+        "sub_sector_name": "Brewing",
+        "show_on_map": "False",
+      },
+      {
+        "sub_sector_name": "Cider",
+        "show_on_map": "False",
+      },
+      {
+        "sub_sector_name": "Coffee/Tea",
+        "show_on_map": "False",
+      },
+      {
+        "sub_sector_name": "Commercial Kitchen",
+        "show_on_map": "False",
+      },
+      {
+        "sub_sector_name": "Dairy",
+        "show_on_map": "False",
+      },
+      {
+        "sub_sector_name": "Distilling",
+        "show_on_map": "False",
+      },
+      {
+        "sub_sector_name": "Fish Processing",
+        "show_on_map": "False",
+      },
+      {
+        "sub_sector_name": "Fruit Processing",
+        "show_on_map": "False",
+      },
+      {
+        "sub_sector_name": "Food Packaging",
+        "show_on_map": "False",
+      },
+      {
+        "sub_sector_name": "Grains Processing",
+        "show_on_map": "False",
+      },
+      {
+        "sub_sector_name": "Maple Processing",
+        "show_on_map": "False",
+      },
+      {
+        "sub_sector_name": "Meat Processing",
+        "show_on_map": "False",
+      },
+      {
+        "sub_sector_name": "Prepared/Speciality Foods",
+        "show_on_map": "False",
+      },
+      {
+        "sub_sector_name": "Wine Production",
+        "show_on_map": "False",
+      },
+      {
+        "sub_sector_name": "Vegetable Processing",
+        "show_on_map": "False",
+      },
+      {
+        "sub_sector_name": "Other",
+        "show_on_map": "False",
+      }
     ]
   },
-  "Aggregation" : {
+  "3" : {
     "sector_name" : "Aggregation",
     "section_title": "Aggregation, Transport & Storage",
     "section_description": "Once food has been produced or processed, it needs to make its way to food outlets where it can be sold to consumers. Products may be aggregated together from multiple sources to create a larger and more reliable supply to meet market demands. Aggregation, Distribution, & Storage describes any organization or business that collects, transports, or preserves raw or processed food products prior to purchasing by consumers.",
@@ -95,7 +194,7 @@ var sectors = {
       }
     ]
   },
-  "Distribution" : {
+  "4" : {
     "sector_name" : "Distribution",
     "section_title": "Food Retail / Direct Sales",
     "section_description": "Food makes its way to the consumer and our plates in a variety of ways. Food Retail/Direct Sales describes any organization or business that sells food directly to consumers. This includes supermarkets, restaurants, dining halls, and other locations an individual can purchase food.",
@@ -168,7 +267,7 @@ var sectors = {
       }
     ]
   },
-  "Waste" : {
+  "5" : {
     "sector_name" : "Waste",
     "section_title": "Food Loss Management",
     "section_description": "In the United States, over one-third of all available food goes uneaten through loss or waste. Food Loss Management describes any organization or business that manages waste produced at any stage of the food system.",
@@ -201,7 +300,7 @@ var sectors = {
       }
     ]
   },
-  "Eduction" : {
+  "6" : {
     "sector_name" : "Education",
     "section_title": "Food Assistance, Education, & Support",
     "section_description": "There are a variety of resources for people and organizations within the food system. Education & Support describes any organization or business that provides assistance to the community at any stage of the food system.",
