@@ -17,17 +17,19 @@ var map = new mapboxgl.Map({
   zoom: 8.5,
 });
 
-// Assign a unique id to each point.
+// Assign a unique id to each point and clean up subsectors_joined
 points.features.forEach(function(point, i){
   point.properties.id = i;
+  point.properties.Subsectors_Joined = point.properties.Subsectors_Joined.split(',');
+  for (var x=0; x < (point.properties.Subsectors_Joined.length); x++){
+    point.properties.Subsectors_Joined[x] = point.properties.Subsectors_Joined[x].trim();
+  };
 });
 
-// Wait until the map loads to make changes to the map.
 map.on('load', function (e) {
     map.addLayer({
         "id": "locations",
         "type": "symbol",
-        /* Add a GeoJSON source containing place coordinates and information. */
         "source": {
           "type": "geojson",
           "data": points
@@ -37,10 +39,6 @@ map.on('load', function (e) {
           "icon-allow-overlap": true,
         }
     });
-
-    // Add to the page:
-    // - The location listings on the side of the page
-    // - The markers onto the map
     buildLocationList(points, map);
     addMarkers();
 });
@@ -51,28 +49,15 @@ function addMarkers() {
     points.features.forEach(function(marker) {
         // Create a div element for the marker
         var el = document.createElement('div');
-        
-        // Assign a unique `id` to the marker
         el.id = "marker-" + marker.properties.id;
-        
-        // Assign the `marker` class to each marker for styling
         el.className = 'marker';
     
-
     // Create a marker using the div element defined above and add it to the map
     new mapboxgl.Marker(el, { offset: [0, -23] })
       .setLngLat(marker.geometry.coordinates)
       .addTo(map);
-
-    // Listen to the element and when it is clicked, do three things:
-    // 1. Fly to the point
-    // 2. Close all other popups and display popup for clicked point
-    // 3. Highlight listing in sidebar (and remove highlight for all other listings)
     el.addEventListener('click', function(e){
-        // Fly to the point
         flyTopoint(marker);
-        
-        // Close all other popups and display popup for clicked point
         createPopUp(marker);
         
         // Highlight listing in sidebar
@@ -156,63 +141,4 @@ function createPopUp(currentFeature) {
     .setHTML('<h3>'+ currentFeature.properties.Organization_Name +'</h3>' +
       '<h4>' + currentFeature.properties.Full_Address + '</h4>')
     .addTo(map);
-};
-
-
-// toggle active-navIcon and active-tabContent
-function removeActive(elements, activeName){
-  for (var i=0; i<elements.length; i++){
-    var elementClasses = elements[i].classList;
-    for (var x=0; x<elementClasses.length; x++){
-      if (elementClasses[x] == activeName){
-        elementClasses.remove(activeName);
-        break
-      };
-    };
-  };
-};
-
-
-function openTab(element){
-  // toggle navIcons
-  var navIcons = document.getElementsByClassName('navIcons');
-  removeActive(navIcons, 'active-navIcon');
-  element.classList.add("active-navIcon");
-
-  // toggle tabDivs
-  var tabDivs = document.getElementsByClassName('tabContent');
-  removeActive(tabDivs, 'active-tabContent')
-  var contentID = (element.id + 'Content');
-  document.getElementById(contentID).classList.add('active-tabContent')
-};
-
-var navIcons = document.getElementsByClassName('navIcons');
-for (var i=0; i<navIcons.length; i++){
-  navIcons[i].addEventListener('click', function(){
-    openTab(this);
-  });
-};
-
-
-function primarySectorChange(){
-  selectedSector = document.getElementById("PrimarySector").value;
-  subSectorDiv = document.getElementById('subSectorsDiv');
-  subSectorDiv.innerHTML = '';
-  if (selectedSector == 'All'){
-
-  } else {
-    subSectorDiv.innerHTML = '<br>';
-    var subSectorHeading = document.createElement('div');
-    subSectorHeading.classList.add('txt-bold');
-    subSectorHeading.innerText = 'Sub-Sectors:';
-    subSectorDiv.appendChild(subSectorHeading);
-    subSectorList = sectors[selectedSector]["sub_sectors"];
-    for (subSector in subSectorList){
-      var sectorButton = document.createElement('button');
-      sectorButton.classList.add('btn','btn--stroke','mx3','my3');
-      sectorButton.textContent = subSectorList[subSector];
-      subSectorDiv.appendChild(sectorButton);
-    };
-  }
-
 };
