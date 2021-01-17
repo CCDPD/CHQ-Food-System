@@ -194,10 +194,25 @@ for (var i=0; i<navIcons.length; i++){
 };
 
 
-
 function primarySectorChange(){
   selectedSector = document.getElementById("PrimarySector").value;
   subSectorDiv = document.getElementById('subSectorsDiv');
-  console.log(sectors[selectedSector]["sub_sectors"])
+  subSectorDiv.innerHTML = '';
+  if (selectedSector == 'All'){
+
+  } else {
+    subSectorDiv.innerHTML = '<br>';
+    var subSectorHeading = document.createElement('div');
+    subSectorHeading.classList.add('txt-bold');
+    subSectorHeading.innerText = 'Sub-Sectors:';
+    subSectorDiv.appendChild(subSectorHeading);
+    subSectorList = sectors[selectedSector]["sub_sectors"];
+    for (subSector in subSectorList){
+      var sectorButton = document.createElement('button');
+      sectorButton.classList.add('btn','btn--stroke','mx3','my3');
+      sectorButton.textContent = subSectorList[subSector];
+      subSectorDiv.appendChild(sectorButton);
+    };
+  }
 
 };
