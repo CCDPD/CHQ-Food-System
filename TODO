@@ -2,9 +2,9 @@ Filter Tab:
 - Clear selection
 
 Map
-- Add mdn icons and more colors to the map markers
 - add more content to popups
 - Add certification badges
 
 
--when zoomed in on a point and the sub-sector is changed, fly map back to default view
+- when zoomed in on a point and the sub-sector is changed, fly map back to default view
+- have map show loading symbol until its finished loading

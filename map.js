@@ -1,173 +1,124 @@
-mapboxgl.accessToken = 'pk.eyJ1IjoiYnJlbjk2IiwiYSI6ImNqc2pkNGRvdTA0bm80OW9hOTIxNzB6NG0ifQ.tDovHyl1gFWQ96O3pok0Qg';
-
-// This will let you use the .remove() function later on
-if (!('remove' in Element.prototype)) {
-  Element.prototype.remove = function() {
-    if (this.parentNode) {
-        this.parentNode.removeChild(this);
-    }
-  };
-}
+mapboxgl.accessToken =
+  "pk.eyJ1IjoiYnJlbjk2IiwiYSI6ImNqc2pkNGRvdTA0bm80OW9hOTIxNzB6NG0ifQ.tDovHyl1gFWQ96O3pok0Qg";
 
 // Add the map to the page
 var map = new mapboxgl.Map({
-  container: 'map',
-  style: 'mapbox://styles/mapbox/light-v10',
+  container: "map",
+  style: "mapbox://styles/mapbox/light-v10",
   center: [-79.41355346964089, 42.16678183056057],
   zoom: 8.5,
 });
 
 // Assign a unique id to each point and clean up subsectors_joined
-points.features.forEach(function(point, i){
+points.features.forEach(function (point, i) {
   point.properties.id = i;
-  point.properties.Subsectors_Joined = point.properties.Subsectors_Joined.split(',');
-  for (var x=0; x < (point.properties.Subsectors_Joined.length); x++){
-    point.properties.Subsectors_Joined[x] = point.properties.Subsectors_Joined[x].trim();
-  };
+  point.properties.Subsectors_Joined = point.properties.Subsectors_Joined.split(
+    ","
+  );
+  for (var x = 0; x < point.properties.Subsectors_Joined.length; x++) {
+    point.properties.Subsectors_Joined[x] = point.properties.Subsectors_Joined[
+      x
+    ].trim();
+  }
 });
 
-
-
-
-
-map.on('load', function (e) {
-  // load mapIcons from img folder
-  var iconPath = 'https://raw.githubusercontent.com/bren96/CHQ-Food-System/MapboxVersion/img/icons/'
-  var mapIcons = [
-    ['mdi-sprout','sprout.png'],
-    ['mdi-dolly','dolly.png'],
-    ['mdi-silo','silo.png'],
-    ['mid-store','store.png'],
-    ['mdi-dump-truck','dump-truck.png'],
-    ['mdi-school','school.png']
-  ].forEach(
-    el => map.loadImage((iconPath + el[1]), function(error, image){
-      map.addImage(el[0], image);
-    })
-  );
+var markerCollection = [];
+map.on("load", function (e) {
   map.addLayer({
-    "id": "locations",
-    "type": "symbol",
-    "source": {
-      "type": "geojson",
-      "data": points
-    },
-    "layout": {
-      "icon-image": [
-        'match',
-        ['get', 'Primary_Food_System_Category'],
-        'Agriculture & Food Production', 'mdi-sprout',
-        'Processing & Value-Added Products', 'mdi-dolly',
-        'Aggregation, Distribution & Storage', 'mdi-silo',
-        'Food Retail / Direct Sales', 'mid-store',
-        'Food Loss Management', 'mdi-dump-truck',
-        'Food Assistance, Education, & Support', 'mdi-school', 'farm-15'
-      ],
-      "icon-size": 0.5,
-      "icon-allow-overlap": true,
+    id: "locations",
+    type: "symbol",
+    source: {
+      type: "geojson",
+      data: points,
     }
   });
   buildLocationList(points.features, map);
-  addMarkers();
+  addMarkers(points.features);
 });
 
-// Add a marker to the map for every point listing.
-function addMarkers() {
-    /* For each feature in the GeoJSON object above: */
-    points.features.forEach(function(marker) {
-        // Create a div element for the marker
-        var el = document.createElement('div');
-        el.id = "marker-" + marker.properties.id;
-        el.className = 'marker';
-        
-    
-    // Create a marker using the div element defined above and add it to the map
-    new mapboxgl.Marker(el)
-      .setLngLat(marker.geometry.coordinates)
-      .addTo(map);
-    el.addEventListener('click', function(e){
-        flyTopoint(marker);
-        createPopUp(marker);
-        
-        // Highlight listing in sidebar
-        var activeItem = document.getElementsByClassName('active');
-        e.stopPropagation();
-        if (activeItem[0]) {
-            activeItem[0].classList.remove('active');
-        }
-        var listing = document.getElementById('listing-' + marker.properties.id);
-        listing.classList.add('active');
+function addMarkers(data) {
+  //define icon classes
+  var iconClasses = {
+    "Agriculture & Food Production":
+      "marker sprout border border--green-light px6 py6",
+    "Processing & Value-Added Products":
+      "marker dolly border border--green px6 py6",
+    "Aggregation, Distribution & Storage":
+      "marker silo border border--blue-light px6 py6",
+    "Food Retail / Direct Sales": "marker store border border--blue px6 py6",
+    "Food Loss Management":
+      "marker dump-truck border border--red-light px6 py6",
+    "Food Assistance, Education, & Support":
+      "marker school border border--red px6 py6",
+  };
+
+  // if markerCollection is not empty -> remove each marker from map -> clear collection list
+  if (markerCollection != undefined){
+    markerCollection.forEach(element => element.remove());
+    markerCollection = []
+  }
+
+  // For each feature in the GeoJSON object
+  data.forEach(function (marker) {
+    // create element for marker
+    var el = document.createElement("div");
+    el.id = "marker-" + marker.properties.id;
+    el.className = iconClasses[marker.properties.Primary_Food_System_Category];
+
+    // create marker using element -> add to map -> add to markerCollection
+    var markerFeature = new mapboxgl.Marker(el).setLngLat(marker.geometry.coordinates).addTo(map);
+    markerCollection.push(markerFeature);
+
+    // add event listener to element
+    el.addEventListener("click", function (e) {
+      flyTopoint(marker.geometry.coordinates, 15);
+      createPopUp(marker);
+      highlightListing(e, marker);
     });
   });
-};
+}
 
+// Hhghlight listing in sidebar
+function highlightListing(e, marker){
+  var activeItem = document.getElementsByClassName("active");
+  e.stopPropagation();
+  if (activeItem[0]) {
+    activeItem[0].classList.remove("active");
+  }
+  var listing = document.getElementById("listing-" + marker.properties.id);
+  listing.classList.add("active");
+}
 
-function buildLocationList(data, map) {
-  // clear previous list
-  var listings = document.getElementById('listings');
-  listings.innerHTML = '';
-
-  data.forEach(function(point, i){
-    var prop = point.properties;
-
-    // Add a new listing section to the sidebar
-    var listing = listings.appendChild(document.createElement('div'));
-    listing.id = "listing-" + prop.id;
-    listing.className = 'item';
-
-    // Add the link to the individual listing created above
-    var link = listing.appendChild(document.createElement('a'));
-    link.href = '#';
-    link.className = 'title';
-    link.id = "link-" + prop.id;
-    link.innerHTML = prop.Organization_Street_Address;
-
-    // Add details to the individual listing
-    var details = listing.appendChild(document.createElement('div'));
-    details.innerHTML = prop.Organization_City_Town + ' ' + prop.Organization_Zip_Code;
-
-    // Listen to the element and when it is clicked, do four things:
-    // 1. Update the `currentFeature` to the point associated with the clicked link
-    // 2. Fly to the point
-    // 3. Close all other popups and display popup for clicked point
-    // 4. Highlight listing in sidebar (and remove highlight for all other listings)
-    link.addEventListener('click', function(e){
-      for (var i=0; i < data.length; i++) {
-        if (this.id === "link-" + data[i].properties.id) {
-          var clickedListing = data[i];
-          flyTopoint(clickedListing);
-          createPopUp(clickedListing);
-        }
-      }
-      var activeItem = document.getElementsByClassName('active');
-      if (activeItem[0]) {
-        activeItem[0].classList.remove('active');
-      }
-      this.parentNode.classList.add('active');
-      
-    });
-  });
-};
-
-
-// Use Mapbox GL JS's `flyTo` to move the camera smoothly a given center point.
-function flyTopoint(currentFeature) {
+// move the camera smoothly a given center point.
+function flyTopoint(coord, zoomLevel) {
   map.flyTo({
-    center: currentFeature.geometry.coordinates,
-    zoom: 15
+    center: coord,
+    zoom: zoomLevel,
   });
-};
+}
 
-
-// Create a Mapbox GL JS `Popup`.
+// create popup -> add to popupCollection
+var popupCollection = [];
 function createPopUp(currentFeature) {
-  var popUps = document.getElementsByClassName('mapboxgl-popup');
+  var popUps = document.getElementsByClassName("mapboxgl-popup");
   if (popUps[0]) popUps[0].remove();
-  var popup = new mapboxgl.Popup({closeButton:false})
+  var popup = new mapboxgl.Popup({ closeButton: false })
     .setLngLat(currentFeature.geometry.coordinates)
     .setHTML(
-      "<div class='txt-h4 txt-bold color-white bg-green-light px12 py12'>" + currentFeature.properties.Organization_Name + "</div>" +
-      "<div class='txt-m px12 py12'>" + currentFeature.properties.Full_Address + "</div>"
+      "<div class='txt-h4 txt-bold color-white bg-green-light px12 py12'>" +
+        currentFeature.properties.Organization_Name +
+        "</div>" +
+        "<div class='txt-m px12 py12'>" +
+        currentFeature.properties.Full_Address +
+        "</div>"
     )
     .addTo(map);
-};
+  popupCollection.push(popup)
+}
+
+function resetMapView(){
+  flyTopoint([-79.41355346964089, 42.16678183056057], 8.5,);
+  if (popupCollection != undefined){
+    popupCollection.forEach(element => element.remove());
+  }
+}
