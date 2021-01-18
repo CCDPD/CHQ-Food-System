@@ -26,6 +26,33 @@ points.features.forEach(function(point, i){
   };
 });
 
+
+// load mapIcons from img folder
+var mapIcons = [
+  ['mdi-sprout','img/icons/sprout.svg'],
+  ['mdi-dolly','img/icons/dolly.svg']
+  // 'mdi-silo',
+  // 'mid-store',
+  // 'mdi-dump-truck',
+  // 'mdi-school',
+].forEach(
+  el => map.loadImage(el[1], function(error, image){
+    if (error) throw error;
+    map.addImage(el[0], image);
+  })
+);
+
+// "icon-image": [
+//   'match',
+//   ['get', 'Primary_Food_System_Category'],
+//   'Agriculture & Food Production', 'mdi-sprout',
+//   'Processing & Value-Added Products', 'mdi-dolly',
+//   'Aggregation, Distribution & Storage', 'mdi-silo',
+//   'Food Retail / Direct Sales', 'mid-store',
+//   'Food Loss Management', 'mdi-dump-truck',
+//   'Food Assistance, Education, & Support', 'mdi-school', 'farm-15'
+// ],
+
 map.on('load', function (e) {
     map.addLayer({
         "id": "locations",
@@ -34,12 +61,21 @@ map.on('load', function (e) {
           "type": "geojson",
           "data": points
         },
-        "layout": {
-          "icon-image": "farm-15",
-          "icon-allow-overlap": true,
-        }
+        // "layout": {
+        //   "icon-image": [
+        //     'match',
+        //     ['get', 'Primary_Food_System_Category'],
+        //     'Agriculture & Food Production', 'mdi-sprout',
+        //     'Processing & Value-Added Products', 'mdi-dolly',
+        //     'Aggregation, Distribution & Storage', 'mdi-silo',
+        //     'Food Retail / Direct Sales', 'mid-store',
+        //     'Food Loss Management', 'mdi-dump-truck',
+        //     'Food Assistance, Education, & Support', 'mdi-school', 'farm-15'
+        //   ],
+        //   "icon-allow-overlap": true,
+        // }
     });
-    buildLocationList(points, map);
+    buildLocationList(points.features, map);
     addMarkers();
 });
 
@@ -51,9 +87,10 @@ function addMarkers() {
         var el = document.createElement('div');
         el.id = "marker-" + marker.properties.id;
         el.className = 'marker';
+        
     
     // Create a marker using the div element defined above and add it to the map
-    new mapboxgl.Marker(el, { offset: [0, -23] })
+    new mapboxgl.Marker(el)
       .setLngLat(marker.geometry.coordinates)
       .addTo(map);
     el.addEventListener('click', function(e){
@@ -72,53 +109,51 @@ function addMarkers() {
   });
 };
 
-// Add a listing for each point to the sidebar.
+
 function buildLocationList(data, map) {
-    data.features.forEach(function(point, i){
-        // Create a shortcut for `point.properties`, which will be used several times below.
-        var prop = point.properties;
+  // clear previous list
+  var listings = document.getElementById('listings');
+  listings.innerHTML = '';
 
-        // Add a new listing section to the sidebar
-        var listings = document.getElementById('listings');
-        var listing = listings.appendChild(document.createElement('div'));
-        
-        // Assign a unique `id` to the listing
-        listing.id = "listing-" + prop.id;
-        
-        // Assign the `item` class to each listing for styling
-        listing.className = 'item';
+  data.forEach(function(point, i){
+    var prop = point.properties;
 
-        // Add the link to the individual listing created above
-        var link = listing.appendChild(document.createElement('a'));
-        link.href = '#';
-        link.className = 'title';
-        link.id = "link-" + prop.id;
-        link.innerHTML = prop.Organization_Street_Address;
+    // Add a new listing section to the sidebar
+    var listing = listings.appendChild(document.createElement('div'));
+    listing.id = "listing-" + prop.id;
+    listing.className = 'item';
 
-        // Add details to the individual listing
-        var details = listing.appendChild(document.createElement('div'));
-        details.innerHTML = prop.Organization_City_Town + ' ' + prop.Organization_Zip_Code;
+    // Add the link to the individual listing created above
+    var link = listing.appendChild(document.createElement('a'));
+    link.href = '#';
+    link.className = 'title';
+    link.id = "link-" + prop.id;
+    link.innerHTML = prop.Organization_Street_Address;
 
-        // Listen to the element and when it is clicked, do four things:
-        // 1. Update the `currentFeature` to the point associated with the clicked link
-        // 2. Fly to the point
-        // 3. Close all other popups and display popup for clicked point
-        // 4. Highlight listing in sidebar (and remove highlight for all other listings)
-        link.addEventListener('click', function(e){
-          for (var i=0; i < data.features.length; i++) {
-            if (this.id === "link-" + data.features[i].properties.id) {
-              var clickedListing = data.features[i];
-              flyTopoint(clickedListing);
-              createPopUp(clickedListing);
-            }
-          }
-          var activeItem = document.getElementsByClassName('active');
-          if (activeItem[0]) {
-            activeItem[0].classList.remove('active');
-          }
-          this.parentNode.classList.add('active');
-          
-        });
+    // Add details to the individual listing
+    var details = listing.appendChild(document.createElement('div'));
+    details.innerHTML = prop.Organization_City_Town + ' ' + prop.Organization_Zip_Code;
+
+    // Listen to the element and when it is clicked, do four things:
+    // 1. Update the `currentFeature` to the point associated with the clicked link
+    // 2. Fly to the point
+    // 3. Close all other popups and display popup for clicked point
+    // 4. Highlight listing in sidebar (and remove highlight for all other listings)
+    link.addEventListener('click', function(e){
+      for (var i=0; i < data.length; i++) {
+        if (this.id === "link-" + data[i].properties.id) {
+          var clickedListing = data[i];
+          flyTopoint(clickedListing);
+          createPopUp(clickedListing);
+        }
+      }
+      var activeItem = document.getElementsByClassName('active');
+      if (activeItem[0]) {
+        activeItem[0].classList.remove('active');
+      }
+      this.parentNode.classList.add('active');
+      
+    });
   });
 };
 
@@ -136,9 +171,11 @@ function flyTopoint(currentFeature) {
 function createPopUp(currentFeature) {
   var popUps = document.getElementsByClassName('mapboxgl-popup');
   if (popUps[0]) popUps[0].remove();
-  var popup = new mapboxgl.Popup({closeOnClick: false})
+  var popup = new mapboxgl.Popup({closeButton:false})
     .setLngLat(currentFeature.geometry.coordinates)
-    .setHTML('<h3>'+ currentFeature.properties.Organization_Name +'</h3>' +
-      '<h4>' + currentFeature.properties.Full_Address + '</h4>')
+    .setHTML(
+      "<div class='txt-h4 txt-bold color-white bg-green-light px12 py12'>" + currentFeature.properties.Organization_Name + "</div>" +
+      "<div class='txt-m px12 py12'>" + currentFeature.properties.Full_Address + "</div>"
+    )
     .addTo(map);
 };

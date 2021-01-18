@@ -47,17 +47,27 @@ function filterSubSector(subSectorValue, action){
         // go thru filters, skip fist value 'any'
         for (x=1; currentFilter.length; x++){
             var filterValue = currentFilter[x][1];
-            console.log(filterValue)
             if (filterValue == subSectorValue){
                 currentFilter.splice(x,1);
+                if (currentFilter.length == 1){currentFilter = null}
                 var filter = currentFilter;
-                console.log(filter)
                 break
             };
         };
     };
     map.setFilter('locations', filter);
-    console.log(map.getFilter('locations'))
+    // if there is no filter -> build entire location list
+    if (map.getFilter('locations') == null){
+      var features = map.getSource('locations')._data.features;
+      buildLocationList(features, map);
+    } else {
+      // go thru each feature -> if any conditions are true return feature to list
+      var subSectorFilter =  filter.slice(1).map(element => element[1]);
+      var features = map.getSource('locations')._data.features.filter(
+        x => subSectorFilter.some( y => x.properties.Subsectors_Joined.includes(y))
+      );
+      buildLocationList(features, map);
+    };
 };
 
 
