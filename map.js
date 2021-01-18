@@ -28,6 +28,7 @@ points.features.forEach(function(point, i){
 
 
 // load mapIcons from img folder
+var iconPath = 'https://raw.githubusercontent.com/bren96/CHQ-Food-System/MapboxVersion/'
 var mapIcons = [
   ['mdi-sprout','img/icons/sprout.svg'],
   ['mdi-dolly','img/icons/dolly.svg']
@@ -36,7 +37,7 @@ var mapIcons = [
   // 'mdi-dump-truck',
   // 'mdi-school',
 ].forEach(
-  el => map.loadImage(el[1], function(error, image){
+  el => map.loadImage((iconPath + el[1]), function(error, image){
     if (error) throw error;
     map.addImage(el[0], image);
   })
@@ -61,19 +62,19 @@ map.on('load', function (e) {
           "type": "geojson",
           "data": points
         },
-        // "layout": {
-        //   "icon-image": [
-        //     'match',
-        //     ['get', 'Primary_Food_System_Category'],
-        //     'Agriculture & Food Production', 'mdi-sprout',
-        //     'Processing & Value-Added Products', 'mdi-dolly',
-        //     'Aggregation, Distribution & Storage', 'mdi-silo',
-        //     'Food Retail / Direct Sales', 'mid-store',
-        //     'Food Loss Management', 'mdi-dump-truck',
-        //     'Food Assistance, Education, & Support', 'mdi-school', 'farm-15'
-        //   ],
-        //   "icon-allow-overlap": true,
-        // }
+        "layout": {
+          "icon-image": [
+            'match',
+            ['get', 'Primary_Food_System_Category'],
+            'Agriculture & Food Production', 'mdi-sprout',
+            'Processing & Value-Added Products', 'mdi-dolly',
+            'Aggregation, Distribution & Storage', 'mdi-silo',
+            'Food Retail / Direct Sales', 'mid-store',
+            'Food Loss Management', 'mdi-dump-truck',
+            'Food Assistance, Education, & Support', 'mdi-school', 'farm-15'
+          ],
+          "icon-allow-overlap": true,
+        }
     });
     buildLocationList(points.features, map);
     addMarkers();
