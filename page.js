@@ -34,7 +34,6 @@ function openTab(element) {
   resetMapView();
 }
 
-
 function filterSubSector(subSectorValue, action) {
   // update filter based on request -> set filter -> built location list -> add markers
   currentFilter = map.getFilter("locations");
@@ -133,7 +132,7 @@ function primarySectorChange() {
     subSectorList = sectors[selectedSector]["sub_sectors"];
     for (subSector in subSectorList) {
       var sectorButton = document.createElement("button");
-      sectorButton.classList.add("btn", "btn--stroke", "mx3", "my3");
+      sectorButton.classList.add("btn", "btn--stroke", "btn--green", "mx3", "my3");
       sectorButton.textContent = subSectorList[subSector];
       sectorButton.addEventListener("click", function () {
         toggleSubSector(this);
@@ -189,3 +188,17 @@ function buildLocationList(data, map) {
     });
   });
 }
+
+function refreshSelection(){
+  map.setFilter('locations',null);
+  addMarkers(points.features);
+  var subSectorDiv = document.getElementById('subSectorsDiv');
+  var subSectorBtns = subSectorDiv.getElementsByClassName('btn');
+  for (var i=0; i<subSectorBtns.length; i++){
+    if (!('btn--stroke' in subSectorBtns[i].classList)){
+      subSectorBtns[i].classList.add('btn--stroke');
+    }
+  }
+  resetMapView();
+}
+

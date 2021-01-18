@@ -1,10 +1,12 @@
-Filter Tab:
-- Clear selection
-
 Map
+- set default view to county bounds
 - add more content to popups
 - Add certification badges
-
-
-- when zoomed in on a point and the sub-sector is changed, fly map back to default view
 - have map show loading symbol until its finished loading
+
+Filter
+- only show subsectors that are in the dataset
+
+Inspect
+- list org name and address (not just address)
+- link hover should be a light green (same as assembly.css)
