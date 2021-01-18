@@ -27,57 +27,48 @@ points.features.forEach(function(point, i){
 });
 
 
-// load mapIcons from img folder
-var iconPath = 'https://raw.githubusercontent.com/bren96/CHQ-Food-System/MapboxVersion/img/icons/'
-var mapIcons = [
-  ['mdi-sprout','sprout.png'],
-  ['mdi-dolly','dolly.png']
-  ['mdi-silo','silo.png'],
-  ['mid-store','store.png'],
-  ['mdi-dump-truck','dump-truck.png'],
-  ['mdi-school','school.png']
-].forEach(
-  el => map.loadImage((iconPath + el[1]), function(error, image){
-    if (error) throw error;
-    map.addImage(el[0], image);
-  })
-);
 
-// "icon-image": [
-//   'match',
-//   ['get', 'Primary_Food_System_Category'],
-//   'Agriculture & Food Production', 'mdi-sprout',
-//   'Processing & Value-Added Products', 'mdi-dolly',
-//   'Aggregation, Distribution & Storage', 'mdi-silo',
-//   'Food Retail / Direct Sales', 'mid-store',
-//   'Food Loss Management', 'mdi-dump-truck',
-//   'Food Assistance, Education, & Support', 'mdi-school', 'farm-15'
-// ],
+
 
 map.on('load', function (e) {
-    map.addLayer({
-        "id": "locations",
-        "type": "symbol",
-        "source": {
-          "type": "geojson",
-          "data": points
-        },
-        "layout": {
-          "icon-image": [
-            'match',
-            ['get', 'Primary_Food_System_Category'],
-            'Agriculture & Food Production', 'mdi-sprout',
-            'Processing & Value-Added Products', 'mdi-dolly',
-            'Aggregation, Distribution & Storage', 'mdi-silo',
-            'Food Retail / Direct Sales', 'mid-store',
-            'Food Loss Management', 'mdi-dump-truck',
-            'Food Assistance, Education, & Support', 'mdi-school', 'farm-15'
-          ],
-          "icon-allow-overlap": true,
-        }
-    });
-    buildLocationList(points.features, map);
-    addMarkers();
+  // load mapIcons from img folder
+  var iconPath = 'https://raw.githubusercontent.com/bren96/CHQ-Food-System/MapboxVersion/img/icons/'
+  var mapIcons = [
+    ['mdi-sprout','sprout.png'],
+    ['mdi-dolly','dolly.png'],
+    ['mdi-silo','silo.png'],
+    ['mid-store','store.png'],
+    ['mdi-dump-truck','dump-truck.png'],
+    ['mdi-school','school.png']
+  ].forEach(
+    el => map.loadImage((iconPath + el[1]), function(error, image){
+      map.addImage(el[0], image);
+    })
+  );
+  map.addLayer({
+    "id": "locations",
+    "type": "symbol",
+    "source": {
+      "type": "geojson",
+      "data": points
+    },
+    "layout": {
+      "icon-image": [
+        'match',
+        ['get', 'Primary_Food_System_Category'],
+        'Agriculture & Food Production', 'mdi-sprout',
+        'Processing & Value-Added Products', 'mdi-dolly',
+        'Aggregation, Distribution & Storage', 'mdi-silo',
+        'Food Retail / Direct Sales', 'mid-store',
+        'Food Loss Management', 'mdi-dump-truck',
+        'Food Assistance, Education, & Support', 'mdi-school', 'farm-15'
+      ],
+      "icon-size": 0.5,
+      "icon-allow-overlap": true,
+    }
+  });
+  buildLocationList(points.features, map);
+  addMarkers();
 });
 
 // Add a marker to the map for every point listing.

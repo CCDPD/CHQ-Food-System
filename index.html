@@ -1,66 +1,114 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset='utf-8' />
-    <title>CHQ Food System</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700' rel='stylesheet'>
-    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v2.0.1/mapbox-gl.js'></script>
-    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v2.0.1/mapbox-gl.css' rel='stylesheet' />
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-    <div id='sidebar' class='sidebar'>
-      <div class='grid--gut6'>
-        <div class="col col--3"><h1 >CHQ Food System Map</h1></div>
-        <div class="col col--1">ABOUT</div>
-        <div class="col col--1">SEARCH</div>
-        <div class="col col--1">LIST</div>
-      </div>
-      <button id='defaultOpen' class="tabLink" onclick="openPage('about', this)">ABOUT</button>
-      <button class="tabLink" onclick="openPage('listings', this)">SEARCH</button>      
-      <div id="about" class="tabContent">
-        <em>The purpose of this project is to identify, connect, and promote assets within Chautauqua County's Food System. Use the SEARCH tab to filter the map and learn more about the food system assets of Chautauqua County.</em>
-        <img id='foodDiagram' src="img\Food System Diagram.svg" alt="Food System Diagram">
-        <h3>Asset Types</h3>
-        <h4>Agriculture & Food Production</h4>
-        <p>Food begins with agriculture and farming. The food we consume must first be grown, cultivated, and harvested. Agriculture & Food Production describes any organization or business that produces raw food products.</p>
-        <h4>Processing & Value-Added Products</h4>
-        <p>Food processing can provide benefits such as giving foods a longer shelf life, reducing food safety risks, and creating value-added products. Processing & Value-Added Products describes any organization or business that transforms raw foods and ingredients into new products.</p>
-        <h4>Aggregation, Distribution & Storage</h4>
-        <p>Once food has been produced or processed, it needs to make its way to food outlets where it can be sold to consumers. Products may be aggregated together from multiple sources to create a larger and more reliable supply to meet market demands. Aggregation, Distribution, & Storage describes any organization or business that collects, transports, or preserves raw or processed food products prior to purchasing by consumers.</p>
-        <h4>Food Retail / Direct Sales</h4>
-        <p>Food makes its way to the consumer and our plates in a variety of ways. Food Retail/Direct Sales describes any organization or business that sells food directly to consumers. This includes supermarkets, restaurants, dining halls, and other locations an individual can purchase food.</p>
-        <h4>Food Loss Management</h4>
-        <p>In the United States, over one-third of all available food goes uneaten through loss or waste. Food Loss Management describes any organization or business that manages waste produced at any stage of the food system.</p>
-        <h4>Food Assistance, Education, & Support</h4>
-        <p>There are a variety of resources for people and organizations within the food system. Education & Support describes any organization or business that provides assistance to the community at any stage of the food system.</p>
-        <h3>Author</h3>
-        <p>Produced by Chautauqua County Department of Planning & Development in partnership with the Chautauqua County Food Policy Council</p>
-        <div>
-          <img class="footerImg" src="img\Chautauqua_County_ny_seal.png" alt="County Seal">
-          <img class="footerImg" src="img\2---Food-policy-council-logo.gif" alt="Food Policy Council Logo">
+<html lang='en'>
+<head>
+  <title>CHQ Food System Map</title>
+  <meta charset='utf-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <link rel='stylesheet' href="https://cdn.jsdelivr.net/npm/@mdi/font@5.8.55/css/materialdesignicons.min.css">
+  <link href="https://api.mapbox.com/mapbox-assembly/v0.24.0/assembly.min.css" rel="stylesheet">
+  <script async defer src='https://api.mapbox.com/mapbox-assembly/v0.24.0/assembly.js'></script>
+  <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v2.0.1/mapbox-gl.js'></script>
+  <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v2.0.1/mapbox-gl.css' rel='stylesheet' />
+  <link rel="stylesheet" href="style.css">
+  <link rel='shortcut icon' href='img\Food System Diagram.svg' type='image/x-icon'>
+</head>
+<body>
+    <div class='flex-parent viewport-full relative scroll-hidden'>
+        <div id='sidebar' class='sidebar flex-child w-full w360-ml absolute static-ml left bottom'>
+            <div class='flex-parent flex-parent--column h-full-ml viewport-third bg-white'>
+                <div class='flex-child grid px12 py12 color-gray-light border-b'>
+                    <div class="col col--6 txt-bold color-gray-dark">CHQ Food System Map</div>
+                    <div class="col col--auto color-gray-dark"></div>
+                    <div id='home' class="navIcons col col--1 color-gray-dark active-navIcon"><svg class='icon w24 h24'><use xlink:href='#icon-home'/></svg></div>
+                    <div id='filter' class="navIcons col col--1 color-gray-dark"><svg class='icon w24 h24'><use xlink:href='#icon-filter'/></svg></div>
+                    <div id='inspect' class="navIcons col col--1 color-gray-dark"><svg class='icon w24 h24'><use xlink:href='#icon-inspect'/></svg></div>
+                </div>
+                <div class='flex-child px12 py12 h-full scroll-styled scroll-auto'>
+                    <div id="homeContent" class="tabContent active-tabContent">
+                        <div class="txt-em">
+                            Welcome to the CHQ Food System Map! The purpose of this project is to identify, connect, and promote sectors within Chautauqua County's Food System. Use the Filter and Inspect tools to explore the map. <strong class="none-mxl none-ml block">Scroll to read more.</strong>
+                        </div>
+                        <br>
+                        <img class="block-mxl block-ml none" src="img\Food System Diagram.svg" alt="">
+                        <br>
+                        <div class="txt-bold">Agriculture & Food Production</div>
+                        <div class="txt-light">
+                            Food begins with agriculture and farming. The food we consume must first be grown, cultivated, and harvested. Agriculture & Food Production describes any organization or business that produces raw food products.
+                        </div>
+                        <br>
+                        <div class="txt-bold">Processing & Value-Added Products</div>
+                        <div class="txt-light">
+                            Food processing can provide benefits such as giving foods a longer shelf life, reducing food safety risks, and creating value-added products. Processing & Value-Added Products describes any organization or business that transforms raw foods and ingredients into new products.
+                        </div>
+                        <br>
+                        <div class="txt-bold">Aggregation, Distribution & Storage</div> 
+                        <div class="txt-light">
+                            Once food has been produced or processed, it needs to make its way to food outlets where it can be sold to consumers. Products may be aggregated together from multiple sources to create a larger and more reliable supply to meet market demands. Aggregation, Distribution, & Storage describes any organization or business that collects, transports, or preserves raw or processed food products prior to purchasing by consumers.
+                        </div>
+                        <br>
+                        <div class="txt-bold">Food Retail / Direct Sales</div>
+                        <div class="txt-light">
+                            Food makes its way to the consumer and our plates in a variety of ways. Food Retail/Direct Sales describes any organization or business that sells food directly to consumers. This includes supermarkets, restaurants, dining halls, and other locations an individual can purchase food.
+                        </div>
+                        <br>
+                        <div class="txt-bold">Food Loss Management</div>
+                        <div class="txt-light">
+                            In the United States, over one-third of all available food goes uneaten through loss or waste. Food Loss Management describes any organization or business that manages waste produced at any stage of the food system.
+                        </div>
+                        <br>
+                        <div class="txt-bold">Food Assistance, Education, & Support</div>
+                        <div class="txt-light">
+                            There are a variety of resources for people and organizations within the food system. Education & Support describes any organization or business that provides assistance to the community at any stage of the food system.
+                        </div>
+                        <br>
+                        <div class="txt-bold">Author</div>
+                        <div class="txt-light">
+                            Produced by the Chautauqua County Department of Planning & Development in partnership with the Food Policy Council of Chautauqua County
+                        </div>
+                        <img class="footerImg" src="img\Chautauqua_County_ny_seal.png" alt="County Seal">
+                        <img class="footerImg" src="img\2---Food-policy-council-logo.gif" alt="Food Policy Council Logo">
+                    </div>
+                    <div id="filterContent" class="tabContent">
+                        <!-- <div class="txt-em">
+                            Use the tools below to filter the markers on the map. Click the CLEAR button to refresh the query.
+                        </div>
+                        <br> -->
+                        <div class='select-container'>
+                            <select id='PrimarySector' name="Primary Sector" class='select' onchange="primarySectorChange()">
+                                <option value="All">All Sectors</option>
+                                <option value="Production">Agriculture & Food Production</option>
+                                <option value="Processing">Processing & Value-Added Products</option>
+                                <option value="Aggregation">Aggregation, Distribution & Storage</option>
+                                <option value="Distribution">Food Retail / Direct Sales</option>
+                                <option value="Waste">Food Waste Management</option>
+                                <option value="Eduction">Food Assistance, Education & Support</option>
+                            </select>
+                            <div class='select-arrow'></div>
+                        </div>
+                        <br>
+                        <div id='subSectorsDiv'></div>
+                        <br>
+                        <button class='btn btn--stroke'>
+                            <svg class='icon w24 h24'><use xlink:href='#icon-refresh'/></svg>
+                        </button>
+
+                    </div>
+                    <div id='inspectContent' class="tabContent">
+                        <div id='listings' class='listings'></div>
+                    </div>
+                </div>
+                <footer class='px12 py6 txt-xs color-gray-light border-t'>
+                    <div class="color-gray-dark" >
+                        CCDPD - <a class="link" href="https://planningchautauqua.com">planningchautauqua.com</a> | 2021
+                    </div>
+                </footer>
+            </div>
         </div>
-      </div>
-      <div id='listings' class='listings tabContent'>
-        <select name="Primary Sector" id="">
-          <option value="All">All Sectors</option>
-          <option value="Production">Agriculture & Production</option>
-          <option value="Processing">Processing & Value-Add</option>
-          <option value="Aggregation">Aggregation & Storage</option>
-          <option value="Distribution">Distribution</option>
-          <option value="Waste">Waste Management</option>
-          <option value="Eduction">Education & Support</option>
-        </select>
-        <!-- <div id='listings' class="listings"></div> -->
-      </div>
-    </div>
-    <div id='map' class='map'></div>
-    <div id='openBtn' class="map-overlay top">
-      <button class="openbtn">&#9776;</button>
-    </div>
-  </body>
-  <script src="data/current_assets.json"></script>
-  <script src="data/Sectors.js"></script>
-  <script src="main.js"></script>
+        <div id='map' class='map flex-child flex-child--grow viewport-twothirds viewport-full-ml'></div>
+        </div>
+</body>
+<script src="data/current_assets.json"></script>
+<script src="data/Sectors.js"></script>
+<script src="page.js"></script>
+<script src="map.js"></script>
 </html>
