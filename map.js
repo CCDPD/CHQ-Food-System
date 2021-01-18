@@ -28,14 +28,14 @@ points.features.forEach(function(point, i){
 
 
 // load mapIcons from img folder
-var iconPath = 'https://raw.githubusercontent.com/bren96/CHQ-Food-System/MapboxVersion/'
+var iconPath = 'https://raw.githubusercontent.com/bren96/CHQ-Food-System/MapboxVersion/img/icons/'
 var mapIcons = [
-  ['mdi-sprout','img/icons/sprout.svg'],
-  ['mdi-dolly','img/icons/dolly.svg']
-  // 'mdi-silo',
-  // 'mid-store',
-  // 'mdi-dump-truck',
-  // 'mdi-school',
+  ['mdi-sprout','sprout.png'],
+  ['mdi-dolly','dolly.png']
+  ['mdi-silo','silo.png'],
+  ['mid-store','store.png'],
+  ['mdi-dump-truck','dump-truck.png'],
+  ['mdi-school','school.png']
 ].forEach(
   el => map.loadImage((iconPath + el[1]), function(error, image){
     if (error) throw error;
