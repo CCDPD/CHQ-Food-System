@@ -99,6 +99,9 @@ body {
 /* Marker tweaks */
 .mapboxgl-popup {
   padding: 24px;
+  max-width: 240px;
+  overflow-wrap: normal;
+  overflow-y: auto;
 }
 
 .mapboxgl-popup-content {
@@ -110,7 +113,15 @@ body {
 }
 
 .mapboxgl-popup-anchor-top > .mapboxgl-popup-tip {
-  border-bottom-color: #72c781;
+  border-bottom-color: #31a354;
+}
+
+.mapboxgl-popup-anchor-top-right > .mapboxgl-popup-tip {
+  border-bottom-color: #31a354;
+}
+
+.mapboxgl-popup-anchor-top-left > .mapboxgl-popup-tip {
+  border-bottom-color: #31a354;
 }
 
 .footerImg {

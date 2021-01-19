@@ -102,15 +102,115 @@ var popupCollection = [];
 function createPopUp(currentFeature) {
   var popUps = document.getElementsByClassName("mapboxgl-popup");
   if (popUps[0]) popUps[0].remove();
+  
+  // create popup heading
+  var popupHeader = ("<div class='txt-h4 txt-bold color-white bg-green px12 py12'>" +
+  currentFeature.properties.Organization_Name + "</div>");
+
+  // determine what content to add to popup
+  var popupHTMLClasses = {
+    "Organization_Website" : [
+      "<div class='grid px12 py12'>",
+      "<div class='col col--3'>",
+      "<svg class='icon h24 w24'>",
+      "<use xlink:href='#icon-globe'/>",
+      "</svg>",
+      "</div>",
+      "<div class='col col--9 txt-break-word'>",
+      "<a class='link' href='",
+      currentFeature.properties['Organization_Website'], 
+      "'>",
+      new URL(currentFeature.properties['Organization_Website']).hostname,
+      "</a>",
+      "</div>",
+      "</div>"
+    ],
+    "If_you_would_like_to_provide_a_" : [
+      "<div class='txt-bold px12 py12'>Description:</div>",
+      "<div class='txt-s px12 pb3'>",
+      currentFeature.properties['If_you_would_like_to_provide_a_'], 
+      '</div>'
+    ],
+    "Organization_Phone_Number" : [
+      "<div class='txt-bold px12 py12'>Phone:</div>",
+      "<div class='txt-s px12 pb3'>",
+      currentFeature.properties['Organization_Phone_Number'], 
+      '</div>'
+    ],
+    "Organization_Social_Media" : [
+      "<div class='txt-bold px12 py12'>Social Media:</div>",
+      "<div class='txt-s px12 pb3'>",
+      currentFeature.properties['Organization_Social_Media'], 
+      '</div>'
+    ],
+    "Please_indicate_any_certificati" : [
+      "<div class='txt-bold px12 py12'>Certifications:</div>",
+      "<div class='txt-s px12 pb3'>",
+      currentFeature.properties['Please_indicate_any_certificati'], 
+      '</div>'
+    ],
+    "Primary_Food_System_Category" : [
+      "<div class='txt-bold px12 py12'>Primary Sector:</div>",
+      "<div class='txt-s px12 pb3'>",
+      currentFeature.properties['Primary_Food_System_Category'], 
+      '</div>'
+    ],
+    "Agriculture___Food_Production_T": [
+      "<div class='txt-bold px12 py12'>Agriculture & Food Production Sub-Sectors:</div>",
+      "<div class='txt-s px12 pb3'>",
+      currentFeature.properties['Agriculture___Food_Production_T'], 
+      '</div>'
+    ],
+    "Processing___Value_Added_Produc": [
+      "<div class='txt-bold px12 py12'>Processing & Value-Added Products Sub-Sectors:</div>",
+      "<div class='txt-s px12 pb3'>",
+      currentFeature.properties['Processing___Value_Added_Produc'], 
+      '</div>'
+    ],
+    "Aggregation__Distribution____St": [
+      "<div class='txt-bold px12 py12'>Aggregation, Distribution, & Storage Sub-Sectors:</div>",
+      "<div class='txt-s px12 pb3'>",
+      currentFeature.properties['Aggregation__Distribution____St'], 
+      '</div>'
+    ],
+    "Food_Outlet_Type": [
+      "<div class='txt-bold px12 py12'>Food Retail / Direct Sales Sub-Sectors:</div>",
+      "<div class='txt-s px12 pb3'>",
+      currentFeature.properties['Food_Outlet_Type'], 
+      '</div>'
+    ],
+    "Food_Loss_Management_Type": [
+      "<div class='txt-bold px12 py12'>Food Loss Management Sub-Sectors:</div>",
+      "<div class='txt-s px12 pb3'>",
+      currentFeature.properties['Food_Loss_Management_Type'], 
+      '</div>'
+    ],
+    "Food_Assistance__Education____S": [
+      "<div class='txt-bold px12 py12'>Food Assistance, Education, & Support:</div>",
+      "<div class='txt-s px12 pb3'>",
+      currentFeature.properties['Food_Assistance__Education____S'], 
+      '</div>'
+    ],
+  };
+  var popupHTML = "";
+  for (popupClass in popupHTMLClasses){
+    // check if value is null
+    if (currentFeature.properties[popupClass] != null){
+      popupHTML += popupHTMLClasses[popupClass].join('');
+    }
+  }
+
   var popup = new mapboxgl.Popup({ closeButton: false })
     .setLngLat(currentFeature.geometry.coordinates)
-    .setHTML(
-      "<div class='txt-h4 txt-bold color-white bg-green-light px12 py12'>" +
-        currentFeature.properties.Organization_Name +
-        "</div>" +
-        "<div class='txt-m px12 py12'>" +
-        currentFeature.properties.Full_Address +
-        "</div>"
+    .setHTML( popupHeader + 
+      "<div id='popupContent' class='scroll-auto hmax180 hmax360-ml hmax360-mxl'>" +
+      popupHTML + '</div>'
+      // "<div class='txt-h4 txt-bold color-white bg-green-light px12 py12'>" +
+      //   currentFeature.properties.Organization_Name +
+      //   "</div>" +
+      //   "<div class='txt-m px12 py12'>" +
+      //   currentFeature.properties.Full_Address +
+      //   "</div>"
     )
     .addTo(map);
   popupCollection.push(popup)
