@@ -1,5 +1,4 @@
 Map
-- set default view to county bounds
 - have map show loading symbol until its finished loading
 
 Filter

@@ -1,14 +1,5 @@
-mapboxgl.accessToken =
-  "pk.eyJ1IjoiYnJlbjk2IiwiYSI6ImNqc2pkNGRvdTA0bm80OW9hOTIxNzB6NG0ifQ.tDovHyl1gFWQ96O3pok0Qg";
-
-// Add the map to the page
-var map = new mapboxgl.Map({
-  container: "map",
-  style: "mapbox://styles/mapbox/light-v10",
-  center: [-79.41355346964089, 42.16678183056057],
-  zoom: 8.5,
-});
-
+mapboxgl.accessToken = "pk.eyJ1IjoiYnJlbjk2IiwiYSI6ImNqc2pkNGRvdTA0bm80OW9hOTIxNzB6NG0ifQ.tDovHyl1gFWQ96O3pok0Qg";
+  
 // Assign a unique id to each point and clean up subsectors_joined
 points.features.forEach(function (point, i) {
   point.properties.id = i;
@@ -22,6 +13,20 @@ points.features.forEach(function (point, i) {
   }
 });
 
+var countyBounds = new mapboxgl.LngLatBounds(
+  new mapboxgl.LngLat(-79.8754852889,41.9311113451),
+  new mapboxgl.LngLat(-78.919674742,42.5947626407),
+);
+
+// Add the map to the page
+var map = new mapboxgl.Map({
+  container: "map",
+  style: "mapbox://styles/mapbox/light-v10",
+  center: [-79.41355346964089, 42.16678183056057],
+  zoom: 8.5,
+  bounds: countyBounds
+});
+      
 var markerCollection = [];
 map.on("load", function (e) {
   map.addLayer({
@@ -243,7 +248,8 @@ function testURL(url){
 }
 
 function resetMapView(){
-  flyTopoint([-79.41355346964089, 42.16678183056057], 8.5,);
+  // flyTopoint([-79.41355346964089, 42.16678183056057], 8.5,);
+  map.fitBounds(countyBounds);
   if (popupCollection != undefined){
     popupCollection.forEach(element => element.remove());
   }
