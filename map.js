@@ -174,6 +174,12 @@ function createPopUp(currentFeature) {
       currentFeature.properties['Please_indicate_any_certificati'], 
       '</div>'
     ],
+    "Please_indicate_what_payment_me" : [
+      "<div class='txt-bold px12 py12'>Payment Methods:</div>",
+      "<div class='txt-s px12 pb3'>",
+      currentFeature.properties['Please_indicate_what_payment_me'], 
+      '</div>'
+    ],
     "Primary_Food_System_Category" : [
       "<div class='txt-bold px12 py12'>Primary Sector:</div>",
       "<div class='txt-s px12 pb3'>",
@@ -229,7 +235,7 @@ function createPopUp(currentFeature) {
     .setLngLat(currentFeature.geometry.coordinates)
     .setHTML(
       popupHeader + 
-      "<div id='popupContent' class='scroll-auto hmax180 hmax360-ml hmax360-mxl'>" +
+      "<div id='popupContent' class='scroll-auto py6 hmax180 hmax360-ml hmax360-mxl'>" +
       popupHTML +
       '</div>'
     )
