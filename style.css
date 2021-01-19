@@ -31,7 +31,7 @@ body {
 }
 .listings .item.active .title,
 .listings .item .title:hover {
-  color: #8cc63f;
+  color: #74c476;
 }
 .listings .item.active {
   background-color: #f8f8f8;
@@ -99,13 +99,11 @@ body {
 /* Marker tweaks */
 .mapboxgl-popup {
   padding: 24px;
-  max-width: 240px;
-  overflow-wrap: normal;
-  overflow-y: auto;
 }
 
 .mapboxgl-popup-content {
   padding: 0;
+  width: 240px;
 }
 
 .mapboxgl-container .leaflet-marker-icon {

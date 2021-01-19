@@ -110,17 +110,49 @@ function createPopUp(currentFeature) {
   // determine what content to add to popup
   var popupHTMLClasses = {
     "Organization_Website" : [
-      "<div class='grid px12 py12'>",
-      "<div class='col col--3'>",
+      "<div class='grid px12 py6'>",
+      "<div class='col col--2'>",
       "<svg class='icon h24 w24'>",
       "<use xlink:href='#icon-globe'/>",
       "</svg>",
       "</div>",
-      "<div class='col col--9 txt-break-word'>",
+      "<div class='col col--10 txt-break-word mt3'>",
       "<a class='link' href='",
       currentFeature.properties['Organization_Website'], 
       "'>",
-      new URL(currentFeature.properties['Organization_Website']).hostname,
+      testURL(currentFeature.properties['Organization_Website']),
+      "</a>",
+      "</div>",
+      "</div>"
+    ],
+    "Organization_Phone_Number" : [
+      "<div class='grid px12 py6'>",
+      "<div class='col col--2'>",
+      "<svg class='icon h24 w24'>",
+      "<use xlink:href='#icon-mobile'/>",
+      "</svg>",
+      "</div>",
+      "<div class='col col--10 txt-break-word mt3'>",
+      "<a class='link' href='tel:",
+      currentFeature.properties['Organization_Phone_Number'], 
+      "'>",
+      '+' + currentFeature.properties['Organization_Phone_Number'],
+      "</a>",
+      "</div>",
+      "</div>"
+    ],
+    "Organization_Social_Media" : [
+      "<div class='grid px12 py6'>",
+      "<div class='col col--2'>",
+      "<svg class='icon h24 w24'>",
+      "<use xlink:href='#icon-instagram'/>",
+      "</svg>",
+      "</div>",
+      "<div class='col col--10 txt-break-word mt3'>",
+      "<a class='link' href='",
+      currentFeature.properties['Organization_Social_Media'], 
+      "'>",
+      testURL(currentFeature.properties['Organization_Social_Media']),
       "</a>",
       "</div>",
       "</div>"
@@ -129,18 +161,6 @@ function createPopUp(currentFeature) {
       "<div class='txt-bold px12 py12'>Description:</div>",
       "<div class='txt-s px12 pb3'>",
       currentFeature.properties['If_you_would_like_to_provide_a_'], 
-      '</div>'
-    ],
-    "Organization_Phone_Number" : [
-      "<div class='txt-bold px12 py12'>Phone:</div>",
-      "<div class='txt-s px12 pb3'>",
-      currentFeature.properties['Organization_Phone_Number'], 
-      '</div>'
-    ],
-    "Organization_Social_Media" : [
-      "<div class='txt-bold px12 py12'>Social Media:</div>",
-      "<div class='txt-s px12 pb3'>",
-      currentFeature.properties['Organization_Social_Media'], 
       '</div>'
     ],
     "Please_indicate_any_certificati" : [
@@ -202,18 +222,24 @@ function createPopUp(currentFeature) {
 
   var popup = new mapboxgl.Popup({ closeButton: false })
     .setLngLat(currentFeature.geometry.coordinates)
-    .setHTML( popupHeader + 
+    .setHTML(
+      popupHeader + 
       "<div id='popupContent' class='scroll-auto hmax180 hmax360-ml hmax360-mxl'>" +
-      popupHTML + '</div>'
-      // "<div class='txt-h4 txt-bold color-white bg-green-light px12 py12'>" +
-      //   currentFeature.properties.Organization_Name +
-      //   "</div>" +
-      //   "<div class='txt-m px12 py12'>" +
-      //   currentFeature.properties.Full_Address +
-      //   "</div>"
+      popupHTML +
+      '</div>'
     )
     .addTo(map);
   popupCollection.push(popup)
+}
+
+function testURL(url){
+  try {
+    var urlHost = new URL(url).hostname
+  }
+  catch(err) {
+    var urlHost = null
+  }
+  return urlHost
 }
 
 function resetMapView(){
