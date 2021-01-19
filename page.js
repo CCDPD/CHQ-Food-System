@@ -160,12 +160,12 @@ function buildLocationList(data, map) {
     link.href = "#";
     link.className = "title";
     link.id = "link-" + prop.id;
-    link.innerHTML = prop.Organization_Street_Address;
+    link.innerHTML = prop.Organization_Name;
 
     // Add details to the individual listing
     var details = listing.appendChild(document.createElement("div"));
-    details.innerHTML =
-      prop.Organization_City_Town + " " + prop.Organization_Zip_Code;
+    details.classList.add("txt-s","txt-uppercase");
+    details.innerText = prop.Organization_Street_Address + ', ' + prop.Organization_City_Town;
 
     // Listen to the element and when it is clicked, do four things:
     // 1. Update the `currentFeature` to the point associated with the clicked link

@@ -3,7 +3,3 @@ Map
 
 Filter
 - only show subsectors that are in the dataset
-
-Inspect
-- list org name and address (not just address)
-- link hover should be a light green (same as assembly.css)
