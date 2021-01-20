@@ -1,0 +1,9 @@
+Map
+- have map show loading symbol until its finished loading
+
+Filter
+- only show subsectors that are in the dataset
+
+When changing tabs -> scroll back up to top of list
+
+open the popup once the zoom is done
