@@ -1,0 +1,154 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.listings {
+  overflow: auto;
+  padding-bottom: 60px;
+}
+
+.listings .item {
+  display: block;
+  border-bottom: 1px solid #eee;
+  padding: 10px;
+  text-decoration: none;
+}
+
+.listings .item:last-child {
+  border-bottom: none;
+}
+.listings .item .title {
+  display: block;
+  color: #00853e;
+  font-weight: 700;
+}
+
+.listings .item .title small {
+  font-weight: 400;
+}
+.listings .item.active .title,
+.listings .item .title:hover {
+  color: #74c476;
+}
+.listings .item.active {
+  background-color: #f8f8f8;
+}
+::-webkit-scrollbar {
+  width: 3px;
+  height: 3px;
+  border-left: 0;
+  background: rgba(0, 0, 0, 0.1);
+}
+::-webkit-scrollbar-track {
+  background: none;
+}
+::-webkit-scrollbar-thumb {
+  background: #91c0a7;
+  border-radius: 0;
+}
+
+.marker {
+  cursor: pointer;
+  height: 28px;
+  width: 28px;
+  background-color: white;
+  background-size: 18px 18px;
+  background-repeat: no-repeat;
+  border-radius: 100%;
+  background-position: center;
+}
+
+.sprout {
+  background-image: url(img/icons/sprout.png);
+}
+
+.dolly {
+  background-image: url(img/icons/dolly.png);
+}
+
+.silo {
+  background-image: url(img/icons/silo.png);
+}
+
+.store {
+  background-image: url(img/icons/store.png);
+}
+
+.dump-truck {
+  background-image: url(img/icons/dump-truck.png);
+}
+
+.school {
+  background-image: url(img/icons/school.png);
+}
+
+.clearfix {
+  display: block;
+}
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+/* Marker tweaks */
+.mapboxgl-popup {
+  padding: 24px;
+}
+
+.mapboxgl-popup-content {
+  padding: 0;
+  width: 240px;
+}
+
+.mapboxgl-container .leaflet-marker-icon {
+  cursor: pointer;
+}
+
+.mapboxgl-popup-anchor-top > .mapboxgl-popup-tip {
+  border-bottom-color: #31a354;
+}
+
+.mapboxgl-popup-anchor-top-right > .mapboxgl-popup-tip {
+  border-bottom-color: #31a354;
+}
+
+.mapboxgl-popup-anchor-top-left > .mapboxgl-popup-tip {
+  border-bottom-color: #31a354;
+}
+
+.footerImg {
+  width: 70px;
+}
+
+/* Style tab links */
+.tabLink {
+  background-color: #74c476;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  width: 50%;
+}
+
+.tabLink:hover {
+  transition-duration: 750ms;
+  background-color: #31a354;
+}
+
+.tabContent {
+  display: none;
+}
+
+.active-tabContent {
+  display: block;
+}
+
+.active-navIcon {
+  color: #31a354 !important;
+}

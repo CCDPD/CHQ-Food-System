@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHQ - Food System Map</title>
+    <!-- Add CSS Links -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+      integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+      crossorigin=""/>
+    <link rel="stylesheet" href="map/map.css">
+    <link rel="stylesheet" href="page/page.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Raleway|Roboto&display=swap" rel="stylesheet">
+    <!-- Load Esri Leaflet Geocoder from CDN -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/esri-leaflet-geocoder@2.3.2/dist/esri-leaflet-geocoder.css"
+      integrity="sha512-IM3Hs+feyi40yZhDH6kV8vQMg4Fh20s9OzInIIAc4nx7aMYMfo+IenRUekoYsHZqGkREUgx0VvlEsgm7nCDW9g=="
+      crossorigin="">
+    <link rel="stylesheet" href="Plugins/leaflet-locatecontrol-gh-pages/dist/L.Control.Locate.min.css">
+
+    <!-- Make sure you put this AFTER Leaflet's CSS -->
+    <script
+      src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+      integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+      crossorigin="">
+    </script>
+    <script
+      src="https://unpkg.com/esri-leaflet@2.3.3/dist/esri-leaflet.js"
+      integrity="sha512-cMQ5e58BDuu1pr9BQ/eGRn6HaR6Olh0ofcHFWe5XesdCITVuSBiBZZbhCijBe5ya238f/zMMRYIMIIg1jxv4sQ=="
+      crossorigin="">
+    </script>
+    <script src="https://kit.fontawesome.com/d686df2664.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.materialdesignicons.com/4.8.95/css/materialdesignicons.min.css">
+  </head>
+  <body>
+    <div id="sidebar-left">
+      <div class="description_header">
+      </div>
+      <div class="description">
+        <div class="description_content">
+          <h1>Chautauqua County Food System Map</h1>
+          <h4>Identifying, Connecting & Promoting Chautauqua's Food Assets</h4>
+          <p>Developed by the Chautauqua County Division of Planning & Community Development in cooperation with the Chautauqua County Food Policy Council.</p>
+        <div class="dropdown_section">
+          <div>
+            <label for="Sector">Select Sector:</label>
+            <select class="select-css" id="Sector" onchange="populate_sub_sector_dropdown()">
+              <option value="Default">All Sectors</option>
+            </select>
+          </div>
+          <div>
+            <label for="Sub-Sector">Select Sub-Sector:</label>
+            <select class="select-css" id="Sub-Sector" style>
+              <option value="Default">All Sub-Sectors</option>
+            </select>
+          </div>
+          <div>
+            <button id="Search_Button" type="button" name="button" onclick="search_map()">SEARCH</button>
+          </div>
+        </div>
+      </div>
+      </div>
+        <!-- <div id="page-header-img">
+          <img src="img/Food System Diagram.svg" alt="">
+          <p>For the most up to date information, please check in with the business you are trying to reach.</p>
+        </div>
+      </div> -->
+    </div>
+    <div id="collapsed_sidebar">
+      <span class='mdi mdi-keyboard-backspace' style="font-size:28px; cursor:pointer; margin-left:1px;" onclick="openNav()"></span><br/>
+      <!-- <span id="layer_toggle" class="mdi mdi-layers-remove" style="font-size:30px;cursor:pointer; margin-left:1px;" onclick="toggleLegend()"></span> -->
+    </div>
+    <div id="mapid"></div>
+  </body>
+  <footer>
+    <script type="text/javascript" src="Plugins\polyfills.js"></script>
+    <script type="text/javascript" src="data/Sectors.js"></script>
+    <script type="text/javascript" src="data/certifications_badges.js"></script>
+    <script type="text/javascript" src="data/payment_badges.js"></script>
+    <script type="text/javascript" src="Plugins/Leaflet.Icon.Glyph.js"></script>
+    <script type="text/javascript" src="Plugins/leaflet-locatecontrol-gh-pages/dist/L.Control.Locate.min.js"></script>
+    <script type="text/javascript" src="data/current_assets.geojson"></script>
+    <script type="text/javascript" src="data/MuniBounds.json"></script>
+    <script
+    src="https://unpkg.com/esri-leaflet-geocoder@2.3.2/dist/esri-leaflet-geocoder.js"
+    integrity="sha512-8twnXcrOGP3WfMvjB0jS5pNigFuIWj4ALwWEgxhZ+mxvjF5/FBPVd5uAxqT8dd2kUmTVK9+yQJ4CmTmSg/sXAQ=="
+    crossorigin="">
+    </script>
+    <script type="text/javascript" src="map/map.js"></script>
+    <script type="text/javascript" src="page/page.js"></script>
+  </footer>
+</html>
