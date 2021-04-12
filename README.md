@@ -3,8 +3,9 @@
 # Food System Map of Chautauqua County, New York
 
 ## Author
-Chautauqua County Division of Planning & Community Development  
-Primary Contact: Brendan Cullen | cullenb@co.chautauqua.ny.us
+Chautauqua County Department of Planning & Development  
+Developer: Brendan Cullen | Planning Technician
+Primary Contact : Melissa Keller | kellerm@co.chautauqua.ny.us
 
 ## Summary
 During the initial meetings of the Chautauqua County Food Policy Council, the Council noted that while we have a foundational understanding of the strengths and weaknesses of Chautauqua County's food system, we are unaware of its specific assets. Understanding our assets and capacity will help the Council to formulate policy changes and program areas that will benefit the food system. Additionally, we hope that this will help develop and strengthen connections within Chautauqua County.
@@ -75,3 +76,12 @@ There are a variety of resources for people and organizations within the food sy
 - Geocoder: https://willgeary.github.io/data/2016/11/04/Geocoding-with-Google-Sheets.html
 - https://www.nal.usda.gov/afsic/local-food-systems
 - https://clf.jhsph.edu/publications
+
+
+
+## NOTES
+How to update point layer:
+1. Sort Google Sheet by Organization Name (alphabetically)
+2. Export as JSON
+3. Replace data/current_assets.json with exported JSON (only replace everything after "var points = ")
+4. Commit changes

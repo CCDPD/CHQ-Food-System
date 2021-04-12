@@ -78,7 +78,7 @@ function filterSubSector(subSectorValue, action) {
     var features = map
       .getSource("locations")
       ._data.features.filter((x) =>
-        subSectorFilter.some((y) => x.properties.Subsectors_Joined.includes(y))
+        subSectorFilter.some((y) => x.properties.subsectorsJoined.includes(y))
       );
     }
     buildLocationList(features, map);
@@ -160,12 +160,12 @@ function buildLocationList(data, map) {
     link.href = "#";
     link.className = "title";
     link.id = "link-" + prop.id;
-    link.innerHTML = prop.Organization_Name;
+    link.innerHTML = prop.organizationName;
 
     // Add details to the individual listing
     var details = listing.appendChild(document.createElement("div"));
     details.classList.add("txt-s","txt-uppercase");
-    details.innerText = prop.Organization_Street_Address + ', ' + prop.Organization_City_Town;
+    details.innerText = prop.organizationStreetAddress + ', ' + prop.organizationCitytown;
 
     // Listen to the element and when it is clicked, do four things:
     // 1. Update the `currentFeature` to the point associated with the clicked link

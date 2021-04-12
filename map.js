@@ -1,18 +1,71 @@
 mapboxgl.accessToken = "pk.eyJ1IjoiYnJlbjk2IiwiYSI6ImNqc2pkNGRvdTA0bm80OW9hOTIxNzB6NG0ifQ.tDovHyl1gFWQ96O3pok0Qg";
-  
-// Assign a unique id to each point and clean up subsectors_joined
-points.features.forEach(function (point, i) {
-  point.properties.id = i;
-  point.properties.Subsectors_Joined = point.properties.Subsectors_Joined.split(
-    ","
-  );
-  for (var x = 0; x < point.properties.Subsectors_Joined.length; x++) {
-    point.properties.Subsectors_Joined[x] = point.properties.Subsectors_Joined[
-      x
-    ].trim();
+
+
+// sort JSON alphabetically by organization name
+
+// convert points JSON to geoJSON
+geojsonCollection = {
+  "type": "FeatureCollection",
+  "features" : []
+}
+points.forEach(function(point, i) {
+
+  // build feature geom and properties
+  geojsonFeature = {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [point.long, point.lat]
+    },
+    "properties" : {
+      "id": i,
+      "organizationName": point.organizationName,
+      "organizationStreetAddress": point.organizationStreetAddress,
+      "organizationCitytown": point.organizationCitytown,
+      "organizationZipCode": point.organizationZipCode,
+      "organizationState": point.organizationState,
+      "fullAddress": point.fullAddress,
+      "organizationPhoneNumber": point.organizationPhoneNumber,
+      "organizationWebsite": point.organizationWebsite,
+      "organizationSocialMedia": point.organizationSocialMedia,
+      "ifYouWouldLikeToProvideABriefDescriptionOfYourOrganizationPleaseIncludeItInTheSpaceBelow": point.ifYouWouldLikeToProvideABriefDescriptionOfYourOrganizationPleaseIncludeItInTheSpaceBelow,
+      "pleaseIndicateAnyCertificationsHeldByYourOrganization": point.pleaseIndicateAnyCertificationsHeldByYourOrganization,
+      "primaryFoodSystemCategory": point.primaryFoodSystemCategory,
+      "agricultureFoodProductionType": point.agricultureFoodProductionType,
+      "processingValueaddedProductsType": point.processingValueaddedProductsType,
+      "aggregationDistributionStorageType": point.aggregationDistributionStorageType,
+      "foodOutletType": point.foodOutletType,
+      "foodAssistanceEducationSupportType": point.foodAssistanceEducationSupportType,
+      "foodLossManagementType" : point.foodLossManagementType,
+      "pleaseIndicateWhatPaymentMethodsYouAccept": point.pleaseIndicateWhatPaymentMethodsYouAccept,
+      "additionalFoodSystemCategories":point.additionalFoodSystemCategories,
+      "subsectorsJoined": point.subsectorsJoined,
+    }
   }
+
+  // clean up subsectorsJoined
+  geojsonFeature.properties.subsectorsJoined = geojsonFeature.properties.subsectorsJoined.split(",");
+  for (var x = 0; x < geojsonFeature.properties.subsectorsJoined.length; x++) {
+    geojsonFeature.properties.subsectorsJoined[x] = geojsonFeature.properties.subsectorsJoined[x].trim();
+  };
+
+  // check for missing properites -> if missing set to ""
+  Object.keys(geojsonFeature.properties).forEach(function(prop){
+    if (geojsonFeature.properties.prop == undefined){
+      geojsonFeature.properties.prop = "";
+    };
+  });
+
+  // add feature to feature collection
+  geojsonCollection.features.push(geojsonFeature);
+
 });
 
+// set points var to feature collection
+points = geojsonCollection;
+
+
+// set map bounds
 var countyBounds = new mapboxgl.LngLatBounds(
   new mapboxgl.LngLat(-79.8754852889,41.9311113451),
   new mapboxgl.LngLat(-78.919674742,42.5947626407),
@@ -68,7 +121,7 @@ function addMarkers(data) {
     // create element for marker
     var el = document.createElement("div");
     el.id = "marker-" + marker.properties.id;
-    el.className = iconClasses[marker.properties.Primary_Food_System_Category];
+    el.className = iconClasses[marker.properties.primaryFoodSystemCategory];
 
     // create marker using element -> add to map -> add to markerCollection
     var markerFeature = new mapboxgl.Marker(el).setLngLat(marker.geometry.coordinates).addTo(map);
@@ -110,11 +163,11 @@ function createPopUp(currentFeature) {
   
   // create popup heading
   var popupHeader = ("<div class='txt-h4 txt-bold color-white bg-green px12 py12'>" +
-  currentFeature.properties.Organization_Name + "</div>");
+  currentFeature.properties.organizationName + "</div>");
 
   // determine what content to add to popup
   var popupHTMLClasses = {
-    "Organization_Website" : [
+    "organizationWebsite" : [
       "<div class='grid px12 py6'>",
       "<div class='col col--2'>",
       "<svg class='icon h24 w24'>",
@@ -122,15 +175,15 @@ function createPopUp(currentFeature) {
       "</svg>",
       "</div>",
       "<div class='col col--10 txt-break-word mt3'>",
-      "<a class='link' href='",
-      currentFeature.properties['Organization_Website'], 
+      "<a class='link' href='https://",
+      currentFeature.properties.organizationWebsite, 
       "'>",
-      testURL(currentFeature.properties['Organization_Website']),
+      testURL('https://' + currentFeature.properties.organizationWebsite),
       "</a>",
       "</div>",
       "</div>"
     ],
-    "Organization_Phone_Number" : [
+    "organizationPhoneNumber" : [
       "<div class='grid px12 py6'>",
       "<div class='col col--2'>",
       "<svg class='icon h24 w24'>",
@@ -139,14 +192,14 @@ function createPopUp(currentFeature) {
       "</div>",
       "<div class='col col--10 txt-break-word mt3'>",
       "<a class='link' href='tel:",
-      currentFeature.properties['Organization_Phone_Number'], 
+      currentFeature.properties.organizationPhoneNumber, 
       "'>",
-      '+' + currentFeature.properties['Organization_Phone_Number'],
+      '+' + currentFeature.properties.organizationPhoneNumber,
       "</a>",
       "</div>",
       "</div>"
     ],
-    "Organization_Social_Media" : [
+    "organizationSocialMedia" : [
       "<div class='grid px12 py6'>",
       "<div class='col col--2'>",
       "<svg class='icon h24 w24'>",
@@ -154,72 +207,72 @@ function createPopUp(currentFeature) {
       "</svg>",
       "</div>",
       "<div class='col col--10 txt-break-word mt3'>",
-      "<a class='link' href='",
-      currentFeature.properties['Organization_Social_Media'], 
+      "<a class='link' href='https://",
+      currentFeature.properties.organizationSocialMedia, 
       "'>",
-      testURL(currentFeature.properties['Organization_Social_Media']),
+      testURL('https://' + currentFeature.properties.organizationSocialMedia),
       "</a>",
       "</div>",
       "</div>"
     ],
-    "If_you_would_like_to_provide_a_" : [
+    "ifYouWouldLikeToProvideABriefDescriptionOfYourOrganizationPleaseIncludeItInTheSpaceBelow" : [
       "<div class='txt-bold px12 py12'>Description:</div>",
       "<div class='txt-s px12 pb3'>",
-      currentFeature.properties['If_you_would_like_to_provide_a_'], 
+      currentFeature.properties.ifYouWouldLikeToProvideABriefDescriptionOfYourOrganizationPleaseIncludeItInTheSpaceBelow, 
       '</div>'
     ],
-    "Please_indicate_any_certificati" : [
+    "pleaseIndicateAnyCertificationsHeldByYourOrganization" : [
       "<div class='txt-bold px12 py12'>Certifications:</div>",
       "<div class='txt-s px12 pb3'>",
-      currentFeature.properties['Please_indicate_any_certificati'], 
+      currentFeature.properties.pleaseIndicateAnyCertificationsHeldByYourOrganization, 
       '</div>'
     ],
-    "Please_indicate_what_payment_me" : [
+    "pleaseIndicateWhatPaymentMethodsYouAccept" : [
       "<div class='txt-bold px12 py12'>Payment Methods:</div>",
       "<div class='txt-s px12 pb3'>",
-      currentFeature.properties['Please_indicate_what_payment_me'], 
+      currentFeature.properties.pleaseIndicateWhatPaymentMethodsYouAccept, 
       '</div>'
     ],
-    "Primary_Food_System_Category" : [
+    "primaryFoodSystemCategory" : [
       "<div class='txt-bold px12 py12'>Primary Sector:</div>",
       "<div class='txt-s px12 pb3'>",
-      currentFeature.properties['Primary_Food_System_Category'], 
+      currentFeature.properties.primaryFoodSystemCategory, 
       '</div>'
     ],
-    "Agriculture___Food_Production_T": [
+    "agricultureFoodProductionType": [
       "<div class='txt-bold px12 py12'>Agriculture & Food Production Sub-Sectors:</div>",
       "<div class='txt-s px12 pb3'>",
-      currentFeature.properties['Agriculture___Food_Production_T'], 
+      currentFeature.properties.agricultureFoodProductionType, 
       '</div>'
     ],
-    "Processing___Value_Added_Produc": [
+    "processingValueaddedProductsType": [
       "<div class='txt-bold px12 py12'>Processing & Value-Added Products Sub-Sectors:</div>",
       "<div class='txt-s px12 pb3'>",
-      currentFeature.properties['Processing___Value_Added_Produc'], 
+      currentFeature.properties.processingValueaddedProductsType, 
       '</div>'
     ],
-    "Aggregation__Distribution____St": [
+    "aggregationDistributionStorageType": [
       "<div class='txt-bold px12 py12'>Aggregation, Distribution, & Storage Sub-Sectors:</div>",
       "<div class='txt-s px12 pb3'>",
-      currentFeature.properties['Aggregation__Distribution____St'], 
+      currentFeature.properties.aggregationDistributionStorageType, 
       '</div>'
     ],
-    "Food_Outlet_Type": [
+    "foodOutletType": [
       "<div class='txt-bold px12 py12'>Food Retail / Direct Sales Sub-Sectors:</div>",
       "<div class='txt-s px12 pb3'>",
-      currentFeature.properties['Food_Outlet_Type'], 
+      currentFeature.properties.foodOutletType, 
       '</div>'
     ],
-    "Food_Loss_Management_Type": [
+    "foodLossManagementType": [
       "<div class='txt-bold px12 py12'>Food Loss Management Sub-Sectors:</div>",
       "<div class='txt-s px12 pb3'>",
-      currentFeature.properties['Food_Loss_Management_Type'], 
+      currentFeature.properties.foodLossManagementType, 
       '</div>'
     ],
-    "Food_Assistance__Education____S": [
+    "foodAssistanceEducationSupportType": [
       "<div class='txt-bold px12 py12'>Food Assistance, Education, & Support:</div>",
       "<div class='txt-s px12 pb3'>",
-      currentFeature.properties['Food_Assistance__Education____S'], 
+      currentFeature.properties.foodAssistanceEducationSupportType, 
       '</div>'
     ],
   };
