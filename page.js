@@ -44,10 +44,10 @@ function filterSubSector(subSectorValue, action) {
     if (currentFilter == null) {
       var filter = [
         "any",
-        ["in", subSectorValue, ["get", "Subsectors_Joined"]],
+        ["in", subSectorValue, ["get", "subsectorsJoined"]],
       ];
     } else {
-      currentFilter.push(["in", subSectorValue, ["get", "Subsectors_Joined"]]);
+      currentFilter.push(["in", subSectorValue, ["get", "subsectorsJoined"]]);
       var filter = currentFilter;
     }
   } else if(action == "REMOVE") {

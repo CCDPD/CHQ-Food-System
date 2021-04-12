@@ -1,8 +1,5 @@
 mapboxgl.accessToken = "pk.eyJ1IjoiYnJlbjk2IiwiYSI6ImNqc2pkNGRvdTA0bm80OW9hOTIxNzB6NG0ifQ.tDovHyl1gFWQ96O3pok0Qg";
 
-
-// sort JSON alphabetically by organization name
-
 // convert points JSON to geoJSON
 geojsonCollection = {
   "type": "FeatureCollection",
@@ -64,6 +61,24 @@ points.forEach(function(point, i) {
 // set points var to feature collection
 points = geojsonCollection;
 
+// get point's sub sectors as list
+function getSubSectorData(points){
+  actualSectors = []
+  points.features.forEach( function(point) {
+    point.properties.subsectorsJoined.forEach( function(subsector){
+      if (actualSectors.includes(subsector)){} else {
+        actualSectors.push(subsector)
+      }
+    })
+  })
+  return actualSectors
+}
+
+// remove unused subsectors from sectors
+usedSubsectors = getSubSectorData(points)
+Object.keys(sectors).forEach(function(sector){
+  sectors[sector].sub_sectors = sectors[sector].sub_sectors.filter(subsector => usedSubsectors.includes(subsector));
+})
 
 // set map bounds
 var countyBounds = new mapboxgl.LngLatBounds(
@@ -307,7 +322,6 @@ function testURL(url){
 }
 
 function resetMapView(){
-  // flyTopoint([-79.41355346964089, 42.16678183056057], 8.5,);
   map.fitBounds(countyBounds);
   if (popupCollection != undefined){
     popupCollection.forEach(element => element.remove());

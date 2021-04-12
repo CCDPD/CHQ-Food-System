@@ -1,5 +1,2 @@
 Map
 - have map show loading symbol until its finished loading
-
-Filter
-- only show subsectors that are in the dataset
