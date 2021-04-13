@@ -126,6 +126,11 @@ body {
   width: 70px;
 }
 
+#fpcLogo {
+  height: 70px;
+  width: 80px;
+}
+
 /* Style tab links */
 .tabLink {
   background-color: #74c476;
