@@ -1,4 +1,5 @@
 var points = [
+   [
     {
         "timestamp": "2020-03-21T20:08:58.037Z",
         "organizationName": "Abers Acres",
@@ -377,11 +378,13 @@ var points = [
         "long": -79.0685724,
         "organizationPhoneNumber": "716-485-3163",
         "organizationWebsite": "www.clearwatercreeksavetheearth.com/compost",
+        "organizationSocialMedia": "https:
         "ifYouWouldLikeToProvideABriefDescriptionOfYourOrganizationPleaseIncludeItInTheSpaceBelow": "Through our hot compost methods we manage the decomposition of organic waste. We collect things like fruit and veggie scraps, paper, sawdust, leaves and other various items from our local community and turn it into highly nutritious soil.",
         "pleaseIndicateAnyCertificationsHeldByYourOrganization": "Not applicable",
         "primaryFoodSystemCategory": "Food Loss Management",
         "foodLossManagementType": "Composting",
         "additionalFoodSystemCategories": "I do not fit into another category (Submit Survey)",
+        "subsectorsJoined": ",,,,Composting,",
         "firstName": "Sarah",
         "lastName": "Moller",
         "emailAddress": "clearwatercreek.savetheearth@gmail.com",
@@ -1187,6 +1190,7 @@ var points = [
         "foodOutletType": "Farmers Market",
         "pleaseIndicateWhatPaymentMethodsYouAccept": "Cash, SNAP, WIC, Double Up Food Bucks",
         "additionalFoodSystemCategories": "I do not fit into another category (Submit Survey)",
+        "subsectorsJoined": ",,,Farmers Market,,",
         "firstName": "EJ",
         "lastName": "Hayes",
         "emailAddress": "ehayes@cityofdunkirk.com",
@@ -1486,6 +1490,7 @@ var points = [
         "foodOutletType": "Community Supported Agriculture (CSA), Farm Stand, Farm Store, Online Ordering",
         "pleaseIndicateWhatPaymentMethodsYouAccept": "Credit Cards, Cash, Shoptauqua Gift Card, Personal Check",
         "additionalFoodSystemCategories": "I do not fit into another category (Submit Survey)",
+        "subsectorsJoined": "Flowers, Fruits/Berries, Honey, Herbs, Vegetables, Vegetable amd Herb Transplants,,,Community Supported Agriculture (CSA), Farm Stand, Farm Store, Online Ordering,,",
         "firstName": "Adrienne",
         "lastName": "Ploss",
         "emailAddress": "hickoryhurst@gmail.com",
@@ -1925,6 +1930,7 @@ var points = [
         "foodOutletType": "Grocery Store",
         "pleaseIndicateWhatPaymentMethodsYouAccept": "Credit Cards, Cash, SNAP, WIC",
         "additionalFoodSystemCategories": "I do not fit into another category (Submit Survey)",
+        "subsectorsJoined": ",,,Grocery Store,,",
         "firstName": "Jill",
         "lastName": "Meaux",
         "emailAddress": "jmeaux@cityofdunkirk.com",
@@ -2670,6 +2676,7 @@ var points = [
         "pleaseIndicateWhatPaymentMethodsYouAccept": "Credit Cards, Cash, SNAP",
         "foodAssistanceEducationSupportType": "Community Resource, Education, Food Assistance Program (Ex. WIC, SNAP)",
         "additionalFoodSystemCategories": "I do not fit into another category (Submit Survey)",
+        "subsectorsJoined": ",,,Farmers Market,,Community Resource, Education, Food Assistance Program (Ex. WIC, SNAP)",
         "firstName": "Blair",
         "lastName": "Koss",
         "emailAddress": "Blairkoss@iKoss.com",
